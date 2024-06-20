@@ -1,4 +1,4 @@
-﻿[cmdletbinding()]
+[cmdletbinding()]
 param(
     [parameter(mandatory = $true)] 
     [int]$hours 
