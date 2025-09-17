@@ -1,0 +1,236 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="STIGComments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Vuln" maxOccurs="500" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AnswerKey" maxOccurs="500" minOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ExpectedStatus">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Not_Reviewed"/>
+                          <xs:enumeration value="Open"/>
+                          <xs:enumeration value="NotAFinding"/>
+                          <xs:enumeration value="Not_Applicable"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="ValidationCode"/>
+                    <xs:element name="ValidTrueStatus">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value=""/>
+                          <xs:enumeration value="Not_Reviewed"/>
+                          <xs:enumeration value="Open"/>
+                          <xs:enumeration value="NotAFinding"/>
+                          <xs:enumeration value="Not_Applicable"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="ValidTrueComment" maxOccurs="1" minOccurs="1"/>
+                    <xs:element name="ValidFalseStatus">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value=""/>
+                          <xs:enumeration value="Not_Reviewed"/>
+                          <xs:enumeration value="Open"/>
+                          <xs:enumeration value="NotAFinding"/>
+                          <xs:enumeration value="Not_Applicable"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="ValidFalseComment" maxOccurs="1" minOccurs="1"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Name" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="ID" use="required"/>
+          </xs:complexType>
+          <xs:unique name="AnswerKeyUniqueKey">
+            <xs:selector xpath="AnswerKey"/>
+            <xs:field xpath="@Name"/>
+          </xs:unique>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Name" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="_replace_with_stig_shortname_"/>
+            <xs:enumeration value="Active Directory Domain"/>
+            <xs:enumeration value="ADDomain"/>
+            <xs:enumeration value="Active Directory Forest"/>
+            <xs:enumeration value="ADForest"/>
+            <xs:enumeration value="Adobe Acrobat Pro XI"/>
+            <xs:enumeration value="AdobeAcrobatProXI"/>
+            <xs:enumeration value="Adobe Acrobat Professional DC Classic"/>
+            <xs:enumeration value="AdobeAcrobatProDCClassic"/>
+            <xs:enumeration value="Adobe Acrobat Professional DC Continuous"/>
+            <xs:enumeration value="AdobeAcrobatProDCContinuous"/>
+            <xs:enumeration value="Adobe Reader DC Classic"/>
+            <xs:enumeration value="AdobeReaderDCClassic"/>
+            <xs:enumeration value="Adobe Reader DC Continuous"/>
+            <xs:enumeration value="AdobeReaderDCContinuous"/>
+            <xs:enumeration value="Apache 2.4 Server Unix"/>
+            <xs:enumeration value="Apache24SvrUnix"/>
+            <xs:enumeration value="Apache 2.4 Server Windows"/>
+            <xs:enumeration value="Apache24SvrWin"/>
+            <xs:enumeration value="Apache 2.4 Site Unix"/>
+            <xs:enumeration value="Apache24SiteUnix"/>
+            <xs:enumeration value="Apache 2.4 Site Windows"/>
+            <xs:enumeration value="Apache24SiteWin"/>
+            <xs:enumeration value="CentOS 7"/>
+            <xs:enumeration value="CentOS7"/>
+            <xs:enumeration value="Cisco IOS XE Router NDM"/>
+            <xs:enumeration value="CiscoXERtrNDM"/>
+            <xs:enumeration value="Cisco IOS XE Switch L2S"/>
+            <xs:enumeration value="CiscoXESwtchL2S"/>
+            <xs:enumeration value="Cisco IOS XE Switch NDM"/>
+            <xs:enumeration value="CiscoXESwtchNDM"/>
+            <xs:enumeration value="Google Chrome"/>
+            <xs:enumeration value="Chrome"/>
+            <xs:enumeration value="IIS 10.0 Server"/>
+            <xs:enumeration value="IIS10Server"/>
+            <xs:enumeration value="IIS 10.0 Site"/>
+            <xs:enumeration value="IIS10Site"/>
+            <xs:enumeration value="IIS 8.5 Server"/>
+            <xs:enumeration value="IIS85Server"/>
+            <xs:enumeration value="IIS 8.5 Site"/>
+            <xs:enumeration value="IIS85Site"/>
+            <xs:enumeration value="Internet Explorer 11"/>
+            <xs:enumeration value="IE11"/>
+            <xs:enumeration value="McAfee ENS 10x Local"/>
+            <xs:enumeration value="McAfeeENS10xLocal"/>
+            <xs:enumeration value="McAfee VirusScan 8.8 Local Client"/>
+            <xs:enumeration value="McAfeeVS88"/>
+            <xs:enumeration value="Microsoft .NET Framework 4"/>
+            <xs:enumeration value="DotNET4"/>
+            <xs:enumeration value="Microsoft Access 2013"/>
+            <xs:enumeration value="MSAccess2013"/>
+            <xs:enumeration value="Microsoft Access 2016"/>
+            <xs:enumeration value="MSAccess2016"/>
+            <xs:enumeration value="Microsoft Defender Antivirus"/>
+            <xs:enumeration value="MSDefender"/>
+            <xs:enumeration value="Microsoft Edge"/>
+            <xs:enumeration value="MSEdge"/>
+            <xs:enumeration value="Microsoft Excel 2013"/>
+            <xs:enumeration value="MSExcel2013"/>
+            <xs:enumeration value="Microsoft Excel 2016"/>
+            <xs:enumeration value="MSExcel2016"/>
+            <xs:enumeration value="Microsoft Exchange 2016 Edge Transport Server"/>
+            <xs:enumeration value="MSExchange2016EdgeTP"/>
+            <xs:enumeration value="Microsoft Exchange 2016 Mailbox Server"/>
+            <xs:enumeration value="MSExchange2016MB"/>
+            <xs:enumeration value="Microsoft Groove 2013"/>
+            <xs:enumeration value="MSGroove2013"/>
+            <xs:enumeration value="Microsoft InfoPath 2013"/>
+            <xs:enumeration value="MSInfoPath2013"/>
+            <xs:enumeration value="Microsoft Lync 2013"/>
+            <xs:enumeration value="MSLync2013"/>
+            <xs:enumeration value="Microsoft Office 365"/>
+            <xs:enumeration value="MSOffice365"/>
+            <xs:enumeration value="Microsoft Office System 2013"/>
+            <xs:enumeration value="MSOfficeSystem2013"/>
+            <xs:enumeration value="Microsoft Office System 2016"/>
+            <xs:enumeration value="MSOfficeSystem2016"/>
+            <xs:enumeration value="Microsoft OneDrive"/>
+            <xs:enumeration value="MSOneDrive"/>
+            <xs:enumeration value="Microsoft OneNote 2013"/>
+            <xs:enumeration value="MSOneNote2013"/>
+            <xs:enumeration value="Microsoft OneNote 2016"/>
+            <xs:enumeration value="MSOneNote2016"/>
+            <xs:enumeration value="Microsoft Outlook 2013"/>
+            <xs:enumeration value="MSOutlook2013"/>
+            <xs:enumeration value="Microsoft Outlook 2016"/>
+            <xs:enumeration value="MSOutlook2016"/>
+            <xs:enumeration value="Microsoft PowerPoint 2013"/>
+            <xs:enumeration value="MSPowerPoint2013"/>
+            <xs:enumeration value="Microsoft PowerPoint 2016"/>
+            <xs:enumeration value="MSPowerPoint2016"/>
+            <xs:enumeration value="Microsoft Project 2013"/>
+            <xs:enumeration value="MSProject2013"/>
+            <xs:enumeration value="Microsoft Project 2016"/>
+            <xs:enumeration value="MSProject2016"/>
+            <xs:enumeration value="Microsoft Publisher 2013"/>
+            <xs:enumeration value="MSPublisher2013"/>
+            <xs:enumeration value="Microsoft Publisher 2016"/>
+            <xs:enumeration value="MSPublisher2016"/>
+            <xs:enumeration value="Microsoft SharePoint Designer 2013"/>
+            <xs:enumeration value="MSSPDesigner2013"/>
+            <xs:enumeration value="Microsoft Skype for Business 2016"/>
+            <xs:enumeration value="MSSkype2016"/>
+            <xs:enumeration value="Microsoft SQL Server 2014 Database"/>
+            <xs:enumeration value="SQL2014DB"/>
+            <xs:enumeration value="Microsoft SQL Server 2014 Instance"/>
+            <xs:enumeration value="SQL2014Instance"/>
+            <xs:enumeration value="Microsoft SQL Server 2016 Database"/>
+            <xs:enumeration value="SQL2016DB"/>
+            <xs:enumeration value="Microsoft SQL Server 2016 Instance"/>
+            <xs:enumeration value="SQL2016Instance"/>
+            <xs:enumeration value="Microsoft Visio 2013"/>
+            <xs:enumeration value="MSVisio2013"/>
+            <xs:enumeration value="Microsoft Visio 2016"/>
+            <xs:enumeration value="MSVisio2016"/>
+            <xs:enumeration value="Microsoft Word 2013"/>
+            <xs:enumeration value="MSWord2013"/>
+            <xs:enumeration value="Microsoft Word 2016"/>
+            <xs:enumeration value="MSWord2016"/>
+            <xs:enumeration value="Mozilla Firefox"/>
+            <xs:enumeration value="Firefox"/>
+            <xs:enumeration value="Oracle Java JRE 8 for Unix"/>
+            <xs:enumeration value="JavaJRE8Unix"/>
+            <xs:enumeration value="Oracle Java JRE 8 for Windows"/>
+            <xs:enumeration value="JavaJRE8Windows"/>
+            <xs:enumeration value="Oracle Linux 7"/>
+            <xs:enumeration value="Oracle7"/>
+            <xs:enumeration value="Oracle Linux 8"/>
+            <xs:enumeration value="Oracle8"/>
+            <xs:enumeration value="PostgreSQL 9.x"/>
+            <xs:enumeration value="PgSQL9x"/>
+            <xs:enumeration value="Red Hat Enterprise Linux 7"/>
+            <xs:enumeration value="RHEL7"/>
+            <xs:enumeration value="Red Hat Enterprise Linux 8"/>
+            <xs:enumeration value="RHEL8"/>
+            <xs:enumeration value="Ubuntu 16.04"/>
+            <xs:enumeration value="Ubuntu16"/>
+            <xs:enumeration value="Ubuntu 18.04"/>
+            <xs:enumeration value="Ubuntu18"/>
+            <xs:enumeration value="Ubuntu 20.04"/>
+            <xs:enumeration value="Ubuntu20"/>
+            <xs:enumeration value="VMware Horizon 7.13 Agent"/>
+            <xs:enumeration value="HorizonAgent"/>
+            <xs:enumeration value="VMware Horizon 7.13 Client"/>
+            <xs:enumeration value="HorizonClient"/>
+            <xs:enumeration value="VMware Horizon 7.13 Connection Server"/>
+            <xs:enumeration value="HorizonConnectionServer"/>
+            <xs:enumeration value="Windows 10"/>
+            <xs:enumeration value="Win10"/>
+            <xs:enumeration value="Windows 11"/>
+            <xs:enumeration value="Win11"/>
+            <xs:enumeration value="Windows Firewall"/>
+            <xs:enumeration value="WinFirewall"/>
+            <xs:enumeration value="Windows Server 2008 R2 MS"/>
+            <xs:enumeration value="WinServer2008R2MS"/>
+            <xs:enumeration value="Windows Server 2012 DC"/>
+            <xs:enumeration value="WinServer2012DC"/>
+            <xs:enumeration value="Windows Server 2012 MS"/>
+            <xs:enumeration value="WinServer2012MS"/>
+            <xs:enumeration value="Windows Server 2016"/>
+            <xs:enumeration value="WinServer2016"/>
+            <xs:enumeration value="Windows Server 2019"/>
+            <xs:enumeration value="WinServer2019"/>
+            <xs:enumeration value="Windows Server 2022"/>
+            <xs:enumeration value="WinServer2022"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+    <xs:unique name="VulnIdUniqueKey">
+      <xs:selector xpath="Vuln"/>
+      <xs:field xpath="@ID"/>
+    </xs:unique>
+  </xs:element>
+</xs:schema>

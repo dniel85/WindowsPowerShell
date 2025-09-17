@@ -1,0 +1,936 @@
+<!--
+**************************************************************************************
+This file maps the STIG to the associated CKL Template and scan module.
+
+<Name> is the name for the STIG.
+<ShortName> is the short name of the STIG.  Used for -SelectSTIG and -ExcludeSTIG options.
+<Template> is the name of the blank .ckl file for the STIG and must be stored in the CKLTemplates subfolder.
+<DetectionCode> is Powershell code that detects if the STIG is applicable to a system.  Must return true/false.
+<PsModule> is the file name for the custom check module for the STIG and must be stored in the Modules subfolder.
+<PsModuleVer> is the current version of the scan module.
+<Classification> is the classification of the STIG.
+**************************************************************************************
+-->
+<List>
+  <STIG>
+    <Name>Active Directory Domain</Name>
+    <ShortName>ADDomain</ShortName>
+    <Template>ADDomain.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_ComputerSystem).DomainRole -eq 5) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-ActiveDirectoryDomain_Checks</PsModule>
+    <PSModuleVer>1.2023.5.16</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Active Directory Forest</Name>
+    <ShortName>ADForest</ShortName>
+    <Template>ADForest.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_ComputerSystem).DomainRole -eq 5 -and ((Get-ADDomain).DNSRoot -eq (Get-ADDomain).Forest)) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-ActiveDirectoryForest_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Adobe Acrobat Pro XI</Name>
+    <ShortName>AdobeAcrobatProXI</ShortName>
+    <Template>AdobeAcrobatProXI.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-AdobeReaderProInstalls | Where-Object {$_.Name -like "Adobe Acrobat*" -and $_.Version -eq "XI"}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-AdobeAcrobatProXI_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Adobe Acrobat Professional DC Classic</Name>
+    <ShortName>AdobeAcrobatProDCClassic</ShortName>
+    <Template>AdobeAcrobatProDCClassic.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-AdobeReaderProInstalls | Where-Object {$_.Name -like "Adobe Acrobat*" -and $_.Track -eq "Classic" -and $_.Version -in @("2015", "2017", "2020")}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-AdobeAcrobatProDCClassic_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Adobe Acrobat Professional DC Continuous</Name>
+    <ShortName>AdobeAcrobatProDCContinuous</ShortName>
+    <Template>AdobeAcrobatProDCContinuous.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-AdobeReaderProInstalls | Where-Object {$_.Name -like "Adobe Acrobat*" -and $_.Track -eq "Continuous" -and $_.Version -eq "DC"}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-AdobeAcrobatProDCContinuous_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Adobe Reader DC Classic</Name>
+    <ShortName>AdobeReaderDCClassic</ShortName>
+    <Template>AdobeReaderDCClassic.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-AdobeReaderProInstalls | Where-Object {$_.Name -like "Adobe Reader*" -and $_.Track -eq "Classic" -and $_.Version -in @("2015", "2017", "2020")}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-AdobeReaderDCClassic_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Adobe Reader DC Continuous</Name>
+    <ShortName>AdobeReaderDCContinuous</ShortName>
+    <Template>AdobeReaderDCContinuous.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-AdobeReaderProInstalls | Where-Object {$_.Name -like "Adobe Reader*" -and $_.Track -eq "Continuous" -and $_.Version -eq "DC"}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-AdobeReaderDCContinuous_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Apache 2.4 Server Unix</Name>
+    <ShortName>Apache24SvrUnix</ShortName>
+    <Template>Apache24SvrUnix.ckl</Template>
+    <DetectionCode>Return (Test-IsApacheInstalled -OnOS "Unix");</DetectionCode>
+    <PsModule>Scan-ApacheServer2-4UNIXServer_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Apache 2.4 Server Windows</Name>
+    <ShortName>Apache24SvrWin</ShortName>
+    <Template>Apache24SvrWin.ckl</Template>
+    <DetectionCode>Return (Test-IsApacheInstalled -OnOS "Windows");</DetectionCode>
+    <PsModule>Scan-ApacheServer2-4WindowsServer_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Apache 2.4 Site Unix</Name>
+    <ShortName>Apache24SiteUnix</ShortName>
+    <Template>Apache24SiteUnix.ckl</Template>
+    <DetectionCode>Return (Test-IsApacheInstalled -OnOS "Unix");</DetectionCode>
+    <PsModule>Scan-ApacheServer2-4UNIXSite_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Apache 2.4 Site Windows</Name>
+    <ShortName>Apache24SiteWin</ShortName>
+    <Template>Apache24SiteWin.ckl</Template>
+    <DetectionCode>Return (Test-IsApacheInstalled -OnOS "Windows");</DetectionCode>
+    <PsModule>Scan-ApacheServer2-4WindowsSite_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>CentOS 7</Name>
+    <ShortName>CentOS7</ShortName>
+    <Template>CentOS7.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="CentOS Linux*' -and $OSRelease -like '*VERSION_ID="7*') {$STIGRequired = $true}ElseIf ($OSRelease -like '*NAME="RedHawk Linux*' -and $OSRelease -like '*VERSION_ID="7.*') {If ($(Get-Content /etc/redhat-release) -like "CentOS Linux*"){$STIGRequired = $true}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-CentOS7_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Cisco IOS XE Router NDM</Name>
+    <ShortName>CiscoXERtrNDM</ShortName>
+    <Template>CiscoXERouterNDM.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ($DeviceInfo | Where-Object {($_.DeviceType -eq "Router" -and $_.CiscoOS -match "XE")}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-CiscoXERouterNDM_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>true</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Cisco IOS XE Switch L2S</Name>
+    <ShortName>CiscoXESwtchL2S</ShortName>
+    <Template>CiscoXESwitchL2S.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ($DeviceInfo | Where-Object {($_.DeviceType -eq "Switch" -and $_.CiscoOS -match "XE")}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-CiscoXESwitchL2S_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>true</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Cisco IOS XE Switch NDM</Name>
+    <ShortName>CiscoXESwtchNDM</ShortName>
+    <Template>CiscoXESwitchNDM.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ($DeviceInfo | Where-Object {($_.DeviceType -eq "Switch" -and $_.CiscoOS -match "XE")}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-CiscoXESwitchNDM_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>true</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Google Chrome</Name>
+    <ShortName>Chrome</ShortName>
+    <Template>Chrome.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-InstalledSoftware | Where DisplayName -eq "Google Chrome") -or (Get-ChildItem -Path $env:ProgramFiles\Google\Chrome -Recurse -ErrorAction SilentlyContinue | Where-Object Name -eq "chrome.exe") -or (Get-ChildItem -Path ${env:ProgramFiles(x86)}\Google\Chrome -Recurse -ErrorAction SilentlyContinue | Where-Object Name -eq "chrome.exe")) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-GoogleChrome_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>IIS 10.0 Server</Name>
+    <ShortName>IIS10Server</ShortName>
+    <Template>IIS10Server.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (((Get-CimInstance Win32_OperatingSystem | Where Caption -Like "*Windows*Server*") -and ((Get-WindowsFeature -Name "Web-WebServer").Installed -eq $true)) -or ((Get-CimInstance Win32_OperatingSystem | Where Caption -Like "*Windows*1*") -and ((Get-CimInstance -ClassName Win32_OptionalFeature | Where-Object Name -eq "IIS-WebServer").InstallState -eq 1))){If (Test-Path "HKLM:\SOFTWARE\Microsoft\InetStp"){$InetStp = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\InetStp"; [Version]$IISVersion="$(($InetStp).MajorVersion).$(($InetStp).MinorVersion)"; If ($IISVersion -ge [Version]"10.0"){$STIGRequired = $true}}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-IIS10_0_Server_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>IIS 10.0 Site</Name>
+    <ShortName>IIS10Site</ShortName>
+    <Template>IIS10Site.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (((Get-CimInstance Win32_OperatingSystem | Where Caption -Like "*Windows*Server*") -and ((Get-WindowsFeature -Name "Web-WebServer").Installed -eq $true)) -or ((Get-CimInstance Win32_OperatingSystem | Where Caption -Like "*Windows*1*") -and ((Get-CimInstance -ClassName Win32_OptionalFeature | Where-Object Name -eq "IIS-WebServer").InstallState -eq 1))){If (Test-Path "HKLM:\SOFTWARE\Microsoft\InetStp"){$InetStp = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\InetStp"; [Version]$IISVersion="$(($InetStp).MajorVersion).$(($InetStp).MinorVersion)"; If ($IISVersion -ge [Version]"10.0"){$STIGRequired = $true}}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-IIS10_0_Site_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>IIS 8.5 Server</Name>
+    <ShortName>IIS85Server</ShortName>
+    <Template>IIS85Server.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-CimInstance Win32_OperatingSystem | Where Caption -Like "*Windows*Server*"){If (((Get-WindowsFeature -Name "Web-WebServer").Installed -eq $true)){If (Test-Path "HKLM:\SOFTWARE\Microsoft\InetStp"){$InetStp = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\InetStp"; [Version]$IISVersion="$(($InetStp).MajorVersion).$(($InetStp).MinorVersion)"; If ($IISVersion -ge [Version]"8.5" -and $IISVersion -lt [Version]"10.0"){$STIGRequired = $true}}}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-IIS85_Server_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>IIS 8.5 Site</Name>
+    <ShortName>IIS85Site</ShortName>
+    <Template>IIS85Site.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-CimInstance Win32_OperatingSystem | Where Caption -Like "*Windows*Server*"){If (((Get-WindowsFeature -Name "Web-WebServer").Installed -eq $true)){If (Test-Path "HKLM:\SOFTWARE\Microsoft\InetStp"){$InetStp = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\InetStp"; [Version]$IISVersion="$(($InetStp).MajorVersion).$(($InetStp).MinorVersion)"; If ($IISVersion -ge [Version]"8.5" -and $IISVersion -lt [Version]"10.0"){$STIGRequired = $true}}}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-IIS85_Site_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Internet Explorer 11</Name>
+    <ShortName>IE11</ShortName>
+    <Template>IE11.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$Paths = @("$env:ProgramFiles","${env:ProgramFiles(x86)}"); ForEach ($Path in $Paths) {If ([Version](Get-ChildItem "$Path\Internet Explorer\iexplore.exe" -ErrorAction SilentlyContinue).VersionInfo.ProductVersion -ge "11.0") {$STIGRequired = $true}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-IE11_Checks</PsModule>
+    <PSModuleVer>1.2023.5.16</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>McAfee ENS 10x Local</Name>
+    <ShortName>McAfeeENS10xLocal</ShortName>
+    <Template>(CUI)_McAfeeENS10xLocal.ckl</Template>
+    <DetectionCode>Return (Test-IsMcAfeeInstalled);</DetectionCode>
+    <PsModule>Scan-McAfeeENS10-xLocalClient_Checks_(CUI)</PsModule>
+    <PSModuleVer>1.2023.5.16</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>CUI</Classification>
+  </STIG>
+  <STIG>
+    <Name>McAfee VirusScan 8.8 Local Client</Name>
+    <ShortName>McAfeeVS88</ShortName>
+    <Template>McAfeeVS88.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {Switch ((Get-CimInstance Win32_OperatingSystem).OSArchitecture) {"64-bit" {If ((Get-InstalledSoftware | Where-Object {($_.DisplayName -eq "McAfee VirusScan Enterprise") -and ([Version]$_.DisplayVersion -ge "8.8")}) -and ((Get-RegistryResult -Path "HKLM:\SOFTWARE\WOW6432Node\Network Associates\ePolicy Orchestrator\Agent" -ValueName "ePOServerList").Value -in @("(blank)","(NotFound)"))) {$STIGRequired = $true}} "32-bit" {If ((Get-InstalledSoftware | Where-Object {($_.DisplayName -eq "McAfee VirusScan Enterprise") -and ([Version]$_.DisplayVersion -ge "8.8")}) -and ((Get-RegistryResult -Path "HKLM:\SOFTWARE\Network Associates\ePolicy Orchestrator\Agent" -ValueName "ePOServerList").Value -in @("(blank)","(NotFound)"))) {$STIGRequired = $true}}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-McAfeeVirusScanLocalClient_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft .NET Framework 4</Name>
+    <ShortName>DotNET4</ShortName>
+    <Template>DotNET4.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (((Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client" -ErrorAction SilentlyContinue).Install -eq 1) -or ((Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" -ErrorAction SilentlyContinue).Install -eq 1)) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-NETFramework4_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Access 2013</Name>
+    <ShortName>MSAccess2013</ShortName>
+    <Template>MSAccess2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Access"; $Executable = "MSACCESS.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Access2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Access 2016</Name>
+    <ShortName>MSAccess2016</ShortName>
+    <Template>MSAccess2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Access"; $Executable = "MSACCESS.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Access2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Defender Antivirus</Name>
+    <ShortName>MSDefender</ShortName>
+    <Template>MsDefender.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-Service WinDefend -ErrorAction Stop) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-MicrosoftDefenderAntivirus_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Edge</Name>
+    <ShortName>MSEdge</ShortName>
+    <Template>MSEdge.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-InstalledSoftware | Where DisplayName -eq "Microsoft Edge") -or (Get-ChildItem -Path $env:ProgramFiles\Microsoft\Edge -Recurse -ErrorAction SilentlyContinue | Where-Object Name -eq "msedge.exe") -or (Get-ChildItem -Path ${env:ProgramFiles(x86)}\Microsoft\Edge -Recurse -ErrorAction SilentlyContinue | Where-Object Name -eq "msedge.exe")) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-MicrosoftEdge_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Excel 2013</Name>
+    <ShortName>MSExcel2013</ShortName>
+    <Template>MSExcel2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Excel"; $Executable = "EXCEL.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Excel2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Excel 2016</Name>
+    <ShortName>MSExcel2016</ShortName>
+    <Template>MSExcel2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Excel"; $Executable = "EXCEL.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Excel2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Exchange 2016 Edge Transport Server</Name>
+    <ShortName>MSExchange2016EdgeTP</ShortName>
+    <Template>MSExchange2016EdgeTP.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ([Version](Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\ExchangeServer\V15\EdgeTransportRole" -ErrorAction SilentlyContinue).ConfiguredVersion -ge 15.1) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-MSExchange2016EdgeTP_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Exchange 2016 Mailbox Server</Name>
+    <ShortName>MSExchange2016MB</ShortName>
+    <Template>MSExchange2016MB.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ([Version](Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\ExchangeServer\V15\MailboxRole" -ErrorAction SilentlyContinue).ConfiguredVersion -ge 15.1) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-MSExchange2016MB_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Groove 2013</Name>
+    <ShortName>MSGroove2013</ShortName>
+    <Template>MSGroove2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Groove"; $Executable = "GROOVE.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Groove2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft InfoPath 2013</Name>
+    <ShortName>MSInfoPath2013</ShortName>
+    <Template>MSInfoPath2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "InfoPath"; $Executable = "INFOPATH.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-InfoPath2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Lync 2013</Name>
+    <ShortName>MSLync2013</ShortName>
+    <Template>MSLync2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Office\15.0" -Recurse -ErrorAction SilentlyContinue | Where {($_.PsChildName -eq "Lync" -and $_.Property -eq "InstallationDirectory")}) -or (Get-ChildItem -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0" -Recurse -ErrorAction SilentlyContinue | Where {($_.PsChildName -eq "Lync" -and $_.Property -eq "InstallationDirectory")})) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Lync2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Office 365</Name>
+    <ShortName>MSOffice365</ShortName>
+    <Template>MSOffice365.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$MinVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\ClickToRun\Configuration","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\ClickToRun\Configuration"); ForEach ($Path in $RegPaths) {$VersionToReport = [Version](Get-ItemProperty -Path "$Path" -Name "VersionToReport" -ErrorAction SilentlyContinue).VersionToReport; If ($VersionToReport -ge $MinVer) {$STIGRequired = $true}} If ($STIGRequired -eq $false) {$OfficeApps = @{Access = "MSACCESS.EXE"; Excel = "EXCEL.EXE"; Lync = "LYNC.EXE"; Outlook = "OUTLOOK.EXE"; PowerPoint = "POWERPNT.EXE"; Publisher = "MSPUB.EXE"; Word = "WINWORD.EXE"; Visio = "VISIO.EXE"; Project = "WINPROJ.EXE"}; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($ProductKey in $OfficeApps.Keys) {ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $OfficeApps[$ProductKey]); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer) {$STIGRequired = $true}}}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Office365_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Office System 2013</Name>
+    <ShortName>MSOfficeSystem2013</ShortName>
+    <Template>MSOfficeSystem2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Common"; $Executable = "CLVIEW.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-OfficeSystem2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Office System 2016</Name>
+    <ShortName>MSOfficeSystem2016</ShortName>
+    <Template>MSOfficeSystem2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Common"; $Executable = "CLVIEW.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-OfficeSystem2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft OneDrive</Name>
+    <ShortName>MSOneDrive</ShortName>
+    <Template>MSOneDrive.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Groove"; $Executable = "GROOVE.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}}; If ($STIGRequired -eq $false) {If ((Test-Path "$env:ProgramFiles\Microsoft OneDrive\OneDrive.exe") -or (Test-Path "$(${env:ProgramFiles(x86)})\Microsoft OneDrive\OneDrive.exe") -or (Test-Path "$((Get-UsersToEval -ProvideSingleUser).LocalPath)\AppData\Local\Microsoft\OneDrive\OneDrive.exe")) {$STIGRequired = $true}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-OneDrive_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft OneNote 2013</Name>
+    <ShortName>MSOneNote2013</ShortName>
+    <Template>MSOneNote2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "OneNote"; $Executable = "ONENOTE.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-OneNote2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft OneNote 2016</Name>
+    <ShortName>MSOneNote2016</ShortName>
+    <Template>MSOneNote2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "OneNote"; $Executable = "ONENOTE.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-OneNote2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Outlook 2013</Name>
+    <ShortName>MSOutlook2013</ShortName>
+    <Template>MSOutlook2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Outlook"; $Executable = "OUTLOOK.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Outlook2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Outlook 2016</Name>
+    <ShortName>MSOutlook2016</ShortName>
+    <Template>MSOutlook2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Outlook"; $Executable = "OUTLOOK.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Outlook2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft PowerPoint 2013</Name>
+    <ShortName>MSPowerPoint2013</ShortName>
+    <Template>MSPowerPoint2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "PowerPoint"; $Executable = "POWERPNT.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-PowerPoint2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft PowerPoint 2016</Name>
+    <ShortName>MSPowerPoint2016</ShortName>
+    <Template>MSPowerPoint2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "PowerPoint"; $Executable = "POWERPNT.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-PowerPoint2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Project 2013</Name>
+    <ShortName>MSProject2013</ShortName>
+    <Template>MSProject2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Project"; $Executable = "WINPROJ.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Project2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Project 2016</Name>
+    <ShortName>MSProject2016</ShortName>
+    <Template>MSProject2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Project"; $Executable = "WINPROJ.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Project2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Publisher 2013</Name>
+    <ShortName>MSPublisher2013</ShortName>
+    <Template>MSPublisher2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Publisher"; $Executable = "MSPUB.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Publisher2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Publisher 2016</Name>
+    <ShortName>MSPublisher2016</ShortName>
+    <Template>MSPublisher2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Publisher"; $Executable = "MSPUB.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Publisher2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft SharePoint Designer 2013</Name>
+    <ShortName>MSSPDesigner2013</ShortName>
+    <Template>MSSPDesigner2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-InstalledSoftware | Where DisplayName -Like "Microsoft SharePoint Designer 2013*") {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-SharePointDesigner2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Skype for Business 2016</Name>
+    <ShortName>MSSkype2016</ShortName>
+    <Template>MSSkype2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); $ProductVerKey = "Common\ProductVersion"; ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "Lync" -and $_.Property -eq "InstallationDirectory")}) {$LastProduct = [Version](Get-ItemProperty "$Path\$ProductVerKey" -ErrorAction SilentlyContinue).LastProduct; If ($LastProduct -ge $MinVer -and $LastProduct -lt $NextVer) {$STIGRequired = $true}}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-SkypeForBusiness2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft SQL Server 2014 Database</Name>
+    <ShortName>SQL2014DB</ShortName>
+    <Template>SQL2014DB.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$inst_64 = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server' -ErrorAction SilentlyContinue).InstalledInstances; ForEach ($i in $inst_64) {$p = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL' -ErrorAction SilentlyContinue).$i; If ((Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Edition -notlike "*Express*" -and [Version](Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Version -like "12.*") {$STIGRequired = $true}}} Catch{}; Try {$inst_86 = (Get-ItemProperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server' -ErrorAction SilentlyContinue).InstalledInstances; ForEach ($i in $inst_86) {$p = (Get-ItemProperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\Instance Names\SQL' -ErrorAction SilentlyContinue).$i; If ((Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Edition -notlike "*Express*" -and [Version](Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Version -like "12.*") {$STIGRequired = $true}}} Catch {}; $STIGRequired</DetectionCode>
+    <PsModule>Scan-SqlServer2014Database_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft SQL Server 2014 Instance</Name>
+    <ShortName>SQL2014Instance</ShortName>
+    <Template>SQL2014Instance.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$inst_64 = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server' -ErrorAction SilentlyContinue).InstalledInstances; ForEach ($i in $inst_64) {$p = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL' -ErrorAction SilentlyContinue).$i; If ((Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Edition -notlike "*Express*" -and [Version](Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Version -like "12.*") {$STIGRequired = $true}}} Catch{}; Try {$inst_86 = (Get-ItemProperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server' -ErrorAction SilentlyContinue).InstalledInstances; ForEach ($i in $inst_86) {$p = (Get-ItemProperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\Instance Names\SQL' -ErrorAction SilentlyContinue).$i; If ((Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Edition -notlike "*Express*" -and [Version](Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Version -like "12.*") {$STIGRequired = $true}}} Catch {}; $STIGRequired</DetectionCode>
+    <PsModule>Scan-SqlServer2014Instance_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft SQL Server 2016 Database</Name>
+    <ShortName>SQL2016DB</ShortName>
+    <Template>SQL2016DB.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$inst_64 = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server' -ErrorAction SilentlyContinue).InstalledInstances; ForEach ($i in $inst_64) {$p = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL' -ErrorAction SilentlyContinue).$i; If ([Version](Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Version -ge "13.0") {$STIGRequired = $true}}} Catch{}; $STIGRequired</DetectionCode>
+    <PsModule>Scan-SqlServer2016Database_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft SQL Server 2016 Instance</Name>
+    <ShortName>SQL2016Instance</ShortName>
+    <Template>SQL2016Instance.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$inst_64 = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server' -ErrorAction SilentlyContinue).InstalledInstances; ForEach ($i in $inst_64) {$p = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL' -ErrorAction SilentlyContinue).$i; If ([Version](Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\$p\Setup" -ErrorAction SilentlyContinue).Version -ge "13.0") {$STIGRequired = $true}}} Catch{}; $STIGRequired</DetectionCode>
+    <PsModule>Scan-SqlServer2016Instance_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Visio 2013</Name>
+    <ShortName>MSVisio2013</ShortName>
+    <Template>MSVisio2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Visio"; $Executable = "VISIO.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Visio2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Visio 2016</Name>
+    <ShortName>MSVisio2016</ShortName>
+    <Template>MSVisio2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Visio"; $Executable = "VISIO.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Visio2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Word 2013</Name>
+    <ShortName>MSWord2013</ShortName>
+    <Template>MSWord2013.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Word"; $Executable = "WINWORD.EXE"; $MinVer = [Version]"15.0.4420.1017"; $NextVer = [Version]"16.0.4229.1003"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\15.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\15.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Word2013_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Microsoft Word 2016</Name>
+    <ShortName>MSWord2016</ShortName>
+    <Template>MSWord2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$ProductKey = "Word"; $Executable = "WINWORD.EXE"; $MinVer = [Version]"16.0.4229.1003"; $NextVer = [Version]"16.0.10336.20039"; $RegPaths = @("HKLM:\SOFTWARE\Microsoft\Office\16.0","HKLM:\SOFTWARE\WOW6432Node\Microsoft\Office\16.0"); ForEach ($Path in $RegPaths) {If (Get-ChildItem -Path "$Path\$ProductKey" -Recurse -ErrorAction SilentlyContinue | Where-Object {($_.PsChildName -eq "InstallRoot" -and $_.Property -eq "Path")}) {$ExecutablePath = $(Join-Path -Path (Get-ItemProperty -Path $(Join-Path -Path $Path -ChildPath $ProductKey | Join-Path -ChildPath "InstallRoot")).Path -ChildPath $Executable); If (Test-Path -Path $ExecutablePath) {$ProductVersion = [Version](Get-Item $ExecutablePath).VersionInfo.ProductVersion; If ($ProductVersion -ge $MinVer -and $ProductVersion -lt $NextVer) {$STIGRequired = $true}}}} Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Word2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Mozilla Firefox</Name>
+    <ShortName>Firefox</ShortName>
+    <Template>Firefox.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ($IsLinux) {If ((Test-Path /usr/lib64/firefox/) -or (Test-Path /usr/lib/firefox/)) {$STIGRequired = $true}} Else {If (Get-InstalledSoftware | Where DisplayName -Like "Mozilla Firefox*") {$STIGRequired = $true}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-MozillaFirefox_Checks</PsModule>
+    <PSModuleVer>1.2023.5.16</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Oracle Java JRE 8 for Unix</Name>
+    <ShortName>JavaJRE8Unix</ShortName>
+    <Template>JavaJRE8_Unix.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ($IsLinux) {$Command = "java -version 2$([Char]62)$([Char]38)1 | Out-String"; $JavaVer = Invoke-Expression $Command -ErrorAction SilentlyContinue; If ($JavaVer -like "java*SE Runtime Environment*1.8.0*") {$STIGRequired = $true}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-JavaJRE8_Unix_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Oracle Java JRE 8 for Windows</Name>
+    <ShortName>JavaJRE8Windows</ShortName>
+    <Template>JavaJRE8_Windows.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_ComputerSystem).DomainRole -in @("0","1") -and (Get-InstalledSoftware | Where DisplayName -Like "Java 8*")) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-JavaJRE8_Windows_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Oracle Linux 7</Name>
+    <ShortName>Oracle7</ShortName>
+    <Template>Oracle7.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="Oracle Linux*' -and $OSRelease -like '*VERSION_ID="7.*') {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Oracle7_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Oracle Linux 8</Name>
+    <ShortName>Oracle8</ShortName>
+    <Template>Oracle8.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="Oracle Linux*' -and $OSRelease -like '*VERSION_ID="8.*') {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Oracle8_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>PostgreSQL 9.x</Name>
+    <ShortName>PgSQL9x</ShortName>
+    <Template>PgSQL9x.ckl</Template>
+    <DetectionCode>Return (Test-IsPostgresInstalled);</DetectionCode>
+    <PsModule>Scan-PostgreSQL9-x_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Red Hat Enterprise Linux 7</Name>
+    <ShortName>RHEL7</ShortName>
+    <Template>RHEL7.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="Red Hat Enterprise Linux*' -and $OSRelease -like '*VERSION_ID="7.*') {$STIGRequired = $true} ElseIf ($OSRelease -like '*NAME="RedHawk Linux*' -and $OSRelease -like '*VERSION_ID="7.*') {If ($(Get-Content /etc/redhat-release) -like "Red Hat Enterprise Linux*"){$STIGRequired = $true}};Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-RHEL7_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Red Hat Enterprise Linux 8</Name>
+    <ShortName>RHEL8</ShortName>
+    <Template>RHEL8.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="Red Hat Enterprise Linux*' -and $OSRelease -like '*VERSION_ID="8.*') {$STIGRequired = $true} ElseIf ($OSRelease -like '*NAME="RedHawk Linux*' -and $OSRelease -like '*VERSION_ID="8.*') {If ($(Get-Content /etc/redhat-release) -like "Red Hat Enterprise Linux*"){$STIGRequired = $true}}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-RHEL8_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Ubuntu 16.04</Name>
+    <ShortName>Ubuntu16</ShortName>
+    <Template>Ubuntu16.ckl</Template>
+    <DetectionCode>$STIGRequired = $false;Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="Ubuntu*' -and $OSRelease -like '*VERSION_ID="16.*') {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Ubuntu16_04_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Ubuntu 18.04</Name>
+    <ShortName>Ubuntu18</ShortName>
+    <Template>Ubuntu18.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="Ubuntu*' -and $OSRelease -like '*VERSION_ID="18.*') {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Ubuntu18_04_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Ubuntu 20.04</Name>
+    <ShortName>Ubuntu20</ShortName>
+    <Template>Ubuntu20.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {$OSRelease = Get-Content /etc/os-release -ErrorAction SilentlyContinue; If ($OSRelease -like '*NAME="Ubuntu*' -and $OSRelease -like '*VERSION_ID="20.*') {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Ubuntu20_04_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>VMware Horizon 7.13 Agent</Name>
+    <ShortName>HorizonAgent</ShortName>
+    <Template>VMwareHorizon7-13Agent.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-InstalledSoftware | Where {$_.DisplayName -eq "VMware Horizon Agent" -and $_.DisplayVersion -like "7.*"}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-VMwareHorizon7-13Agent_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>VMware Horizon 7.13 Client</Name>
+    <ShortName>HorizonClient</ShortName>
+    <Template>VMwareHorizon7-13Client.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-InstalledSoftware | Where {$_.DisplayName -eq "VMware Horizon Client" -and $_.DisplayVersion -like "5.*"}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-VMwareHorizon7-13Client_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>VMware Horizon 7.13 Connection Server</Name>
+    <ShortName>HorizonConnectionServer</ShortName>
+    <Template>VMwareHorizon7-13ConnectionServer.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (Get-InstalledSoftware | Where {$_.DisplayName -eq "VMware Horizon 7 Connection Server" -and $_.DisplayVersion -like "7.*"}) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-VMwareHorizon7-13ConnectionServer_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows 10</Name>
+    <ShortName>Win10</ShortName>
+    <Template>Win10.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows 10*") {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Windows10_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows 11</Name>
+    <ShortName>Win11</ShortName>
+    <Template>Win11.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows 11*") {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-Windows11_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows Firewall</Name>
+    <ShortName>WinFirewall</ShortName>
+    <Template>WinFirewall.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ([Version](Get-CimInstance Win32_OperatingSystem).Version -ge [Version]"6.1") {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-WindowsFirewall_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>false</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows Server 2008 R2 MS</Name>
+    <ShortName>WinServer2008R2MS</ShortName>
+    <Template>WinServer2008R2MS.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows*Server 2008 R2*") -and ((Get-CimInstance Win32_ComputerSystem).DomainRole -in @(2,3))) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-WindowsServer2008R2_MS_Checks</PsModule>
+    <PSModuleVer>1.2023.5.8</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows Server 2012 DC</Name>
+    <ShortName>WinServer2012DC</ShortName>
+    <Template>WinServer2012DC.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows*Server 2012*") -and ((Get-CimInstance Win32_ComputerSystem).DomainRole -in @(4,5))) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-WindowsServer2012R2_DC_Checks</PsModule>
+    <PSModuleVer>1.2023.5.17</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows Server 2012 MS</Name>
+    <ShortName>WinServer2012MS</ShortName>
+    <Template>WinServer2012MS.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If (((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows*Server 2012*") -and ((Get-CimInstance Win32_ComputerSystem).DomainRole -in @(2,3))) {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-WindowsServer2012R2_MS_Checks</PsModule>
+    <PSModuleVer>1.2023.5.16</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows Server 2016</Name>
+    <ShortName>WinServer2016</ShortName>
+    <Template>WinServer2016.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows*Server 2016*") {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-WindowsServer2016_Checks</PsModule>
+    <PSModuleVer>1.2023.5.17</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows Server 2019</Name>
+    <ShortName>WinServer2019</ShortName>
+    <Template>WinServer2019.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows*Server 2019*") {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-WindowsServer2019_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <STIG>
+    <Name>Windows Server 2022</Name>
+    <ShortName>WinServer2022</ShortName>
+    <Template>WinServer2022.ckl</Template>
+    <DetectionCode>$STIGRequired = $false; Try {If ((Get-CimInstance Win32_OperatingSystem).Caption -Like "*Windows*Server 2022*") {$STIGRequired = $true}; Return $STIGRequired} Catch {Return $STIGRequired}</DetectionCode>
+    <PsModule>Scan-WindowsServer2022_Checks</PsModule>
+    <PSModuleVer>1.2023.5.23</PSModuleVer>
+    <UserSettings>true</UserSettings>
+    <ConfigFileScan>false</ConfigFileScan>
+    <Classification>UNCLASSIFIED</Classification>
+  </STIG>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <DigestValue>1vLybWKSeIFR3VCbAAiM0sPziZbBZ9h/7dSERsZGiwc=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>JMbZQjWrAY+N09qd8HeEc1RVqZNSBZdjiPg9PZBKqL3hliRbYb609myzdKzkUWexHwMnddyLJYz1druzVlVMQS9jiFzqI6b+1MgamNltx33S5ob7N2EQph3/SJIs/LxDotnxbz7Ylxphbyp6iUknorIyltdZZR77MeOvscVrn/FqrQOnY2UDkzhwz+bQMA0Nt3OW+UgjIdR56CKAs3ADFGxq/nFDaYJOe2192crZMGdSIgHj9ZdoGkBwX1zC8qUMs/B0N8nNUGhhTKPyzhGycXUNI+g3RaD5zhrcfK24WSTdr4ccDnMQexMP0mLhFT89jGNk/5G7+N4wEukm52yAmw==</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIEejCCA2KgAwIBAgIEAwIE1zANBgkqhkiG9w0BAQsFADBaMQswCQYDVQQGEwJVUzEYMBYGA1UEChMPVS5TLiBHb3Zlcm5tZW50MQwwCgYDVQQLEwNEb0QxDDAKBgNVBAsTA1BLSTEVMBMGA1UEAxMMRE9EIElEIENBLTU5MB4XDTIwMDcxNTAwMDAwMFoXDTI1MDQwMjEzMzgzMlowaTELMAkGA1UEBhMCVVMxGDAWBgNVBAoTD1UuUy4gR292ZXJubWVudDEMMAoGA1UECxMDRG9EMQwwCgYDVQQLEwNQS0kxDDAKBgNVBAsTA1VTTjEWMBQGA1UEAxMNQ1MuTlNXQ0NELjAwMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANv2fdTmx2dNPQ47F8kmvU+g20/sFoF+DS3k2GcMduuIXxYFJyMMPAvTJuobeJlX6P6sr5jAKhXXsoV4lT2boWw583Snl6cuSfqMbVowIJ1sCffN7N0VXsLVdOt1u5GCKs4/jXH7MeEOE0oJsgEjjE1IZc5tEqj++s1N1EUY+jf/zc8QHDjy5X88XBTzKVhwvczZVbRahrcmYv0k4we3ndwTl5nXYizSwi96CZuqzrInWbLSsRLNyNZZVo7J5bZ+30dv/hZvq6FqxfAeM3pEDrvbfFkWXzaISqF1bVbsMlACUBf/JFbSGtmMsU1ABfXKPalTWYJKP58dICHcUocZhL0CAwEAAaOCATcwggEzMB8GA1UdIwQYMBaAFHUJphUTroc8+nOUAPLw9Xm5snIUMEEGA1UdHwQ6MDgwNqA0oDKGMGh0dHA6Ly9jcmwuZGlzYS5taWwvY3JsL0RPRElEQ0FfNTlfTkNPREVTSUdOLmNybDAOBgNVHQ8BAf8EBAMCB4AwFgYDVR0gBA8wDTALBglghkgBZQIBCyowHQYDVR0OBBYEFFbrF3OpzfdsZkN1zTfv++oaLCRRMGUGCCsGAQUFBwEBBFkwVzAzBggrBgEFBQcwAoYnaHR0cDovL2NybC5kaXNhLm1pbC9zaWduL0RPRElEQ0FfNTkuY2VyMCAGCCsGAQUFBzABhhRodHRwOi8vb2NzcC5kaXNhLm1pbDAfBgNVHSUEGDAWBgorBgEEAYI3CgMNBggrBgEFBQcDAzANBgkqhkiG9w0BAQsFAAOCAQEAQknaIAXDnyqshmyhuOZS4nBtSydnZrdB8Je0JCq2TTRA4dkNvrswe0kZgA7UjlY1X/9PtQeIwaMrcvdFi+dqzD1bbW/LX5tH/1oMOp4s+VkGfl4xUUxUGjO6QTVOeLyN2x+DBQU11DhKEq9BRCxUGgclFn1iqxi5xKmLaQ3XuRWRGCkb+rXejWR+5uSTognxCuoLp95bqu3JL8ecyF46+VSoafktAGot2Uf3qmwWdMHFBdwzmJalbC4j09I1qJqcJH0p8Wt34zRw/hSr3f+xDEDP8GNL2ciDm7aN0GKy67ugjgMmPXAv7A4/keCuN/dsNS1naNyqzc5AhTAF+o/21g==</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</List>
