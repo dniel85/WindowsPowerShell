@@ -1,0 +1,1 @@
+﻿if(!(Test-Path "N:\Transfer\For Darrell")){New-Item -Path "N:\Transfer\For Darrell" -ItemType Directory}
