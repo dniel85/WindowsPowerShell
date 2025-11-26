@@ -1,6 +1,7 @@
 [cmdletbinding()]
 param(
-    [parameter(mandatory = $true)] 
+    [parameter(mandatory = $true)]
+    #[int][ValidateRange(1,8)] #Allows only 1-8 hours  
     [int]$hours 
     )
 $hours = ($hours *60)
