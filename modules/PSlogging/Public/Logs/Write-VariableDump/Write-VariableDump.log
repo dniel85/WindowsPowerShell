@@ -1,0 +1,1106 @@
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 08:46:16 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 08:46:37 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: True
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [input] | VAR: 
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [MyInvocation] | VAR: System.Management.Automation.InvocationInfo
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [PSBoundParameters] | VAR: Key              Value
+---              -----
+IncludeAutomatic True
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [PSCmdlet] | VAR: System.Management.Automation.PSScriptCmdlet
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [PSCommandPath] | VAR: C:\Users\darrell.nielsen\Documents\WindowsPowerShell\Modules\pslogging\Public\Write-VariableDump.ps1
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [PSScriptRoot] | VAR: C:\Users\darrell.nielsen\Documents\WindowsPowerShell\Modules\pslogging\Public
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 08:46:43 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: True
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [input] | VAR: 
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [MyInvocation] | VAR: System.Management.Automation.InvocationInfo
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [PSBoundParameters] | VAR: Key              Value
+---              -----
+IncludeAutomatic True
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [PSCmdlet] | VAR: System.Management.Automation.PSScriptCmdlet
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [PSCommandPath] | VAR: C:\Users\darrell.nielsen\Documents\WindowsPowerShell\Modules\pslogging\Public\Write-VariableDump.ps1
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [PSScriptRoot] | VAR: C:\Users\darrell.nielsen\Documents\WindowsPowerShell\Modules\pslogging\Public
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 08:47:13 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:20 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:21 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:22 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:02:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [true] | VAR: True
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [false] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [IncludeAutomatic] | VAR: False
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumAliasCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumDriveCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumErrorCount] | VAR: 256
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumFunctionCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [MaximumVariableCount] | VAR: 4096
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [null] | VAR: Unable to stringify variable
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [Scope] | VAR: 0
+2026-02-20 09:03:23 [DEBUG] [L23] VAR [true] | VAR: True
