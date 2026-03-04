@@ -1,4 +1,0 @@
-﻿# powershellScripts
-
-
-Token for this repo is saved in googledrive under git-tokens 
