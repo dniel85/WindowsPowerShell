@@ -1,0 +1,43 @@
+2026-02-19 14:45:46 [INFO] [L5] Detected variable | VAR: Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName                                                                                                                     
+-------  ------    -----      -----     ------     --  -- -----------                                                                                                                     
+    323      24    47300      34100       0.89  10860   2 msedge                                                                                                                          
+    241       9     2460      10040       0.05  11092   2 msedge                                                                                                                          
+    430      66   479556     535728      21.91  11500   2 msedge                                                                                                                          
+   2428      89   185380     351592      33.09  11784   2 msedge                                                                                                                          
+    192      12    13092      24392       0.45  12260   2 msedge                                                                                                                          
+    651      45   149328     201872       9.84  12628   2 msedge                                                                                                                          
+    472      48   264488     321152      11.77  16356   2 msedge                                                                                                                          
+   1112      38   189576     232172       8.59  18204   2 msedge                                                                                                                          
+    439      21    32240      57344       0.28  20028   2 msedge                                                                                                                          
+    277      23    26504      57116       0.22  21196   2 msedge                                                                                                                          
+    463      59   287976     342700      12.95  22904   2 msedge                                                                                                                          
+    246      14     9388      28324       0.11  24596   2 msedge                                                                                                                          
+    248      15     9008      23540       0.19  25200   2 msedge                                                                                                                          
+    281      23    24836      52684       0.25  26184   2 msedge                                                                                                                          
+    472      38   105144     166208       5.33  27964   2 msedge                                                                                                                          
+    218      19    19264      33232       0.13  29768   2 msedge                                                                                                                          
+    256      24    32212      57508       0.42  29816   2 msedge                                                                                                                          
+    538      52    33988      68436       9.28  31272   2 msedge                                                                                                                          
+    169      12     8120      17700       0.06  33260   2 msedge
+2026-02-19 14:45:48 [INFO] [L12] starting sleep...
+2026-02-19 14:45:48 [INFO] [L14] Detected variable | VAR: C:\Users\darrell.nielsen\AppData\Local\Microsoft\Edge\User Data
+2026-02-19 14:45:48 [INFO] [L16] Detected variable | VAR: C:\Users\darrell.nielsen\AppData\Local\Microsoft\Edge\User Data\Default\Cache
+2026-02-19 14:45:49 [INFO] [L20] restarting Edge.exe
+2026-02-19 14:45:49 [INFO] [L26] end of script
+2026-02-19 14:48:36 [INFO] [L5] Detected variable | VAR: Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName                                                                                                                     
+-------  ------    -----      -----     ------     --  -- -----------                                                                                                                     
+    212      18    17860      32544       0.06   2544   2 msedge                                                                                                                          
+    180      10     2460      10052       0.03  12600   2 msedge                                                                                                                          
+    177      11    11268      21964       0.23  13080   2 msedge                                                                                                                          
+    659      45   140412     200044       5.30  15864   2 msedge                                                                                                                          
+    399      29    25264      58244       2.64  16640   2 msedge                                                                                                                          
+    843      29   137640     172772       2.56  19100   2 msedge                                                                                                                          
+    259      15     9512      28308       0.06  21376   2 msedge                                                                                                                          
+    240      14     8840      22932       0.05  23180   2 msedge                                                                                                                          
+    447      33    95860     154388       4.06  30704   2 msedge                                                                                                                          
+   1925      68   117020     264888       7.75  32928   2 msedge
+2026-02-19 14:48:38 [INFO] [L12] starting sleep...
+2026-02-19 14:48:38 [INFO] [L14] Detected variable | VAR: C:\Users\darrell.nielsen\AppData\Local\Microsoft\Edge\User Data
+2026-02-19 14:48:38 [INFO] [L16] Detected variable | VAR: C:\Users\darrell.nielsen\AppData\Local\Microsoft\Edge\User Data\Default\Cache
+2026-02-19 14:48:38 [INFO] [L20] restarting Edge.exe
+2026-02-19 14:48:38 [INFO] [L26] end of script

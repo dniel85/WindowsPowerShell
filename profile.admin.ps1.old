@@ -1,0 +1,89 @@
+#Admin profile for powershell 5
+write-host @'
+
+                 Preloaded Variables:
+   **************************************************
+   *     $WinServers   =  List all Windows servers. *
+   *     $LinuxServers =  List all Linux servers.   *
+   *     $Users        =  All AD Users.             *
+   *     $modules      =  PSModulePath.             * 
+   *     $Scripts      =  PSScriptPath.             *
+   *                                                *
+   **************************************************
+
+'@ -ForegroundColor DarkYellow
+write-host @'
+   **************************************************
+   *         RUNNING AS ADMINISTRATOR               *
+   **************************************************
+'@ -ForegroundColor darkRed
+function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+      write-host "[" -ForegroundColor DarkYellow -nonewline
+      write-host "$env:username@$env:computername " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor DarkYellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor DarkYellow -NoNewline
+		return "$dollarSi "
+		}
+prompt
+
+function df {Get-CimInstance Win32_LogicalDisk -filter "DriveType=3" | 
+               select-Object deviceID, VolumeName,
+               @{Name="Size(GB)";Expression={[math]::round($_.Size/1GB,2)}},
+               @{Name="Free(GB)";Expression={[math]::round($_.FreeSpace/1GB,2)}},
+               @{Name="Used(GB)";Expression={[math]::round(($_.Size - $_.FreeSpace)/1GB,2)}},
+               @{Name="%Used";Expression={ $percent = [math]::round((($_.Size - $_.FreeSpace)/$_.Size)*100,2)}} | ft 
+      }
+function du {
+    param([string]$Path = ".")
+    $results = @()
+    Get-ChildItem -Directory -Force $Path -ErrorAction SilentlyContinue |
+    ForEach-Object {
+        $currentDir = $_.FullName
+        try {
+            $size = Get-ChildItem -Recurse -Force $currentDir -ErrorAction Stop |
+                    Where-Object { -not $_.PSIsContainer } |
+                    Measure-Object Length -Sum |
+                    Select-Object -ExpandProperty Sum
+            $results += [pscustomobject]@{
+                Directory = $currentDir
+                SizeGB    = [math]::Round($size / 1GB, 2)
+                IsAccessDenied = $false
+            }
+        }
+        catch [System.UnauthorizedAccessException] {
+            $results += [pscustomobject]@{
+                Directory = $currentDir
+                SizeGB    = "     Insufficent Permissions"
+                IsAccessDenied = $true
+            }
+        }
+    }
+    $results = $results | Sort-Object {
+        if ($_.'SizeGB' -is [double]) { $_.'SizeGB' } else { -1 }
+    } -Descending
+    # Custom table output
+    "{0,-70} {1,10}" -f "Directory","SizeGB"
+    "{0,-70} {1,10}" -f "---------","------"
+    foreach ($r in $results) {
+        if ($r.IsAccessDenied) {
+            Write-Host ("{0,-70} {1,10}" -f $r.Directory, $r.SizeGB) -ForegroundColor Yellow
+        }
+        else {
+            Write-Host ("{0,-70} {1,10}" -f $r.Directory, $r.SizeGB)
+        }
+    }
+}
+set-location -Path $env:USERPROFILE
+New-Variable -name WinServers -value  @(get-adcomputer -Filter {operatingsystem -like "*windows server*" -and Enabled -eq "True"}).name
+New-Variable -name LinuxServers -value  @(get-adcomputer -Filter {operatingsystem -like "*Linux*" -and Enabled -eq "True"}).name
+New-Variable -Name Users -Value @(get-aduser -Filter * |Select-Object name,samaccountname,enabled,distinguishedname)
+
+New-variable -name Scripts -value "$env:userprofile\documents\windowspowershell\scripts"
+New-variable -name Modules -value "$env:userprofile\documents\windowspowershell\modules"

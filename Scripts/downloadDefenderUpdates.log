@@ -1,0 +1,15 @@
+2026-02-18 12:39:24 [INFO] [5] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64
+2026-02-18 12:39:24 [INFO] [6] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=121721&arch=x86
+2026-02-18 12:45:04 [INFO] [5] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64
+2026-02-18 12:45:04 [INFO] [6] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=121721&arch=x86
+2026-02-18 12:45:04 [INFO] [9] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=187316&arch=x64&nri=true
+2026-02-18 12:45:04 [INFO] [10] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=187316&arch=x86&nri=true
+2026-02-18 12:45:04 [INFO] [17] Testing boolian True
+2026-02-18 12:45:04 [INFO] [19] Testing boolian True
+2026-02-18 12:46:57 [INFO] [5] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64
+2026-02-18 12:46:57 [INFO] [6] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=121721&arch=x86
+2026-02-18 12:46:57 [INFO] [9] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=187316&arch=x64&nri=true
+2026-02-18 12:46:57 [INFO] [10] Detected variable | VAR: https://go.microsoft.com/fwlink/?LinkID=187316&arch=x86&nri=true
+2026-02-18 12:46:57 [INFO] [17] Testing boolian True
+2026-02-18 12:46:57 [INFO] [19] Testing boolian True
+2026-02-18 12:49:51 [INFO] [23] Invokeing WebRequest on https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64 outfile = C:\Users\darrell.nielsen\Desktop\DefenderUpdates\wd_dfs\x64\mpam-fe.exe

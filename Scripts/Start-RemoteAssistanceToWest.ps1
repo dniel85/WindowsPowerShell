@@ -1,0 +1,1 @@
+﻿c:\windows\system32\msra.exe /offerra gxn-adm

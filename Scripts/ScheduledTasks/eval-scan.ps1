@@ -1,0 +1,1 @@
+﻿D:\Evaluate-STIG_1.2501.2\Evaluate-STIG\Evaluate-STIG.ps1  -SelectSTIG WinServer2022 -Output CombinedCKLB -VulnTimeout 15 -FileSearchTimeout 240 -PreviousToKeep 1 -ScanType Classified -AFPath 'D:\Evaluate-STIG_1.2501.2\Evaluate-STIG\AnswerFiles' -OutputPath 'D:\STIG Scan GNEXT' -ComputerName 'D:\STIG Scan GNEXT\GNEXT_servers.txt' 

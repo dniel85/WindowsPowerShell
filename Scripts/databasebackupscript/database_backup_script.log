@@ -1,0 +1,1130 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20251125184247
+Username: GNEXT\darrell.nielsen.adm
+RunAs User: GNEXT\darrell.nielsen.adm
+Configuration Name: 
+Machine: GXE-ADM (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 16596
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.log
+sqlcmd.exe is NOT installed on this system.
+sqlcmd.exe was not found in the script directory (C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript). 'n sqlcmd.msi can be installed from the official Microsoft github repository at: 
+ 
+        github.com/microsoft/go-sqlcmd/releases
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm Write-Host "test /n test"
+test /n test
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm Write-Host "test \n test"
+test \n test
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm Write-Host "test n` test"
+test n test
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm Write-Host "test `n test"
+test 
+ test
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm         Write-Host "sqlcmd.exe was not found in the script directory ($PSScriptRoot). `nsqlcmd.msi can be installed from the official Microsoft github repository at: `n `
+The string is missing the terminator: ".
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString
+
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm         Write-Host "sqlcmd.exe was not found in the script directory ($PSScriptRoot). `nsqlcmd.msi can be installed from the official Microsoft github repository at: `n `
+        github.com/microsoft/go-sqlcmd/releases" -ForegroundColor Cyan 
+sqlcmd.exe was not found in the script directory (). 
+sqlcmd.msi can be installed from the official Microsoft github repository at: 
+ 
+        github.com/microsoft/go-sqlcmd/releases
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+Transcript started, output file is C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.log
+sqlcmd.exe is NOT installed on this system.
+sqlcmd.exe was not found in the script directory (C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript). 
+sqlcmd.msi can be installed from the official Microsoft github repository at: 
+ 
+        github.com/microsoft/go-sqlcmd/releases
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm CommandInvocation(Remove-PSBreakpoint): "Remove-PSBreakpoint"
+>> ParameterBinding(Remove-PSBreakpoint): name="Id"; value="0"
+Transcript started, output file is C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.log
+sqlcmd.exe is NOT installed on this system.
+You can install sqlcmd from the file located at: \n C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\sqlcmd*.msi
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+Transcript started, output file is C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.log
+sqlcmd.exe is NOT installed on this system.
+darrell.nielsen.adm TerminatingError(Write-Host): "Cannot bind parameter 'ForegroundColor'. Cannot convert value "orange" to type "System.ConsoleColor". Error: "Unable to match the identifier name orange to a valid enumerator name. Specify one of the following enumerator names and try again:
+Black, DarkBlue, DarkGreen, DarkCyan, DarkRed, DarkMagenta, DarkYellow, Gray, DarkGray, Blue, Green, Cyan, Red, Magenta, Yellow, White""
+Write-Host : Cannot bind parameter 'ForegroundColor'. Cannot convert value "orange" to type "System.ConsoleColor". 
+Error: "Unable to match the identifier name orange to a valid enumerator name. Specify one of the following enumerator 
+names and try again:
+Black, DarkBlue, DarkGreen, DarkCyan, DarkRed, DarkMagenta, DarkYellow, Gray, DarkGray, Blue, Green, Cyan, Red, 
+Magenta, Yellow, White"
+At C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.ps1:25 
+char:111
++ ...  the file located at: `n $sqlCmdExpectedPath" -ForegroundColor orange
++                                                                    ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Write-Host], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.WriteHostCommand
+Write-Host : Cannot bind parameter 'ForegroundColor'. Cannot convert value "orange" to type "System.ConsoleColor". Error: "Unable to match the identifier name orange to a valid enumerator name. Specify one of the following
+enumerator names and try again:
+Black, DarkBlue, DarkGreen, DarkCyan, DarkRed, DarkMagenta, DarkYellow, Gray, DarkGray, Blue, Green, Cyan, Red, Magenta, Yellow, White"
+At C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.ps1:25 char:111
++ ...  the file located at: `n $sqlCmdExpectedPath" -ForegroundColor orange
++                                                                    ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Write-Host], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.WriteHostCommand
+
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+Transcript started, output file is C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.log
+sqlcmd.exe is NOT installed on this system.
+You can install sqlcmd from the file located at: 
+ C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\sqlcmd*.msi
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+Transcript started, output file is C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\database_backup_script.log
+sqlcmd.exe is NOT installed on this system.
+You can install sqlcmd from the file located at: 
+C:\Users\darrell.nielsen.adm\Documents\windowspowershell\Scripts\databasebackupscript\sqlcmd-amd64.msi
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm        Write-Host "sqlcmd.exe was not found in the script directory ($PSScriptRoot). `nsqlcmd.msi can be installed from the official Microsoft github repository at: `n `
+        github.com/microsoft/go-sqlcmd/releases" -ForegroundColor Cyan 
+sqlcmd.exe was not found in the script directory (). 
+sqlcmd.msi can be installed from the official Microsoft github repository at: 
+ 
+        github.com/microsoft/go-sqlcmd/releases
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm get-psbreakpoint
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror -eq 1){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        $confirm = Read-Host "Do you wish to continue [Y/n?]"
+        if($confirm -ne "YES" -or $confirm -ne "Y") { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+y
+WARNING: Copy script cancelled by user.
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror -eq 1){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        $confirm = Read-Host "Do you wish to continue [Y/n?]"
+        if($confirm -ne "YES" -or $confirm -ne "Y") { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+darrell.nielsen.adm TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror -eq 1){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        $confirm = Read-Host "Do you wish to continue [Y/n?]"
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror -eq 1){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        $confirm = Read-Host "Do you wish to continue [Y/n?]"
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+FOO
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror -eq 1){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        $confirm = Read-Host "Do you wish to continue [Y/n?]"
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+FOO
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror -eq 1){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        $confirm = Read-Host "Do you wish to continue [Y/n?]"
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+FOO
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror -eq 1){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        $confirm = Read-Host "Do you wish to continue [Y/n?]"
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+no
+WARNING: Copy script cancelled by user.
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-warning "Do you wish to continue [Y/n?]"
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+WARNING: Do you wish to continue [Y/n?]
+FOO
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-Host "Do you wish to continue [Y/n?]" -ForegroundColor Yellow
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+Do you wish to continue [Y/n?]
+FOO
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "`nThe -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-Host "Do you wish to continue [Y/n?]" -ForegroundColor Yellow
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"1
+WARNING: 
+The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+Do you wish to continue [Y/n?]
+darrell.nielsen.adm TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-Host "Do you wish to continue [Y/n?]" -ForegroundColor Yellow -NoNewline 
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"1
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+Do you wish to continue [Y/n?]
+darrell.nielsen.adm TerminatingError(): "The pipeline has been stopped."
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-Host "Do you wish to continue [Y/n?]" -ForegroundColor Yellow -NoNewline 
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"1
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+Do you wish to continue [Y/n?]
+FOO 1
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-Host "Do you wish to continue [Y/n?]" -ForegroundColor Yellow -NoNewline 
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"1
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+Do you wish to continue [Y/n?]
+ y
+WARNING: Copy script cancelled by user.
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-Host "Do you wish to continue [Y/n?]" -ForegroundColor Yellow -NoNewline 
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"1
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+Do you wish to continue [Y/n?]
+FOO 1
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm $Mirror = 1
+
+
+if($Mirror){
+        Write-warning "The -Mirror flag will overwrite and delete files in the destination directory to match the source!`nReview your destination patchs carefully before continuing."
+        Write-Host "Do you wish to continue [Y/n?] " -ForegroundColor Yellow -NoNewline 
+        $confirm = read-host
+        if($confirm -notlike "Y*" ) { 
+                Write-Host $confirm
+                write-warning "Copy script cancelled by user."
+                exit 1
+        }
+}
+
+Write-Host "FOO"1
+WARNING: The -Mirror flag will overwrite and delete files in the destination directory to match the source!
+Review your destination patchs carefully before continuing.
+Do you wish to continue [Y/n?]
+FOO 1
+ADMIN
+ [C:\Users\darrell.nielsen.adm]
+ >
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like $shome){
+            $currentPath = "~" + $currentPath.substring($shome.length)
+      }
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+		return "$ " 
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+darrell.nielsen.adm cd .\Documents
+[
+darrell.nielsen.adm
+ADMIN
+ C:\Users\darrell.nielsen.adm\Documents]
+$
+darrell.nielsen.adm TerminatingError(Resolve-Path): "Cannot process argument because the value of argument "path" is not valid. Change the value of the "path" argument and run the operation again."
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like $shome){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+		return "$ " 
+		}
+prompt
+
+Missing closing '}' in statement block or type definition.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndCurlyBrace
+
+[
+darrell.nielsen.adm
+ADMIN
+ C:\Users\darrell.nielsen.adm\Documents]
+$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like $shome){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+		return "$ " 
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ C:/Users/darrell.nielsen.adm/Documents]
+$
+[
+darrell.nielsen.adm
+ADMIN
+ C:/Users/darrell.nielsen.adm/Documents]
+$
+darrell.nielsen.adm cd ~
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+darrell.nielsen.adm cd .\Documents
+[
+darrell.nielsen.adm
+ADMIN
+ C:/Users/darrell.nielsen.adm/Documents]
+$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like $shome*){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+		return "$ " 
+		}
+prompt
+
+At line:4 char:36
++       if($currentPath -like $shome*){
++                                    ~
+You must provide a value expression following the '*' operator.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedValueExpression
+
+[
+darrell.nielsen.adm
+ADMIN
+ C:/Users/darrell.nielsen.adm/Documents]
+$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+		return "$ " 
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents]
+$
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents]
+$
+darrell.nielsen.adm cd .\windowspowershell
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+darrell.nielsen.adm ls
+
+
+    Directory: C:\Users\darrell.nielsen.adm\Documents\windowspowershell
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/19/2025   4:44 PM                files
+d-----         12/1/2025   7:53 PM                Modules
+d-----         12/2/2025   5:14 PM                Scripts
+-a----         12/1/2025   7:53 PM            658 Microsoft.PowerShell_profile.ps1
+-a----         12/2/2025   7:18 PM           1699 profile.admin.ps1
+-a----         12/1/2025   7:53 PM           1316 profile.user.ps1
+-a----         9/17/2025   7:41 PM           6260 README.md
+
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $yellow = "`e[32m"
+		return "$yellow$ " 
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+e[32m$
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+e[32m$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+       # $yellow = "`e[32m"
+		return "$yellow$ " 
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return $dollarSi
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return $dollarSi+""
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return "$dollarSi"
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell]
+$
+
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath ]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return `'
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+' : The term ''' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:15 char:10
++         return `'
++                ~~
+    + CategoryInfo          : ObjectNotFound: (':String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+' : The term ''' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that
+the path is correct and try again.
+At line:15 char:10
++         return `'
++                ~~
+    + CategoryInfo          : ObjectNotFound: (':String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+' : The term ''' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:15 char:10
++         return `'
++                ~~
+    + CategoryInfo          : ObjectNotFound: (':String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath ]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return '`'
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+`
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+`
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath ]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return '`t'
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+`t
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+`t
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath ]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return `t
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+	 : The term '	' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:15 char:10
++         return `t
++                ~~
+    + CategoryInfo          : ObjectNotFound: (	:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+	 : The term '	' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that
+the path is correct and try again.
+At line:15 char:10
++         return `t
++                ~~
+    + CategoryInfo          : ObjectNotFound: (	:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+	 : The term '	' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:15 char:10
++         return `t
++                ~~
+    + CategoryInfo          : ObjectNotFound: (	:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath ]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return ""
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath ]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return "$ "
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+$
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+$
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath ]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return "$dollarSi "
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+
+darrell.nielsen.adm pwd
+
+Path
+----
+C:\Users\darrell.nielsen.adm\Documents\windowspowershell
+
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~/Documents/windowspowershell ]
+$
+
+darrell.nielsen.adm cd ~
+[
+darrell.nielsen.adm
+ADMIN
+ ~ ]
+$
+
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return "$dollarSi "
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return "$dollarSi"
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+
+darrell.nielsen.adm function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+
+
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return "$dollarSi "
+		}
+prompt
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+
+[
+darrell.nielsen.adm
+ADMIN
+ ~]
+$
+

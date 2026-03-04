@@ -1,0 +1,80 @@
+2026-02-19 15:06:32 [INFO] [L1] start of script
+2026-02-19 15:06:32 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:06:32 [WARN] [L11] Detected variable | VAR: this is a warn message
+2026-02-19 15:06:32 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:06:32 [INFO] [L18] end of script
+2026-02-19 15:06:53 [INFO] [L1] start of script
+2026-02-19 15:06:53 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:06:53 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:06:53 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:06:53 [INFO] [L18] end of script
+2026-02-19 15:07:55 [INFO] [L1] start of script
+2026-02-19 15:07:55 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:33 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:33 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:34 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:43 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:43 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:43 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:44 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:44 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:44 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:44 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:45 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:45 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:45 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:45 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:46 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:46 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:46 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:09:47 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:14:54 [INFO] [L1] start of script
+2026-02-19 15:14:54 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:14:54 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:14:54 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:14:54 [INFO] [L18] end of script
+2026-02-19 15:15:00 [INFO] [L1] start of script
+2026-02-19 15:15:00 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:00 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:00 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:00 [INFO] [L18] end of script
+2026-02-19 15:15:21 [INFO] [L1] start of script
+2026-02-19 15:15:21 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:21 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:21 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:21 [INFO] [L18] end of script
+2026-02-19 15:15:24 [INFO] [L1] start of script
+2026-02-19 15:15:24 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:24 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:24 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:24 [INFO] [L18] end of script
+2026-02-19 15:15:25 [INFO] [L1] start of script
+2026-02-19 15:15:25 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:25 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:25 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:25 [INFO] [L18] end of script
+2026-02-19 15:15:25 [INFO] [L1] start of script
+2026-02-19 15:15:25 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:25 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:25 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:25 [INFO] [L18] end of script
+2026-02-19 15:15:26 [INFO] [L1] start of script
+2026-02-19 15:15:26 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:26 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:26 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:26 [INFO] [L18] end of script
+2026-02-19 15:15:26 [INFO] [L1] start of script
+2026-02-19 15:15:26 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:26 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:26 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:26 [INFO] [L18] end of script
+2026-02-19 15:15:26 [INFO] [L1] start of script
+2026-02-19 15:15:26 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:26 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:26 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:26 [INFO] [L18] end of script
+2026-02-19 15:15:27 [INFO] [L1] start of script
+2026-02-19 15:15:27 [INFO] [L5] Detected variable | VAR: this is a message inside of a function
+2026-02-19 15:15:27 [DEBUG] [L7] writing to host this is a message inside of a function
+2026-02-19 15:15:27 [INFO] [L14] writing to host this is a warn message
+2026-02-19 15:15:27 [INFO] [L18] end of script

@@ -1,0 +1,47 @@
+
+#user profile for powershell 5
+$variables = @'
+
+                 Preloaded Variables:
+   **************************************************
+   *     $WinServers   =  List all Windows servers. *
+   *     $LinuxServers =  List all Linux servers.   *
+   *     $Users        =  All AD Users.             *
+   *     $modules      =  PSModulePath.             * 
+   *     $Scripts      =  PSScriptPath.             *
+   *                                                *
+   **************************************************
+
+'@
+
+function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+      write-host "[" -ForegroundColor DarkYellow -nonewline
+      write-host "$env:username@$env:computername " -ForegroundColor Cyan -nonewline
+		write-host " $currentPath]" -Foregroundcolor DarkYellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor DarkYellow -NoNewline
+		return "$dollarSi "
+		}
+prompt
+
+function sudo {start-process powershell -verb runAs}
+
+
+set-location -Path $env:USERPROFILE
+New-Variable -name WinServers -value  @(get-adcomputer -Filter {operatingsystem -like "*windows server*" -and Enabled -eq "True"}).name
+New-Variable -name LinuxServers -value  @(get-adcomputer -Filter {operatingsystem -like "*Linux*" -and Enabled -eq "True"}).name
+New-Variable -Name Users -Value @(get-aduser -Filter * |Select-Object name,samaccountname,enabled,distinguishedname)
+
+
+New-variable -name Scripts -value "$env:userprofile\documents\windowspowershell\scripts"
+New-variable -name Modules -value "$env:userprofile\documents\windowspowershell\modules"
+
+
+
+
+

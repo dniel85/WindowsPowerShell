@@ -1,0 +1,165 @@
+write-host @'
+
+                 Preloaded Variables:
+   **************************************************
+   *     $WinServers   =  List all Windows servers. *
+   *     $LinuxServers =  List all Linux servers.   *
+   *     $Users        =  All AD Users.             *
+   *     $modules      =  PSModulePath.             * 
+   *     $Scripts      =  PSScriptPath.             *
+   *                                                *
+   **************************************************
+
+'@ -ForegroundColor Yellow
+write-host @'
+   **************************************************
+   *         RUNNING AS ADMINISTRATOR               *
+   **************************************************
+'@ -ForegroundColor Red
+function prompt {
+      $currentPath = $(Get-location).Path
+      $shome = [Environment]::GetFolderPath('UserProfile')
+      if($currentPath -like "$shome*"){
+            $currentPath = "~" + $currentPath.substring($shome.length) -replace '\\','/'
+      }
+      else{$currentPath = $currentPath -replace '\\','/'}
+      write-host "[" -ForegroundColor Yellow -nonewline
+      write-host "$env:username@$env:computername " -ForegroundColor Cyan -nonewline
+		write-host "ADMIN" -ForegroundColor Red -nonewline
+      write-host " PS7" -ForegroundColor DarkCyan -nonewline
+		write-host " $currentPath]" -Foregroundcolor Yellow -nonewline
+        $dollarSi = Write-Host "$ " -ForegroundColor Yellow -NoNewline
+		return "$dollarSi "
+		}
+prompt
+
+function du {
+    param([string]$Path = ".")
+
+    $Red   = "$([char]27)[31m"
+    $Reset = "$([char]27)[0m"
+
+    Get-ChildItem -Directory -Force $Path -ErrorAction SilentlyContinue |
+    ForEach-Object {
+
+        $currentDir = $_.FullName
+
+        try {
+            $size = Get-ChildItem -Recurse -Force $currentDir -ErrorAction Stop |
+                    Where-Object { -not $_.PSIsContainer } |
+                    Measure-Object Length -Sum |
+                    Select-Object -ExpandProperty Sum
+
+            [pscustomobject]@{
+                Directory = $currentDir
+                SizeGB    = [math]::Round($size / 1GB, 2)
+            }
+        }
+        catch [System.UnauthorizedAccessException] {
+            [pscustomobject]@{
+                Directory = $currentDir
+                SizeGB    = "${Red}NO ACCESS${Reset}"
+            }
+        }
+    } |
+    Sort-Object {
+        if ($_.'SizeGB' -is [double]) { $_.'SizeGB' } else { -1 }
+    } -Descending
+}
+
+
+set-location -Path $env:USERPROFILE
+New-Variable -name WinServers -value  @(get-adcomputer -Filter {operatingsystem -like "*windows server*" -and Enabled -eq "True"}).name
+New-Variable -name LinuxServers -value  @(get-adcomputer -Filter {operatingsystem -like "*Linux*" -and Enabled -eq "True"}).name
+New-Variable -Name Users -Value @(get-aduser -Filter * |Select-Object name,samaccountname,enabled,distinguishedname)
+
+New-variable -name Scripts -value "$env:userprofile\documents\windowspowershell\scripts"
+New-variable -name Modules -value "$env:userprofile\documents\windowspowershell\modules"
+
+
+
+
+
+
+# SIG # Begin signature block
+# MIIO+AYJKoZIhvcNAQcCoIIO6TCCDuUCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
+# gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUPk/7lz2MSBGhw2cK7K/YYYcD
+# If6gggxsMIIF5jCCA86gAwIBAgITeAAAAEluB/KBk2WtNgAAAAAASTANBgkqhkiG
+# 9w0BAQsFADA+MRMwEQYKCZImiZPyLGQBGRYDZGV2MRUwEwYKCZImiZPyLGQBGRYF
+# Z25leHQxEDAOBgNVBAMTB0dYRS1TQ0EwHhcNMjUxMDA2MTU1NjE0WhcNMjYxMDA2
+# MTU1NjE0WjB0MRMwEQYKCZImiZPyLGQBGRYDZGV2MRUwEwYKCZImiZPyLGQBGRYF
+# Z25leHQxGzAZBgNVBAsTEkdYRS5BZG1pbmlzdHJhdGlvbjEPMA0GA1UECxMGQURN
+# SU5TMRgwFgYDVQQDEw9EYXJyZWxsIE5pZWxzZW4wggEiMA0GCSqGSIb3DQEBAQUA
+# A4IBDwAwggEKAoIBAQDIHeEcMxqNGxRKHdQl3arp5f0LtF3mX3KstG9GZk97qtGo
+# Mqzt3QnEYeTBdqt0MaykAnkyaxE5rM++fVY5pluH1pI6urrDmPHvJz4LcBx8Ajc4
+# Kpv/Id96hYfU7RTg0+IlTPeC2Dt1cVDYQ8wqW+Iz9xKCrgXlwVcj1O5pks+hOnvH
+# dtU0kG1Msfan4xbr5fggq9bjK8XHgGqw5RX925lEwxn++cKkppfaboWvgVESJUoc
+# v8bdOp/gj02+ylUAleeCbYoOKWsMTNYfTPN5rOjrAwvH1fPrCTO234hthwPDiV2C
+# HKasapAWOSW0xmJwNXpBTGBVM80ak5vHi8rCrTM5AgMBAAGjggGlMIIBoTAlBgkr
+# BgEEAYI3FAIEGB4WAEMAbwBkAGUAUwBpAGcAbgBpAG4AZzATBgNVHSUEDDAKBggr
+# BgEFBQcDAzAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0OBBYEFH6Lq3VLPxcZ1CKeAyK7
+# P8CkQEiBMB8GA1UdIwQYMBaAFOsCrl6iKCAio0I75DVTS8EYgRhKMDUGA1UdHwQu
+# MCwwKqAooCaGJGh0dHA6Ly9wa2kuZ25leHQuZGV2L3BraS9HWEUtU0NBLmNybDBS
+# BggrBgEFBQcBAQRGMEQwQgYIKwYBBQUHMAKGNmh0dHA6Ly9wa2kuZ25leHQuZGV2
+# L3BraS9HWEUtU0NBLmduZXh0LmRldl9HWEUtU0NBLmNydDA4BgNVHREEMTAvoC0G
+# CisGAQQBgjcUAgOgHwwdZGFycmVsbC5uaWVsc2VuLmFkbUBnbmV4dC5kZXYwTgYJ
+# KwYBBAGCNxkCBEEwP6A9BgorBgEEAYI3GQIBoC8ELVMtMS01LTIxLTQ3MDIwNTk5
+# My0xOTI1NjgzODUzLTQwMjY5ODc5OTgtMTEwNzANBgkqhkiG9w0BAQsFAAOCAgEA
+# mf3cKfZLU8MycNFYoGLBUngxqG3EZZPJr46j+Cv9YYgbCdfvpGcFjQOeMCgtHqoS
+# +2AmDLEb3lIisXlqvhcl1219TptxdD113EbEtXCCbYdacc9MEV6lYi4cxQh2P/Kr
+# 6HIgjHPqzT4uOgdYLmeSdmE4HWyYXwP3RzyePjTVVhQHLzQH4DCUrB3CvvvNTwXx
+# QyV/dGMpm9ChqnULWWODzVzyxoDEqfTneoWm7XHHMu9/9BAO5c590A/byC3f7hFI
+# aqpgF3Z+eBE9zqQ1w2AcLA7WLQ/Rnvxs3645Vr3uc4JBY0Mx4x396znaCnbV2crj
+# OiFeifAb6id41rfiZwDqJz3srIFHobaLNdSVoAfZcMl2FeFJrWcRSlt72Abtza6k
+# 0Bonuo1PmV7mP4j8nWxecwH5JC2MCrB/o/m5wWqPdJsgzmvPL6WKDx44KCXnmnOy
+# VIeQUMCOUo8N2gRoV8tw21CtXr1eeSdd095yhtgQA2rKPjmQ9n16LEcH7+lw5Vf7
+# xrBo8QEccULKk051abIxww2qFWSUgkU87Z5Y+t4MGZ6535btaZfoPnr83aMy+IN1
+# IGvHgGsyu8WXD+yuidBPtuAuK5rZx65VzfJONf6YUeIFPSxLjK7NOwuyrxrYgUiU
+# QPtTOtdVZPGboRno8QhBPShWNp1Ern85PwTZ9FmJnCMwggZ+MIIEZqADAgECAhMo
+# AAAACe4m6qnEl8P4AAAAAAAJMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNVBAMTEExv
+# dy1XQVNQLVJvb3QtQ0EwHhcNMjUwMjE4MjAyMjE3WhcNMzUwMjE4MjAzMjE3WjA+
+# MRMwEQYKCZImiZPyLGQBGRYDZGV2MRUwEwYKCZImiZPyLGQBGRYFZ25leHQxEDAO
+# BgNVBAMTB0dYRS1TQ0EwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCp
+# 7gACX56G1H8zxVnvyvYnnK2ioFsTXmAH7JEo5yIuyff8jQI1qPQcg88t295bNqKL
+# u+1J46W+8CV+Sk31pNgQXxvcZJVA9z3LCzzInZzl/oDBB09mDMb/nF2tThwQWas2
+# dULKEm5f8AhP9qo3DHY1eGNndrgVV+Tpe7x01inxbAJ3Ce45DMriOI1qg6krffkO
+# 0tuoBhMTZCnCkyp2HqK4ErcHPlRYi75st95U4gMMPUa9+2fZfNofEhcWcQsbT7Qk
+# ALNg6I2/CoJ8koHfq37ZTgvsCi+5Jno8ry2/VBMUrwwTX/YLXthke6OsYeIlOpK6
+# ZghAJYJOGPT3TzUNj8GvfzL3VdaUxHXjyXufYy8awxc85Pq+L+Z+4xyteyHb3Yol
+# ZcYzHS37XMZdhe74Tw1Rbvph9eqxhBnJxVr8g4chGLd03RpuRSiAnT0Pfh+e90y8
+# EfHbrDCgrxX1tmGN/rFKVev7PynxBjfW8vUMswLr8E21ibn8hA4hBAyL1Nbvtc2O
+# KTX8Kix+zh1KbBlNrb9qttuy8JtMksb3EITCC1eCKrxYFkFUwnAdb4naLPdbvleg
+# gCm36Xz31V8/rfvfWWWW8vqWLbXFt7Q2eCq5UiEGN4slu6n8j0/PqjAy6YSCTxvR
+# v2yW09PAKwgCe2N9Mbb4CG7CgrDZzWQRew7LphAmfQIDAQABo4IBljCCAZIwEAYJ
+# KwYBBAGCNxUBBAMCAQAwHQYDVR0OBBYEFOsCrl6iKCAio0I75DVTS8EYgRhKMBkG
+# CSsGAQQBgjcUAgQMHgoAUwB1AGIAQwBBMAsGA1UdDwQEAwIBhjASBgNVHRMBAf8E
+# CDAGAQH/AgEAMB8GA1UdIwQYMBaAFN7fB5FmBMeQBEZFHlCfp7yU8vfQMGoGA1Ud
+# HwRjMGEwX6BdoFuGLGh0dHA6Ly9wa2kud2FzcC5kZXYvcGtpL0xvdy1XQVNQLVJv
+# b3QtQ0EuY3JshitodHRwOi8vcGtpLmRtei5sYW4vcGtpL0xvdy1XQVNQLVJvb3Qt
+# Q0EuY3JsMIGVBggrBgEFBQcBAQSBiDCBhTBBBggrBgEFBQcwAoY1aHR0cDovL3Br
+# aS53YXNwLmRldi9wa2kvVzNFLVJDQTFfTG93LVdBU1AtUm9vdC1DQS5jcnQwQAYI
+# KwYBBQUHMAKGNGh0dHA6Ly9wa2kuZG16Lmxhbi9wa2kvVzNFLVJDQTFfTG93LVdB
+# U1AtUm9vdC1DQS5jcnQwDQYJKoZIhvcNAQELBQADggIBAIjTt7fWyVCVLyq2zL5G
+# 5CIMuP7j4UHybTwzeJhm+150o0YHMW/1/AgmdwpkVcMbyJ7Q2ivkbikVefx9gRXn
+# 8u0denxTLbYE1XOqMnp23rGxUrtYPkyeoiS/7YHYPcIGJD3W8G6PSS8ggUby/VxJ
+# 1wYM2MwMNA3yNCwk9gnl7oOTrqLb1eP+QneYfUzenzsnsVdWp2CE3B24LMpjTeQu
+# F/nFGtxyUzP0REWPUKvyfXPRaXTDSMv5zEsPIxDpL5Qdmz7brzgV/NtpNADbTiHl
+# VLSIkn98odPgQanx4O/Py2T3DxxlVMtBnWt9nZYcYi/JSxuSDAEpjpECkTuZbKnW
+# gQCCzyYDpbn358FtPs22ID3odCqdCNxMBlC5FIQAAj/N4tF5l+DLFVa1me/FM5VZ
+# cFRYdlUiUlFr+Y8WolTVPEMLvJMlvzAZfOkUX4WJEzAVt2IuhKfLc/eZ6S/6LbsL
+# PvTSzDYpaNQP8u5sxK+i3BfZNtACWlWAynoTSvEwDiRRcNC+s8W2DsgZ+gftVbfG
+# V9nYKCwTXF2OBZqlWHzFQVjmiGmtBvOxx5vyBrBaz7VYilFGwJVxBAkwMrV9ls7o
+# jCwp657cHq53cu7pTGTHmJQS+j1QBO6MILo5xsWSRDiDV69ghgJNXCjH8011Ibb2
+# paYGElMr954O5oxLyvFvaSRvMYIB9jCCAfICAQEwVTA+MRMwEQYKCZImiZPyLGQB
+# GRYDZGV2MRUwEwYKCZImiZPyLGQBGRYFZ25leHQxEDAOBgNVBAMTB0dYRS1TQ0EC
+# E3gAAABJbgfygZNlrTYAAAAAAEkwCQYFKw4DAhoFAKB4MBgGCisGAQQBgjcCAQwx
+# CjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQBgjcCAQQwHAYKKwYBBAGC
+# NwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkEMRYEFN9NKTNKsgDFv5DB
+# WJkuCJXBZBIiMA0GCSqGSIb3DQEBAQUABIIBAK7Pj4LaA5mxLfQEG2zzB1C4sJfG
+# 7/tKo64DTAlXFxHZvxBtsWWGnY3FczEB2DovJIbunE0ZC3M15k+ha5X9D4DIoVj4
+# qBlQQ4G3sjkWlBuYRty5xmf1bqAgbprV5Mj4R8rE47aVRMUX4mOiC7CZqJh11gnO
+# 9Hx8zLKI2BPPH8RilyY6fIFYTfNxV8uOyWQw2b/IfTWwZNAOGsWd64RHrmJTtUuN
+# UF/hSRRQ2XX/TIoOMj/fEM0A8TEIs2i4tUzOmkRAwjKYSFHFVI6ZSxblgQj7UWvS
+# IDAloUk0OKFNFKxmq9HpqKQZ52q3TNsgPs0mYfrWWJjk328SKrE1b6JohTc=
+# SIG # End signature block

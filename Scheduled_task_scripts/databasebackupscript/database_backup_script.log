@@ -1,0 +1,788 @@
+
+**********************
+Windows PowerShell transcript start
+Start time: 20251126161828
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 12712
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+Processed 44280 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms' on file 1.
+Processed 2 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms_log' on file 1.
+BACKUP DATABASE successfully processed 44282 pages in 1.381 seconds (250.506 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Alarms\Weekly\LogRhythm_Alarms-26_11.bak
+Processed 1840 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB' on file 1.
+Processed 2 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB_log' on file 1.
+BACKUP DATABASE successfully processed 1842 pages in 0.180 seconds (79.926 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_CMDB\Weekly\LogRhythm_CMDB-26_11.bak
+Processed 4071040 pages for database 'LogRhythm_Events', file 'LogRhythm_Events' on file 1.
+Processed 3 pages for database 'LogRhythm_Events', file 'LogRhythm_Events_log' on file 1.
+BACKUP DATABASE successfully processed 4071043 pages in 99.140 seconds (320.809 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Events\Weekly\LogRhythm_Events-26_11.bak
+Processed 165256 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart' on file 1.
+Processed 6 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart_log' on file 1.
+BACKUP DATABASE successfully processed 165262 pages in 5.973 seconds (216.157 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_LogMart\Weekly\LogRhythm_LogMart-26_11.bak
+Processed 323200 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB' on file 1.
+Processed 6 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB_log' on file 1.
+BACKUP DATABASE successfully processed 323206 pages in 7.157 seconds (352.807 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythmEMDB\Weekly\LogRhythmEMDB-26_11.bak
+**********************
+Windows PowerShell transcript end
+End time: 20251126162022
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251126223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 2216
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+Processed 44264 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms' on file 1.
+Processed 2 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms_log' on file 1.
+BACKUP DATABASE successfully processed 44266 pages in 1.212 seconds (285.333 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Alarms\Weekly\LogRhythm_Alarms-26_11.bak
+Processed 1816 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB' on file 1.
+Processed 2 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB_log' on file 1.
+BACKUP DATABASE successfully processed 1818 pages in 0.184 seconds (77.169 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_CMDB\Weekly\LogRhythm_CMDB-26_11.bak
+Processed 4081800 pages for database 'LogRhythm_Events', file 'LogRhythm_Events' on file 1.
+Processed 7 pages for database 'LogRhythm_Events', file 'LogRhythm_Events_log' on file 1.
+BACKUP DATABASE successfully processed 4081807 pages in 97.788 seconds (326.104 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Events\Weekly\LogRhythm_Events-26_11.bak
+Processed 168280 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart' on file 1.
+Processed 7 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart_log' on file 1.
+BACKUP DATABASE successfully processed 168287 pages in 5.993 seconds (219.379 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_LogMart\Weekly\LogRhythm_LogMart-26_11.bak
+Processed 322616 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB' on file 1.
+Processed 2 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB_log' on file 1.
+BACKUP DATABASE successfully processed 322618 pages in 7.330 seconds (343.854 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythmEMDB\Weekly\LogRhythmEMDB-26_11.bak
+**********************
+Windows PowerShell transcript end
+End time: 20251126223156
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251127223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 4940
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251127223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251128223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 11252
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251128223003
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251129223002
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 5164
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251129223003
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251130223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 7284
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251130223003
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251201223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 1700
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+Processed 44456 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms' on file 1.
+Processed 2 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms_log' on file 1.
+BACKUP DATABASE successfully processed 44458 pages in 1.365 seconds (254.449 MB/sec).
+Mothly Backup created: G:\Database_backups\LogRhythm_Alarms\Monthly\LogRhythm_Alarms-12_2025.bak
+Processed 1824 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB' on file 1.
+Processed 2 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB_log' on file 1.
+BACKUP DATABASE successfully processed 1826 pages in 0.155 seconds (92.011 MB/sec).
+Mothly Backup created: G:\Database_backups\LogRhythm_CMDB\Monthly\LogRhythm_CMDB-12_2025.bak
+Processed 3965352 pages for database 'LogRhythm_Events', file 'LogRhythm_Events' on file 1.
+Processed 10 pages for database 'LogRhythm_Events', file 'LogRhythm_Events_log' on file 1.
+BACKUP DATABASE successfully processed 3965362 pages in 100.525 seconds (308.175 MB/sec).
+Mothly Backup created: G:\Database_backups\LogRhythm_Events\Monthly\LogRhythm_Events-12_2025.bak
+Processed 171768 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart' on file 1.
+Processed 2 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart_log' on file 1.
+BACKUP DATABASE successfully processed 171770 pages in 6.504 seconds (206.327 MB/sec).
+Mothly Backup created: G:\Database_backups\LogRhythm_LogMart\Monthly\LogRhythm_LogMart-12_2025.bak
+Processed 320376 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB' on file 1.
+Processed 3 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB_log' on file 1.
+BACKUP DATABASE successfully processed 320379 pages in 7.467 seconds (335.202 MB/sec).
+Mothly Backup created: G:\Database_backups\LogRhythmEMDB\Monthly\LogRhythmEMDB-12_2025.bak
+**********************
+Windows PowerShell transcript end
+End time: 20251201223200
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251202223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 9864
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251202223003
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251203223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 13228
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+Processed 44552 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms' on file 1.
+Processed 2 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms_log' on file 1.
+BACKUP DATABASE successfully processed 44554 pages in 1.342 seconds (259.369 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Alarms\Weekly\LogRhythm_Alarms-03_12.bak
+Processed 1816 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB' on file 1.
+Processed 2 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB_log' on file 1.
+BACKUP DATABASE successfully processed 1818 pages in 0.209 seconds (67.938 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_CMDB\Weekly\LogRhythm_CMDB-03_12.bak
+Processed 3917832 pages for database 'LogRhythm_Events', file 'LogRhythm_Events' on file 1.
+Processed 7 pages for database 'LogRhythm_Events', file 'LogRhythm_Events_log' on file 1.
+BACKUP DATABASE successfully processed 3917839 pages in 99.657 seconds (307.134 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Events\Weekly\LogRhythm_Events-03_12.bak
+Processed 174344 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart' on file 1.
+Processed 9 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart_log' on file 1.
+BACKUP DATABASE successfully processed 174353 pages in 6.091 seconds (223.630 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_LogMart\Weekly\LogRhythm_LogMart-03_12.bak
+Processed 323016 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB' on file 1.
+Processed 5 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB_log' on file 1.
+BACKUP DATABASE successfully processed 323021 pages in 8.274 seconds (305.003 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythmEMDB\Weekly\LogRhythmEMDB-03_12.bak
+**********************
+Windows PowerShell transcript end
+End time: 20251203223201
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251204223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 10352
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251204223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251205223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 1080
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251205223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251206223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 13760
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251206223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251207223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 10820
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251207223003
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251208223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 12108
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251208223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251209223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 12796
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251209223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251210223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 2892
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+Processed 44912 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms' on file 1.
+Processed 2 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms_log' on file 1.
+BACKUP DATABASE successfully processed 44914 pages in 1.251 seconds (280.484 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Alarms\Weekly\LogRhythm_Alarms-10_12.bak
+Processed 1816 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB' on file 1.
+Processed 2 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB_log' on file 1.
+BACKUP DATABASE successfully processed 1818 pages in 0.250 seconds (56.796 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_CMDB\Weekly\LogRhythm_CMDB-10_12.bak
+Processed 3884528 pages for database 'LogRhythm_Events', file 'LogRhythm_Events' on file 1.
+Processed 7 pages for database 'LogRhythm_Events', file 'LogRhythm_Events_log' on file 1.
+BACKUP DATABASE successfully processed 3884535 pages in 122.428 seconds (247.883 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Events\Weekly\LogRhythm_Events-10_12.bak
+Processed 182544 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart' on file 1.
+Processed 2 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart_log' on file 1.
+BACKUP DATABASE successfully processed 182546 pages in 6.883 seconds (207.197 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_LogMart\Weekly\LogRhythm_LogMart-10_12.bak
+Processed 321576 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB' on file 1.
+Processed 3 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB_log' on file 1.
+BACKUP DATABASE successfully processed 321579 pages in 7.289 seconds (344.674 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythmEMDB\Weekly\LogRhythmEMDB-10_12.bak
+**********************
+Windows PowerShell transcript end
+End time: 20251210223224
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251211223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 7652
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251211223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251212223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 8220
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251212223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251213223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 11084
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251213223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251214223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 10652
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251214223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251215223002
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 13672
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251215223002
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251216223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 12572
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251216223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251217223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 556
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+Processed 28568 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms' on file 1.
+Processed 2 pages for database 'LogRhythm_Alarms', file 'LogRhythm_Alarms_log' on file 1.
+BACKUP DATABASE successfully processed 28570 pages in 1.230 seconds (181.462 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Alarms\Weekly\LogRhythm_Alarms-17_12.bak
+Processed 1808 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB' on file 1.
+Processed 2 pages for database 'LogRhythm_CMDB', file 'LogRhythm_CMDB_log' on file 1.
+BACKUP DATABASE successfully processed 1810 pages in 0.224 seconds (63.110 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_CMDB\Weekly\LogRhythm_CMDB-17_12.bak
+Processed 3636072 pages for database 'LogRhythm_Events', file 'LogRhythm_Events' on file 1.
+Processed 7 pages for database 'LogRhythm_Events', file 'LogRhythm_Events_log' on file 1.
+BACKUP DATABASE successfully processed 3636079 pages in 95.246 seconds (298.247 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_Events\Weekly\LogRhythm_Events-17_12.bak
+Processed 187000 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart' on file 1.
+Processed 8 pages for database 'LogRhythm_LogMart', file 'LogRhythm_LogMart_log' on file 1.
+BACKUP DATABASE successfully processed 187008 pages in 6.410 seconds (227.924 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythm_LogMart\Weekly\LogRhythm_LogMart-17_12.bak
+Processed 320392 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB' on file 1.
+Processed 9 pages for database 'LogRhythmEMDB', file 'LogRhythmEMDB_log' on file 1.
+BACKUP DATABASE successfully processed 320401 pages in 7.730 seconds (323.820 MB/sec).
+Weekly backup Created: G:\Database_backups\LogRhythmEMDB\Weekly\LogRhythmEMDB-17_12.bak
+**********************
+Windows PowerShell transcript end
+End time: 20251217223156
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251218223002
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 6776
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251218223002
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251219223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 11108
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251219223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251220223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 9404
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251220223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251221223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 13156
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251221223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251222223003
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 10528
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251222223004
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20251223223004
+Username: GNEXT\svc-admintaskrunner
+RunAs User: GNEXT\svc-admintaskrunner
+Configuration Name: 
+Machine: GXE-LR-PM1 (Microsoft Windows NT 10.0.20348.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -NoProfile -File C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.ps1 -windowstyle Hidden
+Process ID: 10692
+PSVersion: 5.1.20348.4163
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.20348.4163
+BuildVersion: 10.0.20348.4163
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\scheduledTasks\scripts\databasebackupscript\database_backup_script.log
+**********************
+Windows PowerShell transcript end
+End time: 20251223223004
+**********************
