@@ -1,29 +1,78 @@
-# VerifySystems module
-# This module has numerous checks that can be ran on systems that are developed and maintained by the 53rd CSS, Eglin AFB
-# Austin Hobbs and Derrike Nunn
-# Module Version: 01.07.2016
+<#
+.SYNOPSIS
+Performs infrastructure health checks across multiple enterprise services.
 
-# Standards
-# -----------
-# 1. All checks should output a custom powershell object.
-# 2. Any health test results should be stored with a healthy keyword and a bad keyword (insert list)
-# 3. All functions should have a -Report switch that will then call Build-HTML function that will output an HTML report with the results
-# 4. If using the -Report switch on functions, the script should precede with a Begin-HTML (script with -Report) then finish with End-HTML
+.DESCRIPTION
+The SystemHealthChecks module provides a collection of functions used to
+evaluate the operational health of core infrastructure components including:
 
+• Active Directory Domain Controllers
+• Windows Servers
+• SQL Servers
+• SCVMM Servers
+• Network Load Balancing Clusters
+• Windows Failover Clusters
+• DFS Namespaces
 
+The module can return results as PowerShell objects for automation or
+generate formatted HTML reports for operational monitoring.
 
+This module is designed for system administrators and infrastructure
+engineers responsible for maintaining enterprise environments.
 
-###########################Define Variables##################################
+.NOTES
+Author: Darrell Nielsen
+Version: 1.07
+Initial Release: 01.07.2016
 
-#$servers = Get-Content ".\servers.txt"
+This module collects system health data and may require administrative
+privileges to access remote systems and services.
 
+Tags:
+asfd
+health
+monitor
 
-#$host.ui.RawUI.BackgroundColor = "Black"
-#cls
-#############################################################################
+.LINK
+Get-Help Check-ADHealth
+Get-Help Check-GeneralWindows
+Get-Help Check-SQL
+Get-Help Check-SCVMM
+Get-Help Check-NLB
+Get-Help Check-FailoverCluster
+Get-Help Check-DFSNameSpace
 
-#region Generic Functions
-#------------ Generic Functions ----------------#
+.EXAMPLE
+Import-Module SystemHealthChecks
+
+Loads the health check module.
+
+.EXAMPLE
+Check-ADHealth
+
+Runs health checks against all domain controllers in the forest.
+
+.EXAMPLE
+Check-GeneralWindows -Computers Server01,Server02
+
+Runs general Windows health checks on the specified servers.
+
+.EXAMPLE
+Check-GeneralWindows -Computers Server01 -Report
+
+Runs checks and generates an HTML report.
+
+.EXAMPLE
+Check-SQL -SqlServerAndInstance SQL01\PROD
+
+Runs SQL Server health checks against the specified instance.
+
+.EXAMPLE
+Check-FailoverCluster -FailoverClusters Cluster01 -Report
+
+Runs cluster health checks and outputs an HTML report.
+
+#>
 function formatStringStatus
 {
 	param([string[]]$StringArray, $RemovePart)
