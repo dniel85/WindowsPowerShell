@@ -48,61 +48,47 @@ Author: Darrell Nielsen
 Version: 1.0
 #>
 
+Write-Host "`n"
 Write-Host "Type 'Menu' to list all pre-defined Commands and Variables" -ForegroundColor DarkGray
+Write-Host "`n"
+
 # Load all public functions
 Get-ChildItem "$PSScriptRoot\Public\*.ps1" -Recurse | ForEach-Object {
     . $_
 }
-
-# ===============================
 # Initialize Exported Variables
-# ===============================
-
 $script:WinServers   = @()
 $script:WinComputers = @()
 $script:LinuxServers = @()
 $script:Users        = @()
-
 $script:Scripts = @("$env:USERPROFILE\Documents\WindowsPowerShell\Scripts", "c:\program files\windowspowershell\scripts")
 $script:Modules = @("$env:USERPROFILE\Documents\WindowsPowerShell\Modules", "c:\Program Files\WindowsPowerShell\Modules")
 
-# ===============================
 # Quick Navigation Drives
-# ===============================
-
 # Ensure default directories exist
 foreach ($path in @($Modules[0], $Scripts[0])) {
     if (-not (Test-Path $path)) {
         New-Item -ItemType Directory -Path $path -Force | Out-Null
     }
 }
-
 # Create quick navigation drives
 if (-not (Get-PSDrive modules -ErrorAction SilentlyContinue)) {
     New-PSDrive -Name modules -PSProvider FileSystem -Root $Modules[0] -Scope Global | Out-Null
 }
-
 if (-not (Get-PSDrive scripts -ErrorAction SilentlyContinue)) {
     New-PSDrive -Name scripts -PSProvider FileSystem -Root $Scripts[0] -Scope Global | Out-Null
 }
-# ===============================
-# Background AD Runspace
-# ===============================
 
+# Background AD Runspace
 $script:ADPowerShell  = $null
 $script:ADAsyncResult = $null
 
 function Start-ADBackgroundLoad {
-
     if (-not (Get-Module -ListAvailable ActiveDirectory)) { return }
     if (-not (Get-CimInstance Win32_ComputerSystem).PartOfDomain) { return }
-
     $script:ADPowerShell = [PowerShell]::Create()
-
     $script:ADPowerShell.AddScript({
-
         Import-Module ActiveDirectory
-
         [PSCustomObject]@{
             WinServers = Get-ADComputer -Filter {
                 OperatingSystem -like "*windows server*" -and Enabled -eq "True"
@@ -120,9 +106,7 @@ function Start-ADBackgroundLoad {
             Users = Get-ADUser -Filter * |
                 Select-Object Name,SamAccountName,Enabled,DistinguishedName
         }
-
     })
-
     $script:ADAsyncResult = $script:ADPowerShell.BeginInvoke()
 }
 
@@ -143,25 +127,13 @@ function Complete-ADBackgroundLoad {
     $script:ADAsyncResult = $null
 }
 
-
-
-
-
 # Start background load immediately
 Start-ADBackgroundLoad
 
-# ===============================
 # Export Public Members
-# ===============================
-
-
-
-
 Register-EngineEvent PowerShell.OnIdle -Action {
     Complete-ADBackgroundLoad
 } | Out-Null
 
 Export-ModuleMember -Function * `
                     -Variable WinServers, WinComputers, LinuxServers, Users, Scripts, Modules
-
-

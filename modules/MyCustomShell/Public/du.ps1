@@ -17,19 +17,14 @@ du C:\Temp
         [int]$Decimals = 2,
         [switch]$ShowLessThan # if set: show "<0.01" instead of "0.00" for tiny folders
     )
-
     $root = (Resolve-Path -LiteralPath $Path).Path
-
     # Use a List to avoid slow += array growth
     $results = [System.Collections.Generic.List[object]]::new()
-
     $dirs = Get-ChildItem -LiteralPath $root -Directory -Force -ErrorAction SilentlyContinue
-
     foreach ($d in $dirs) {
         $currentDir = $d.FullName
         $sumBytes = 0L
         $denied = $false
-
         try {
             # Fast enumeration of file paths (not FileInfo objects)
             foreach ($file in [System.IO.Directory]::EnumerateFiles($currentDir, '*', [System.IO.SearchOption]::AllDirectories)) {
@@ -55,7 +50,6 @@ du C:\Temp
             # Treat unexpected enumeration failures as denied for clarity
             $denied = $true
         }
-
         if ($denied) {
             $results.Add([pscustomobject]@{
                 Directory      = $currentDir
@@ -75,7 +69,6 @@ du C:\Temp
                 else {
                     "{0:N$Decimals}" -f $gbRounded
                 }
-
             $results.Add([pscustomobject]@{
                 Directory      = $currentDir
                 Bytes          = $sumBytes
@@ -84,17 +77,14 @@ du C:\Temp
             })
         }
     }
-
     # Sort by bytes, keep denied at bottom
     $results = $results | Sort-Object @{
         Expression = { if ($_.IsAccessDenied) { -1 } else { $_.Bytes } }
         Descending = $true
     }
-
     # Header
     "{0,-70} {1,12}" -f "Directory","SizeGB"
     "{0,-70} {1,12}" -f "---------","------"
-
     foreach ($r in $results) {
         if ($r.IsAccessDenied) {
             Write-Host ("{0,-70} {1,12}" -f $r.Directory, $r.DisplaySizeGB) -ForegroundColor Yellow

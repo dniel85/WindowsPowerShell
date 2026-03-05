@@ -17,8 +17,6 @@ Stay-Awake -Hours 4
 param(
     [int]$Hours = 2
 )
-
 $cmd = "Import-Module MyCustomShell; Stay-Awake -Hours $Hours"
-
 Start-Process powershell -ArgumentList "-NoExit","-Command",$cmd -WindowStyle Minimized
 }

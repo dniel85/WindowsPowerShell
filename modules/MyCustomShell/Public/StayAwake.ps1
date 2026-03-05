@@ -19,17 +19,12 @@ Stay-Awake -Hours 4
 param(
     [int]$Hours = 2
 )
-
 $minutes = $Hours * 60
 $myShell = New-Object -ComObject "Wscript.shell"
-
 Clear-Host
 $oldPos = $host.UI.RawUI.CursorPosition
-
 for ($i = 0; $i -lt $minutes; $i++) {
-
     $timeConvert = [timespan]::FromMinutes($i)
-
     Write-Host -NoNewline " <ESC> or [ctrl]+C" -ForegroundColor Red
     Write-Host -NoNewline " to quit! Elapsed time: " -ForegroundColor Cyan
     Write-Host ("{0:hh\:mm}" -f $timeConvert) -ForegroundColor Green -NoNewline
@@ -45,7 +40,6 @@ for ($i = 0; $i -lt $minutes; $i++) {
             Write-Host "Exit!" -ForegroundColor Red
             return
         }
-
         foreach ($spin in "|","/","-","\") {
             $host.UI.RawUI.CursorPosition = $oldPos
             Write-Host $spin -NoNewline -ForegroundColor White
@@ -53,7 +47,6 @@ for ($i = 0; $i -lt $minutes; $i++) {
         }
     }
 }
-
 rundll32.exe user32.dll,LockWorkStation
 exit 0
 }

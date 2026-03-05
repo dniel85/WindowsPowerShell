@@ -14,13 +14,11 @@ Safe for non-domain machines. The $Winservers, $LinuxServers, and $Users variabl
         Write-Warning "ActiveDirectory module not available."
         return
     }
-
     # Check if domain joined
     if (-not (Get-CimInstance Win32_ComputerSystem).PartOfDomain) {
         Write-Warning "Machine is not domain joined."
         return
     }
-
     try {
         Import-Module ActiveDirectory -ErrorAction Stop
 
