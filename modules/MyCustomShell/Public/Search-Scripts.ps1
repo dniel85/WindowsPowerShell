@@ -1,4 +1,4 @@
-﻿function search-scripts {
+﻿function Search-Scripts {
 <#
 .SYNOPSIS
 Searches PowerShell scripts.
@@ -40,34 +40,47 @@ PSCustomObject
 Returns objects containing:
 Script       - The script filename
 Description  - The description extracted from the script help block
+FullPath     - Full path to the script file
 
 .NOTES
 Author: Darrell Nielsen
 
 This function is intended to help organize and search large PowerShell
 script libraries using tags or keywords embedded in scripts.
-
 #>
-    [cmdletbinding()]
+
+    [CmdletBinding()]
     param(
-    [Parameter(Mandatory=$true,position=0)]
-    [string]$tag,
-    $path = "$env:userprofile\documents\windowspowershell"
+        [Parameter(Mandatory, Position = 0)]
+        [string]$Tag,
+
+        [string]$Path = "$env:USERPROFILE\Documents\WindowsPowerShell"
     )
 
-    $script = Get-ChildItem $path -Recurse -Filter *.ps1 | Where-Object {
-        Select-String -Path $_.FullName -Pattern $tag -Quiet
+    # Find matching scripts
+    $scripts = Get-ChildItem $Path -Recurse -File -Filter *.ps1 | Where-Object {
+        Select-String -Path $_.FullName -Pattern $Tag -Quiet
     }
-    if($script -eq $null){
-        Write-Host "No scripts found that match the tag: $tag" -ForegroundColor Yellow
+
+    if (-not $scripts) {
+        Write-host "No scripts found that match the tag: $Tag" -ForegroundColor DarkYellow
+        return
+    }
+
+    foreach ($script in $scripts) {
+
+        try {
+            $help = Get-Help $script.FullName -ErrorAction Stop
+            $description = $help.Description.Text -join " "
+        }
+        catch {
+            $description = "No help description available"
         }
 
-    $script | ForEach-Object {
-        $help = Get-Help $_.FullName
         [PSCustomObject]@{
-            Script      = $_.Name
-            Description = $help.Description.Text -join " "
-            FullPath    = $_.FullName
+            Script      = $script.Name
+            Description = $description
+            FullPath    = $script.FullName
         }
     }
 }

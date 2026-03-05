@@ -1,4 +1,27 @@
-    param(
+ <#
+.SYNOPSIS
+Automatically searches for passwords in plaintext
+
+.DESCRIPTION
+This script iterates through user directories looking for stored passwords in plain text that match a pattern
+
+
+.OUTPUTS
+None
+
+Displays status messages indicating repository state and Git operations.
+
+.NOTES
+Author: Darrell Nielsen
+
+TAGS:
+passwords
+secret
+
+
+#>
+ [cmdletbinding()]
+ param(
         [string]$directory
         )
 $pattern = @'
