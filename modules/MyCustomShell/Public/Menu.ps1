@@ -1,11 +1,9 @@
-﻿Complete-ADBackgroundLoad
-
-function Menu {
+﻿function Menu {
 <#
 .SYNOPSIS
 Displays commands, variables, and environment info for MyCustomShell.
 #>
-    # Detect module automatically
+Set-Alias -Name Menu -Value Man -Force
     $module = $MyInvocation.MyCommand.Module
 
     if (-not $module) {
@@ -32,29 +30,73 @@ Displays commands, variables, and environment info for MyCustomShell.
     # ===============================
     # Commands Section
     # ===============================
-    Write-Host "Commands:" -ForegroundColor Cyan
+    Write-Host "Commands" -ForegroundColor Cyan
     ""
 
-    "{0,-25} {1}" -f "Command","Synopsis"
-    "{0,-25} {1}" -f "-------","--------"
+    $cmdWidth  = 22
+    $synWidth  = 32
+    $consoleWidth = $Host.UI.RawUI.WindowSize.Width
+    $descWidth = $consoleWidth - ($cmdWidth + $synWidth + 4)
+
+    "{0,-$cmdWidth} {1,-$synWidth} {2}" -f "Command","Synopsis","Description"
+    "{0,-$cmdWidth} {1,-$synWidth} {2}" -f "-------","--------","-----------"
 
     $commands = $module.ExportedCommands.Values |
-                Where-Object { $_.Name -notin @('prompt','Menu','Complete-ADBackgroundLoad','Start-ADBackgroundLoad') } |
+                Where-Object { $_.Name -notin @('prompt','Menu','Complete-ADBackgroundLoad','Start-ADBackgroundLoad','Stay-Awake') } |
                 Sort-Object Name
+
+    function Wrap-Text($text,$width) {
+        $words = $text -split "\s+"
+        $line  = ""
+        $out   = @()
+
+        foreach ($w in $words) {
+            if (($line.Length + $w.Length + 1) -gt $width) {
+                $out += $line.Trim()
+                $line = "$w "
+            }
+            else {
+                $line += "$w "
+            }
+        }
+
+        if ($line.Trim()) { $out += $line.Trim() }
+
+        return $out
+    }
 
     foreach ($cmd in $commands) {
 
         $help = Get-Help $cmd.Name -ErrorAction SilentlyContinue
-        $synopsis = if ($help.Synopsis) { $help.Synopsis.Trim() } else { "No help available" }
 
-        Write-Host ("{0,-25} {1}" -f $cmd.Name, $synopsis) -ForegroundColor Green
+        $synopsis = if ($help.Synopsis) { $help.Synopsis.Trim() } else { "" }
+
+        $description = if ($help.Description) {
+            ($help.Description.Text -join " ").Trim()
+        } else { "" }
+
+        $wrapped = Wrap-Text $description $descWidth
+        $first = $true
+
+        foreach ($line in $wrapped) {
+
+            if ($first) {
+                Write-Host ("{0,-$cmdWidth} {1,-$synWidth} {2}" -f $cmd.Name,$synopsis,$line) -ForegroundColor Green
+                $first = $false
+            }
+            else {
+                Write-Host ("{0,-$cmdWidth} {1,-$synWidth} {2}" -f "","",$line) -ForegroundColor Green
+            }
+        }
+
+        Write-Host ""
     }
 
     # ===============================
     # Variables Section
     # ===============================
     Write-Host ""
-    Write-Host "Preloaded Variables:" -ForegroundColor Cyan
+    Write-Host "Preloaded Variables" -ForegroundColor Cyan
     ""
 
     "{0,-20} {1}" -f "Variable","Info"
@@ -70,47 +112,54 @@ Displays commands, variables, and environment info for MyCustomShell.
 
             "WinServers" {
                 if ($WinServers.Count -eq 0) {
-                    Write-Host ("{0,-20} {1}" -f "`$$name", "Not Loaded") -ForegroundColor Red
+                    Write-Host ("{0,-20} {1}" -f "`$$name","Not Loaded") -ForegroundColor Red
                 }
                 else {
-                    Write-Host ("{0,-20} {1}" -f "`$$name", "$($WinServers.Count) Servers") -ForegroundColor DarkCyan
+                    Write-Host ("{0,-20} {1}" -f "`$$name","$($WinServers.Count) Servers") -ForegroundColor DarkCyan
                 }
             }
 
             "LinuxServers" {
                 if ($LinuxServers.Count -eq 0) {
-                    Write-Host ("{0,-20} {1}" -f "`$$name", "Not Loaded") -ForegroundColor Red
+                    Write-Host ("{0,-20} {1}" -f "`$$name","Not Loaded") -ForegroundColor Red
                 }
                 else {
-                    Write-Host ("{0,-20} {1}" -f "`$$name", "$($LinuxServers.Count) Servers") -ForegroundColor DarkCyan
+                    Write-Host ("{0,-20} {1}" -f "`$$name","$($LinuxServers.Count) Servers") -ForegroundColor DarkCyan
                 }
             }
 
             "Users" {
                 if ($Users.Count -eq 0) {
-                    Write-Host ("{0,-20} {1}" -f "`$$name", "Not Loaded") -ForegroundColor Red
+                    Write-Host ("{0,-20} {1}" -f "`$$name","Not Loaded") -ForegroundColor Red
                 }
                 else {
-                    Write-Host ("{0,-20} {1}" -f "`$$name", "$($Users.Count) Users") -ForegroundColor DarkCyan
+                    Write-Host ("{0,-20} {1}" -f "`$$name","$($Users.Count) Users") -ForegroundColor DarkCyan
                 }
             }
 
             "Modules" {
-                $count = ($Modules -split ';').Count
-                Write-Host ("{0,-20} {1}" -f "`$$name", "$count Module Paths") -ForegroundColor DarkCyan
+
+                $paths = $Modules -split ';'
+                $default = $paths[0] -replace [regex]::Escape($env:USERPROFILE),"~"
+                $count = $paths.Count
+
+                Write-Host ("{0,-20} {1} ($count total)" -f "`$$name",$default) -ForegroundColor DarkCyan
             }
 
             "Scripts" {
-                $home = $env:USERPROFILE
-                $shortPath = $Scripts -replace [regex]::Escape($home), "~"
-                Write-Host ("{0,-20} {1}" -f "`$$name", $shortPath) -ForegroundColor DarkCyan
+
+                $default = $Scripts[0] -replace [regex]::Escape($env:USERPROFILE),"~"
+                $count = $Scripts.Count
+                Write-Host ("{0,-20} {1} ($count total)" -f "`$$name",$default) -ForegroundColor DarkCyan
             }
 
             default {
-                Write-Host ("{0,-20} {1}" -f "`$$name", "") -ForegroundColor DarkCyan
+                Write-Host ("{0,-20} {1}" -f "`$$name","") -ForegroundColor DarkCyan
             }
         }
     }
 
     Write-Host ""
+
+
 }

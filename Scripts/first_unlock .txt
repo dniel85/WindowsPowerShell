@@ -1,0 +1,38 @@
+function first_unlock {
+
+<#
+.SYNOPSIS
+Shows the first workstation unlock of today.
+
+.DESCRIPTION
+Reads Security Event Log ID 4801 (workstation unlock) and returns
+the first unlock event that occurred today with the username.
+
+.EXAMPLE
+first_unlock
+#>
+
+$today = (Get-Date).Date
+
+$event = Get-WinEvent -FilterHashtable @{
+    LogName='Security'
+    Id=4801
+    StartTime=$today
+} -ErrorAction SilentlyContinue |
+Sort-Object TimeCreated |
+Select-Object -First 1
+
+if ($event) {
+
+    [PSCustomObject]@{
+        User        = $event.Properties[1].Value
+        FirstUnlock = $event.TimeCreated
+        Host        = $env:COMPUTERNAME
+    } | Format-Table -AutoSize
+
+}
+else {
+    Write-Host "No unlock events found today." -ForegroundColor Yellow
+}
+
+}

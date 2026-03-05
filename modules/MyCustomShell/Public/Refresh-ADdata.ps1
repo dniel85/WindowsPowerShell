@@ -2,11 +2,11 @@
 
 <#
 .SYNOPSIS
-Refreshes Active Directory data for WinServers, LinuxServers, and Users.
+Refreshes AD data 
 
 .DESCRIPTION
 Queries Active Directory and updates exported module variables.
-Safe for non-domain machines.
+Safe for non-domain machines. The $Winservers, $LinuxServers, and $Users variables will be updated if successful.
 #>
 
     # Check AD module availability
@@ -43,6 +43,6 @@ Safe for non-domain machines.
         Write-Host "Users: $($Users.Count)" -ForegroundColor DarkCyan
     }
     catch {
-        Write-Error "Failed to refresh Active Directory data: $_"
+        Write-Host "Failed to refresh Active Directory data: " -ForegroundColor Red 
     }
 }

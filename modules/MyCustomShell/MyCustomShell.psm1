@@ -1,12 +1,57 @@
-# ===============================
-# MyCustomShell Module
-# ===============================
+<#
+.SYNOPSIS
+MyCustomShell interactive PowerShell environment.
+
+.DESCRIPTION
+MyCustomShell provides a customized interactive PowerShell environment
+with Linux-style commands, Active Directory shortcuts, and enhanced
+navigation tools.
+
+The module includes utilities such as:
+
+    df                Linux-style disk free viewer
+    du                Linux-style disk usage viewer
+    sudo              Launch elevated PowerShell
+    Refresh-ADData    Refresh Active Directory cached data
+    Start-StayAwake   Prevent workstation idle lock
+
+The module also preloads environment variables and background tasks
+for Active Directory queries.
+
+.COMMANDS
+df
+du
+sudo
+Refresh-ADData
+Start-StayAwake
+Menu
+
+.VARIABLES
+$WinServers     Cached Windows server list from Active Directory
+$LinuxServers   Cached Linux server list from Active Directory
+$Users          Cached user objects from Active Directory
+$Modules        Available PowerShell module paths
+$Scripts        Custom script directories
+
+.EXAMPLE
+Import-Module MyCustomShell
+
+Loads the MyCustomShell environment and initializes background AD data.
+
+.EXAMPLE
+Menu
+
+Displays available commands and environment variables.
+
+.NOTES
+Author: Darrell Nielsen
+Version: 1.0
+#>
+
 Write-Host "Type 'Menu' to list all pre-defined Commands and Variables" -ForegroundColor DarkGray
 # Load all public functions
-$publicPath = Join-Path $PSScriptRoot "Public"
-
-Get-ChildItem $publicPath -Filter *.ps1 | ForEach-Object {
-    . $_.FullName
+Get-ChildItem "$PSScriptRoot\Public\*.ps1" -Recurse | ForEach-Object {
+    . $_
 }
 
 # ===============================
@@ -17,9 +62,28 @@ $script:WinServers   = @()
 $script:LinuxServers = @()
 $script:Users        = @()
 
-$script:Scripts = Join-Path $env:USERPROFILE "Documents\PowerShell\Scripts"
-$script:Modules = $env:PSModulePath
+$script:Scripts = @("$env:USERPROFILE\Documents\WindowsPowerShell\Scripts", "c:\program files\windowspowershell\scripts")
+$script:Modules = @("$env:USERPROFILE\Documents\WindowsPowerShell\Modules", "c:\Program Files\WindowsPowerShell\Modules")
 
+# ===============================
+# Quick Navigation Drives
+# ===============================
+
+# Ensure default directories exist
+foreach ($path in @($Modules[0], $Scripts[0])) {
+    if (-not (Test-Path $path)) {
+        New-Item -ItemType Directory -Path $path -Force | Out-Null
+    }
+}
+
+# Create quick navigation drives
+if (-not (Get-PSDrive modules -ErrorAction SilentlyContinue)) {
+    New-PSDrive -Name modules -PSProvider FileSystem -Root $Modules[0] -Scope Global | Out-Null
+}
+
+if (-not (Get-PSDrive scripts -ErrorAction SilentlyContinue)) {
+    New-PSDrive -Name scripts -PSProvider FileSystem -Root $Scripts[0] -Scope Global | Out-Null
+}
 # ===============================
 # Background AD Runspace
 # ===============================
@@ -71,6 +135,8 @@ function Complete-ADBackgroundLoad {
     $script:ADPowerShell  = $null
     $script:ADAsyncResult = $null
 }
+
+
 
 
 
