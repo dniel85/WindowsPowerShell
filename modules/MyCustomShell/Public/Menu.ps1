@@ -119,6 +119,15 @@ Set-Alias -Name Menu -Value Man -Force
                 }
             }
 
+            "WinComputers" {
+                if ($Wincomputers.Count -eq 0) {
+                    Write-Host ("{0,-20} {1}" -f "`$$name","Not Loaded") -ForegroundColor Red
+                }
+                else {
+                    Write-Host ("{0,-20} {1}" -f "`$$name","$($WinComputers.Count) Computers") -ForegroundColor DarkCyan
+                }
+            }
+
             "LinuxServers" {
                 if ($LinuxServers.Count -eq 0) {
                     Write-Host ("{0,-20} {1}" -f "`$$name","Not Loaded") -ForegroundColor Red

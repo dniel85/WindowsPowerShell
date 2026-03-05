@@ -59,6 +59,7 @@ Get-ChildItem "$PSScriptRoot\Public\*.ps1" -Recurse | ForEach-Object {
 # ===============================
 
 $script:WinServers   = @()
+$script:WinComputers = @()
 $script:LinuxServers = @()
 $script:Users        = @()
 
@@ -107,6 +108,11 @@ function Start-ADBackgroundLoad {
                 OperatingSystem -like "*windows server*" -and Enabled -eq "True"
             } | Select-Object -ExpandProperty Name
 
+            WinComputers = Get-ADComputer -Filter {
+                OperatingSystem -like "*Windows 11*" -and Enabled -eq $true} `
+                -Properties OperatingSystem | 
+                Select-object Name,OperatingSystem, @{Name="OU";Expression={$_.DistinguishedName -replace '^CN=[^,]+,'}} | Sort-Object OU
+
             LinuxServers = Get-ADComputer -Filter {
                 OperatingSystem -like "*Linux*" -and Enabled -eq "True"
             } | Select-Object -ExpandProperty Name
@@ -128,6 +134,7 @@ function Complete-ADBackgroundLoad {
     $result = $script:ADPowerShell.EndInvoke($script:ADAsyncResult)
 
     $script:WinServers   = $result.WinServers
+    $script:winComputers = $result.WinComputers
     $script:LinuxServers = $result.LinuxServers
     $script:Users        = $result.Users
 
@@ -155,6 +162,6 @@ Register-EngineEvent PowerShell.OnIdle -Action {
 } | Out-Null
 
 Export-ModuleMember -Function * `
-                    -Variable WinServers, LinuxServers, Users, Scripts, Modules
+                    -Variable WinServers, WinComputers, LinuxServers, Users, Scripts, Modules
 
 
