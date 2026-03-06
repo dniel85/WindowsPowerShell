@@ -1,8 +1,80 @@
-﻿Import-Module GroupPolicy
+﻿<#
+.SYNOPSIS
+Enumerates Windows Firewall rules configured in Group Policy Objects.
 
-# ------------------------------------------------------------
-# Helper: Resolve resource strings like @FirewallAPI.dll,-2878
-# ------------------------------------------------------------
+.DESCRIPTION
+This script scans all Group Policy Objects (GPOs) in the domain and extracts
+Windows Firewall rules defined within those policies.
+
+The script retrieves each GPO using Get-GPO and generates an XML report using
+Get-GPOReport. It then parses the XML to locate inbound and outbound firewall
+rule definitions.
+
+Firewall rule properties such as name, description, direction, action,
+protocol, ports, application, service, and remote addresses are extracted and
+returned as PowerShell objects.
+
+If firewall rule names or descriptions are stored as Windows resource strings
+(e.g., "@FirewallAPI.dll,-12345"), the script resolves them to their readable
+text values using Win32 API calls.
+
+Results are displayed in a formatted table sorted by GPO name and rule name.
+An optional CSV export line is included for reporting or auditing purposes.
+
+.PARAMETER None
+This script does not accept parameters.
+
+.EXAMPLE
+.\Get-GPOFirewallRules.ps1
+
+Scans all GPOs in the domain and displays firewall rules found within them.
+
+.EXAMPLE
+.\Get-GPOFirewallRules.ps1 | Export-Csv FirewallRules.csv -NoTypeInformation
+
+Exports discovered firewall rules to a CSV file.
+
+.INPUTS
+None
+
+.OUTPUTS
+System.Management.Automation.PSCustomObject
+
+Returned object properties include:
+
+    GPOName
+    RuleName
+    Action
+    Direction
+    Protocol
+    LocalPort
+    App
+    Service
+    RemoteIPv4
+    RemoteIPv6
+    Description
+    Active
+
+.NOTES
+Author: Darrell Nielsen
+Created: 2026-03-06
+Version: 1.0
+
+Requirements:
+- Active Directory domain environment
+- GroupPolicy PowerShell module
+- Permission to query GPO reports
+
+Behavior:
+- Enumerates all domain GPOs
+- Parses firewall rules from GPO XML reports
+- Resolves localized firewall rule strings
+- Displays results in a formatted table
+
+TAGS: GPO, GroupPolicy, Firewall, Security, WindowsFirewall, ActiveDirectory, Audit, STIG
+#>
+Import-Module GroupPolicy
+
 Add-Type -TypeDefinition @"
 using System;
 using System.Runtime.InteropServices;
@@ -47,9 +119,7 @@ function Resolve-ResourceString {
     return $ResourceString
 }
 
-# ------------------------------------------------------------
-# Helper: Get node text from XML
-# ------------------------------------------------------------
+
 function Get-NodeText {
     param(
         [System.Xml.XmlNode]$Node,
@@ -63,9 +133,7 @@ function Get-NodeText {
 
 $results = @()
 
-# ------------------------------------------------------------
-# Main loop: iterate all GPOs
-# ------------------------------------------------------------
+
 Get-GPO -All | ForEach-Object {
     $gpo = $_
     Write-Host "Scanning GPO: $($gpo.DisplayName)" -ForegroundColor Cyan
@@ -124,9 +192,7 @@ Get-GPO -All | ForEach-Object {
     }
 }
 
-# ------------------------------------------------------------
-# Output
-# ------------------------------------------------------------
+
 if ($results.Count -eq 0) {
     Write-Warning "No firewall rules found in any GPOs."
 } else {

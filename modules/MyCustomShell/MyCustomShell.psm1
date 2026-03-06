@@ -52,6 +52,35 @@ Write-Host "`n"
 Write-Host "Type 'Menu' to list all pre-defined Commands and Variables" -ForegroundColor DarkGray
 Write-Host "`n"
 
+$script:UserPSRoot = if (Test-Path "$HOME\Documents\PowerShell") {
+    "$HOME\Documents\PowerShell"
+}
+else {
+    "$HOME\Documents\WindowsPowerShell"
+}
+
+#Script directory environment variable
+$env:PSScriptPath = Join-Path $script:UserPSRoot "Scripts"
+
+# Module/script locations
+$script:Scripts = @(
+    $env:PSScriptPath,
+    "C:\Program Files\WindowsPowerShell\Scripts"
+)
+
+
+$script:Modules = @(
+    (Join-Path $script:UserPSRoot "Modules"),
+    "C:\Program Files\WindowsPowerShell\Modules"
+)
+
+# Ensure directories exist
+foreach ($path in @($Modules[0], $Scripts[0])) {
+    if (-not (Test-Path $path)) {
+        New-Item -ItemType Directory -Path $path -Force | Out-Null
+    }
+}
+
 # Load all public functions
 Get-ChildItem "$PSScriptRoot\Public\*.ps1" -Recurse | ForEach-Object {
     . $_
@@ -61,8 +90,9 @@ $script:WinServers   = @()
 $script:WinComputers = @()
 $script:LinuxServers = @()
 $script:Users        = @()
+<#
 $script:Scripts = @("$env:USERPROFILE\Documents\WindowsPowerShell\Scripts", "c:\program files\windowspowershell\scripts")
-$script:Modules = @("$env:USERPROFILE\Documents\WindowsPowerShell\Modules", "c:\Program Files\WindowsPowerShell\Modules")
+#$script:Modules = @("$env:USERPROFILE\Documents\WindowsPowerShell\Modules", "c:\Program Files\WindowsPowerShell\Modules")
 
 # Quick Navigation Drives
 # Ensure default directories exist
@@ -70,7 +100,7 @@ foreach ($path in @($Modules[0], $Scripts[0])) {
     if (-not (Test-Path $path)) {
         New-Item -ItemType Directory -Path $path -Force | Out-Null
     }
-}
+} #>
 # Create quick navigation drives
 if (-not (Get-PSDrive modules -ErrorAction SilentlyContinue)) {
     New-PSDrive -Name modules -PSProvider FileSystem -Root $Modules[0] -Scope Global | Out-Null

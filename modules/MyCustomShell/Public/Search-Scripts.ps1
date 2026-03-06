@@ -71,7 +71,7 @@ script libraries using tags or keywords embedded in scripts.
 
         try {
             $help = Get-Help $script.FullName -ErrorAction Stop
-            $description = $help.Description.Text -join " "
+            $description = $help.synopsis
         }
         catch {
             $description = "No help description available"

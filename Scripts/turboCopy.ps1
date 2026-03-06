@@ -19,6 +19,17 @@
  Multi-destination functionality copied in parallel
  .\turboCopy.ps1 -Source "C:\Temp Folder" -Destinations "D:\Backup1","E:\Backup2","F:\Backup3" -Mirror -Threads 16 -LogToFile
 
+ .NOTES
+Author: Darrell Nielsen
+Created: 2026-03-06
+Version: 1.0
+
+Tags:
+copy
+robo
+robocopy
+turbo
+
 .FUNCTIONALITY
    Copy files really fast.... 
 #>
