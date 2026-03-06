@@ -9,14 +9,11 @@ navigation tools.
 
 The module includes utilities such as:
 
-    df                Linux-style disk free viewer
-    du                Linux-style disk usage viewer
-    sudo              Launch elevated PowerShell
-    Refresh-ADData    Refresh Active Directory cached data
-    Start-StayAwake   Prevent workstation idle lock
-
-The module also preloads environment variables and background tasks
-for Active Directory queries.
+    df
+    du
+    sudo
+    Refresh-ADData
+    Start-StayAwake
 
 .COMMANDS
 df
@@ -27,21 +24,15 @@ Start-StayAwake
 Menu
 
 .VARIABLES
-$WinServers     Cached Windows server list from Active Directory
-$LinuxServers   Cached Linux server list from Active Directory
-$Users          Cached user objects from Active Directory
-$Modules        Available PowerShell module paths
-$Scripts        Custom script directories
-
-.EXAMPLE
-Import-Module MyCustomShell
-
-Loads the MyCustomShell environment and initializes background AD data.
-
-.EXAMPLE
-Menu
-
-Displays available commands and environment variables.
+$WinServers
+$LinuxServers
+$Users
+$Scripts
+$Modules
+$UserScripts
+$CPUScripts
+$UserModules
+$CPUModules
 
 .NOTES
 Author: Darrell Nielsen
@@ -52,6 +43,20 @@ Write-Host "`n"
 Write-Host "Type 'Menu' to list all pre-defined Commands and Variables" -ForegroundColor DarkGray
 Write-Host "`n"
 
+
+$ps5Root = Join-Path $env:USERPROFILE "Documents\WindowsPowerShell"
+$ps7Root = Join-Path $env:USERPROFILE "Documents\PowerShell"
+
+if (-not (Test-Path $ps7Root)) {
+    New-Item -ItemType Directory -Path $ps7Root | Out-Null
+}
+
+$itemsToLink = @(
+    "Scripts"
+    "Modules"
+    "Microsoft.PowerShell_profile.ps1"
+)
+
 $script:UserPSRoot = if (Test-Path "$HOME\Documents\PowerShell") {
     "$HOME\Documents\PowerShell"
 }
@@ -59,75 +64,109 @@ else {
     "$HOME\Documents\WindowsPowerShell"
 }
 
-#Script directory environment variable
-$env:PSScriptPath = Join-Path $script:UserPSRoot "Scripts"
+# --------------------------------------
+# Define user paths
+# --------------------------------------
 
-# Module/script locations
+$script:UserScripts = Join-Path $script:UserPSRoot "Scripts"
+$script:UserModules = Join-Path $script:UserPSRoot "Modules"
+
+# --------------------------------------
+# Define system paths
+# --------------------------------------
+
+$script:CPUScripts = "C:\Program Files\WindowsPowerShell\Scripts"
+$script:CPUModules = "C:\Program Files\WindowsPowerShell\Modules"
+
+# --------------------------------------
+# Combined path collections
+# --------------------------------------
+
 $script:Scripts = @(
-    $env:PSScriptPath,
-    "C:\Program Files\WindowsPowerShell\Scripts"
+    $script:UserScripts
+    $script:CPUScripts
 )
-
 
 $script:Modules = @(
-    (Join-Path $script:UserPSRoot "Modules"),
-    "C:\Program Files\WindowsPowerShell\Modules"
+    $script:UserModules
+    $script:CPUModules
 )
 
+# Optional environment variable
+$env:PSScriptPath = $script:UserScripts
+
+# --------------------------------------
 # Ensure directories exist
-foreach ($path in @($Modules[0], $Scripts[0])) {
+# --------------------------------------
+
+foreach ($path in @(
+    $script:UserScripts
+    $script:UserModules
+)) {
     if (-not (Test-Path $path)) {
         New-Item -ItemType Directory -Path $path -Force | Out-Null
     }
 }
 
-# Load all public functions
+# --------------------------------------
+# Load public functions
+# --------------------------------------
+
 Get-ChildItem "$PSScriptRoot\Public\*.ps1" -Recurse | ForEach-Object {
     . $_
 }
-# Initialize Exported Variables
+
+# --------------------------------------
+# Initialize exported variables
+# --------------------------------------
+
 $script:WinServers   = @()
 $script:WinComputers = @()
 $script:LinuxServers = @()
 $script:Users        = @()
-<#
-$script:Scripts = @("$env:USERPROFILE\Documents\WindowsPowerShell\Scripts", "c:\program files\windowspowershell\scripts")
-#$script:Modules = @("$env:USERPROFILE\Documents\WindowsPowerShell\Modules", "c:\Program Files\WindowsPowerShell\Modules")
 
-# Quick Navigation Drives
-# Ensure default directories exist
-foreach ($path in @($Modules[0], $Scripts[0])) {
-    if (-not (Test-Path $path)) {
-        New-Item -ItemType Directory -Path $path -Force | Out-Null
-    }
-} #>
-# Create quick navigation drives
-if (-not (Get-PSDrive modules -ErrorAction SilentlyContinue)) {
-    New-PSDrive -Name modules -PSProvider FileSystem -Root $Modules[0] -Scope Global | Out-Null
-}
+# --------------------------------------
+# Navigation drives
+# --------------------------------------
+
 if (-not (Get-PSDrive scripts -ErrorAction SilentlyContinue)) {
-    New-PSDrive -Name scripts -PSProvider FileSystem -Root $Scripts[0] -Scope Global | Out-Null
+    New-PSDrive -Name scripts -PSProvider FileSystem -Root $script:UserScripts -Scope Global | Out-Null
 }
 
+if (-not (Get-PSDrive modules -ErrorAction SilentlyContinue)) {
+    New-PSDrive -Name modules -PSProvider FileSystem -Root $script:UserModules -Scope Global | Out-Null
+}
+
+# --------------------------------------
 # Background AD Runspace
+# --------------------------------------
+
 $script:ADPowerShell  = $null
 $script:ADAsyncResult = $null
 
 function Start-ADBackgroundLoad {
+
     if (-not (Get-Module -ListAvailable ActiveDirectory)) { return }
     if (-not (Get-CimInstance Win32_ComputerSystem).PartOfDomain) { return }
+
     $script:ADPowerShell = [PowerShell]::Create()
+
     $script:ADPowerShell.AddScript({
+
         Import-Module ActiveDirectory
+
         [PSCustomObject]@{
+
             WinServers = Get-ADComputer -Filter {
                 OperatingSystem -like "*windows server*" -and Enabled -eq "True"
             } | Select-Object -ExpandProperty Name
 
             WinComputers = Get-ADComputer -Filter {
-                OperatingSystem -like "*Windows 11*" -and Enabled -eq $true} `
-                -Properties OperatingSystem | 
-                Select-object Name,OperatingSystem, @{Name="OU";Expression={$_.DistinguishedName -replace '^CN=[^,]+,'}} | Sort-Object OU
+                OperatingSystem -like "*Windows 11*" -and Enabled -eq $true
+            } -Properties OperatingSystem |
+            Select-Object Name,OperatingSystem,
+                @{Name="OU";Expression={$_.DistinguishedName -replace '^CN=[^,]+,'}} |
+            Sort-Object OU
 
             LinuxServers = Get-ADComputer -Filter {
                 OperatingSystem -like "*Linux*" -and Enabled -eq "True"
@@ -136,7 +175,9 @@ function Start-ADBackgroundLoad {
             Users = Get-ADUser -Filter * |
                 Select-Object Name,SamAccountName,Enabled,DistinguishedName
         }
+
     })
+
     $script:ADAsyncResult = $script:ADPowerShell.BeginInvoke()
 }
 
@@ -148,7 +189,7 @@ function Complete-ADBackgroundLoad {
     $result = $script:ADPowerShell.EndInvoke($script:ADAsyncResult)
 
     $script:WinServers   = $result.WinServers
-    $script:winComputers = $result.WinComputers
+    $script:WinComputers = $result.WinComputers
     $script:LinuxServers = $result.LinuxServers
     $script:Users        = $result.Users
 
@@ -157,13 +198,19 @@ function Complete-ADBackgroundLoad {
     $script:ADAsyncResult = $null
 }
 
-# Start background load immediately
+# --------------------------------------
+# Start background load
+# --------------------------------------
+
 Start-ADBackgroundLoad
 
-# Export Public Members
 Register-EngineEvent PowerShell.OnIdle -Action {
     Complete-ADBackgroundLoad
 } | Out-Null
 
+# --------------------------------------
+# Export module members
+# --------------------------------------
+
 Export-ModuleMember -Function * `
-                    -Variable WinServers, WinComputers, LinuxServers, Users, Scripts, Modules
+    -Variable WinServers, WinComputers, LinuxServers, Users, Scripts, Modules, UserScripts, CPUScripts, UserModules, CPUModules
