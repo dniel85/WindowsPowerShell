@@ -1,4 +1,30 @@
-﻿Import-Module ActiveDirectory
+﻿<#
+.SYNOPSIS
+    Retrieves Defender status for domain
+
+.DESCRIPTION
+    Use this to run against a domain connected network. Will iterate through the domain and retrieve the status of all domain connected workstations and servers.
+
+.PARAMETER ParameterName
+    Parameter description
+
+.EXAMPLE
+    .\Get-DomainDefenderStatus.ps1
+
+.NOTES
+    Author: Darrell Nielsen
+    Created: 2026-03-06
+    Version: 1.0
+
+TAGS
+    Defender
+    status
+    IA
+    Security
+    scan
+    mpsignature
+#>
+Import-Module ActiveDirectory
 
 $servers = @(Get-Content 'C:\STiG_Findings\ops\ExceptADM.txt')
 $totalServers = $servers.Count

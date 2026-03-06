@@ -1,5 +1,29 @@
-﻿
+﻿<#
+.SYNOPSIS
+    Downloads defender updates
 
+.DESCRIPTION
+    Downloads the mpam-fe.exe and nis files directly from Microsoft and places
+    them in the transfer folder
+
+#.PARAMETER ParameterName
+    Parameter description
+
+.EXAMPLE
+    .\downloaddefenderupdates7.ps1
+
+.NOTES
+    Author: Darrell Nielsen
+    Created: 2026-03-06
+    Version: 1.0
+
+TAGS:
+    Defender
+    Download
+    curl
+    security
+    compliance
+#>
 if($PSVersionTable.PSVersion.Major -lt 7){
     Write-Host "PowerShell version 7 must be used to run this Script" -ForegroundColor Red
     exit 1 

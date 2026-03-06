@@ -1,0 +1,101 @@
+{
+    "PowerShell Comment Help": {
+        "prefix": "pshelp",
+        "body": [
+            "<#",
+            ".SYNOPSIS",
+            "    ${1:Short description}",
+            "",
+            ".DESCRIPTION",
+            "    ${2:Detailed description}",
+            "",
+            ".PARAMETER ${3:ParameterName}",
+            "    ${4:Parameter description}",
+            "",
+            ".EXAMPLE",
+            "    ${5:Example usage}",
+            "",
+            ".NOTES",
+            "    Author: ${6:Darrell Nielsen}",
+            "    Created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+            "    Version: 1.0",
+            "",
+            "TAGS:",
+            "    ${7:Tag1}",
+            "#>"
+        ],
+        "description": "PowerShell comment help template"
+    },
+
+    "PowerShell Advanced Function": {
+        "prefix": "psfunc",
+        "body": [
+            "function ${1:Verb-Noun} {",
+            "",
+            "    [CmdletBinding()]",
+            "    param(",
+            "        ${2}",
+            "    )",
+            "",
+            "    begin {",
+            "        ${3:# initialization}",
+            "    }",
+            "",
+            "    process {",
+            "        ${4:# main logic}",
+            "    }",
+            "",
+            "    end {",
+            "        ${5:# cleanup}",
+            "    }",
+            "}"
+        ],
+        "description": "Advanced PowerShell function template"
+    },
+
+    "PowerShell Try Catch": {
+        "prefix": "pstry",
+        "body": [
+            "try {",
+            "    ${1:# code}",
+            "}",
+            "catch {",
+            "    Write-Error \"${2:Error occurred}: $_\"",
+            "}",
+            "finally {",
+            "    ${3:# cleanup}",
+            "}"
+        ],
+        "description": "Try/Catch template"
+    },
+
+    "PowerShell Parameter Block": {
+        "prefix": "psparam",
+        "body": [
+            "[Parameter(",
+            "    Mandatory=$${1:true},",
+            "    ValueFromPipeline=$${2:false},",
+            "    ValueFromPipelineByPropertyName=$${3:false},",
+            "    Position=${4:0}",
+            ")]",
+            "[ValidateNotNullOrEmpty()]",
+            "[string]$${5:ParameterName}"
+        ],
+        "description": "Advanced parameter template"
+    },
+    
+     "PowerShell Admin Check": {
+        "prefix": "psisadministrator",
+        "body": [
+            "# Ensure script is running as Administrator",
+            "if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()",
+            ").IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {",
+            "    Write-Host \"${1:This script must be run as Administrator.}\" -ForegroundColor Red",
+            "    exit 1",
+            "}",
+            ""
+        ],
+        "description": "Stops the script if not running as Administrator"
+    }
+
+}

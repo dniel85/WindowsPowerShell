@@ -1,7 +1,102 @@
-﻿param(
+﻿<#
+.SYNOPSIS
+Displays a real-time view of Windows Firewall traffic from the firewall log.
+
+.DESCRIPTION
+This script reads and tails the Windows Firewall log file (pfirewall.log) and
+displays traffic events in real time inside the PowerShell console.
+
+The console window is maximized and formatted to show a continuously updating
+table of firewall events. Traffic entries are color-coded based on action:
+
+    Green  = Allowed traffic
+    Red    = Blocked/Dropped traffic
+    Gray   = Other actions
+
+If firewall logging is disabled, the script temporarily enables logging for
+Domain, Private, and Public firewall profiles. When the script exits (including
+when Ctrl+C is pressed), the original firewall logging settings are restored.
+
+The script reads the header fields directly from the firewall log to determine
+which columns to display and maintains a circular buffer to render a scrolling
+view of the most recent events.
+
+.PARAMETER SourceIPs
+Optional list of source IP addresses to filter. Only traffic originating from
+these IPs will be displayed.
+
+If left empty, all firewall traffic entries will be shown.
+
+.PARAMETER LogPath
+Path to the Windows Firewall log file.
+
+Default:
+C:\Windows\System32\LogFiles\Firewall\pfirewall.log
+
+.EXAMPLE
+.\Watch-FirewallTraffic.ps1
+
+Displays all firewall traffic in real time.
+
+.EXAMPLE
+.\Watch-FirewallTraffic.ps1 -SourceIPs 10.10.10.15
+
+Shows only firewall traffic originating from 10.10.10.15.
+
+.EXAMPLE
+.\Watch-FirewallTraffic.ps1 -SourceIPs 10.10.10.15,192.168.1.20
+
+Filters traffic for multiple source IP addresses.
+
+.EXAMPLE
+.\Watch-FirewallTraffic.ps1 -LogPath "D:\Logs\Firewall\pfirewall.log"
+
+Reads firewall traffic from a custom log location.
+
+.INPUTS
+System.String[]
+
+.OUTPUTS
+None
+
+The script writes formatted output directly to the console.
+.ROLE
+Administrator
+
+.NOTES
+Author: Darrell Nielsen
+Created: 2026-03-06
+Version: 1.0
+
+Tags:
+firewall
+logs
+troubleshoot
+
+Requirements:
+- Must be run with sufficient privileges to modify firewall logging settings.
+- Windows Firewall logging must be available on the system.
+- PowerShell 5.1 or later recommended.
+
+Behavior:
+- Maximizes the PowerShell console window.
+- Temporarily enables firewall logging if disabled.
+- Restores original firewall settings on script exit.
+- Uses a circular buffer to render a scrolling live view of traffic.
+
+#>
+param(
     [string[]]$SourceIPs = @(),  # Leave empty to show all traffic
     [string]$LogPath = "C:\Windows\System32\LogFiles\Firewall\pfirewall.log"
 )
+
+# Ensure script is running as Administrator
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()
+).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "This script must be run as Administrator." -ForegroundColor Red
+    exit 1
+}
+
 
 cls
 
@@ -22,9 +117,7 @@ public class Win32 {
 $host.UI.RawUI.BufferSize = $host.UI.RawUI.WindowSize
 
 
-# -----------------------------
-# Save current firewall logging settings
-# -----------------------------
+
 $profiles = @("Domain", "Private", "Public")
 $originalSettings = @{}
 
@@ -58,9 +151,6 @@ if (-not $loggingEnabled) {
     }
 }
 
-# -----------------------------
-# Handle Ctrl+C to restore firewall logging
-# -----------------------------
 $onExit = {
     Write-Host "`nRestoring original firewall logging settings..." -ForegroundColor Cyan
     foreach ($p in $profiles) {
