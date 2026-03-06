@@ -81,6 +81,6 @@ script libraries using tags or keywords embedded in scripts.
             Script      = $script.Name
             Description = $description
             FullPath    = $script.FullName
-        }
+        } | format-list
     }
 }

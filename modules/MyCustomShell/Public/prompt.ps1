@@ -1,6 +1,6 @@
 ﻿function prompt {
     #detect repo/branch
-    banner
+   # banner
     $git = $null
     $path = $PWD.Path
     while ($path) {

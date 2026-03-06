@@ -160,14 +160,24 @@ function Start-ADBackgroundLoad {
             WinServers = Get-ADComputer -Filter {
                 OperatingSystem -like "*windows server*" -and Enabled -eq "True"
             } | Select-Object -ExpandProperty Name
-
+            <#
             WinComputers = Get-ADComputer -Filter {
                 OperatingSystem -like "*Windows 11*" -and Enabled -eq $true
             } -Properties OperatingSystem |
             Select-Object Name,OperatingSystem,
                 @{Name="OU";Expression={$_.DistinguishedName -replace '^CN=[^,]+,'}} |
             Sort-Object OU
-
+            #>
+            WinComputers = Get-ADComputer -Filter {
+            OperatingSystem -like "*Windows 11*" -and Enabled -eq $true
+            } -Properties OperatingSystem, Description |
+            Select-Object Name,
+              OperatingSystem,
+              @{Name="User";Expression={
+                  if ($_.Description) {
+                      ($_.Description -split '-',2)[0].Trim()
+                  }
+              }}
             LinuxServers = Get-ADComputer -Filter {
                 OperatingSystem -like "*Linux*" -and Enabled -eq "True"
             } | Select-Object -ExpandProperty Name
