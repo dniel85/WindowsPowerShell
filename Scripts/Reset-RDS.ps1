@@ -1,4 +1,31 @@
-﻿$scriptName = ($MyInvocation.MyCommand).Name.Trim('.ps1').ToString()
+﻿<#
+.SYNOPSIS
+    Resets the RDS Gateway grace period if the last warning event is within the last 2 days.
+
+.DESCRIPTION
+    This script checks the last warning event (Event ID 50281) from the Terminal Services Remote Connection Manager Admin log.
+    If the last warning event occurred within the last 2 days, it resets the RDS Gateway grace period by modifying the registry.
+    The script also sets appropriate permissions on the registry key to allow for the reset and then restarts the server.
+
+.PARAMETER none
+    This script does not accept parameters.
+
+.EXAMPLE
+    .\Reset-RDS.ps1
+.NOTES
+    Author: Darrell Nielsen
+    Created: 2026-03-09
+    Version: 1.0
+
+TAGS:
+    RDS
+    RemoteDesktop
+    TerminalServices
+    GracePeriod
+    reset
+    timebomb
+#>
+$scriptName = ($MyInvocation.MyCommand).Name.Trim('.ps1').ToString()
 
 $logfile = "C:\ScheduledTasks\Logs\$scriptname.log"
 Start-Transcript -Path $logfile

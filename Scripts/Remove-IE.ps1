@@ -1,6 +1,37 @@
-﻿#New-Variable -name WinServers -value  @(get-adcomputer -Filter {operatingsystem -like "*windows server*" -and Enabled -eq "True"}).name
+﻿<#
+.SYNOPSIS
+    Removes Internet Explorer
 
+.DESCRIPTION
+    This script scans a list of servers and checks if Internet Explorer is installed. 
+    If it is found, the script will remove Internet Explorer using DISM and then restart the server.
 
+.PARAMETER None
+    This script does not accept parameters.
+    
+
+.EXAMPLE 
+    .\Remove-IE.ps1
+
+    Reads servers from:
+    C:\STiG_Findings\ops\OPSRV.txt
+
+    Checks for Internet Explorer on each server, removes it if found, and restarts the server.
+
+.NOTES
+    Author: Darrell Nielsen
+    Created: 2026-03-09
+    Version: 1.0
+
+TAGS:
+    remove
+    uninstall
+    InternetExplorer
+    
+#>
+
+[cmdletbinding()]
+    param()
 
 foreach($server in $WinServers){
     Write-Host "Processing server $server" -ForegroundColor Yellow

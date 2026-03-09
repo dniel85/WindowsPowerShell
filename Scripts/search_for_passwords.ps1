@@ -3,9 +3,7 @@
 Automatically searches for passwords in plaintext
 
 .DESCRIPTION
-This script iterates through user directories looking for stored passwords in plain text that match a pattern
-
-
+This script iterates through user directories looking for stored passwords in plain text that match a pattern commonly used for strong passwords (at least 14 characters, including uppercase, lowercase, digits, and special characters).
 .OUTPUTS
 None
 
@@ -17,8 +15,6 @@ Author: Darrell Nielsen
 TAGS:
 passwords
 secret
-
-
 #>
  [cmdletbinding()]
  param(

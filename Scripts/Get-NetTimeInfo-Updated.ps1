@@ -1,4 +1,50 @@
-﻿$winservers = @(Get-Content 'C:\STiG_Findings\ops\ExceptADM.txt')
+﻿<#
+.SYNOPSIS
+    Retrieves time synchronization information from a list of remote Windows servers.
+
+.DESCRIPTION
+    This script reads a list of server names from a text file and queries each server
+    for time synchronization status using the w32tm command.
+
+    For each server, the script retrieves:
+    - Hostname
+    - Time zone
+    - Last successful sync time
+    - NTP server source
+    - Current time
+
+    The script uses PowerShell remoting (Invoke-Command) to execute the w32tm query on each server.
+
+    Results are displayed in a formatted table.
+
+.PARAMETER Winservers
+    A text file containing a list of server names to query, one per line.(DEFAULT)
+
+.EXAMPLE
+    .\Get-NetTimeInfo-Updated.ps1
+
+    Reads servers from:
+    C:\STiG_Findings\ops\ExceptADM.txt
+
+    Queries time synchronization status on each system and displays results in a table.
+
+.NOTES
+    Author: Darrell Nielsen
+    Created: 2026-03-09
+    Version: 1.0
+
+TAGS:
+    Time
+    tools
+    synchronization
+    w32tm
+    NTP
+    timezones
+    net time
+#>
+[cmdletbinding()]
+    param()
+$winservers = @(Get-Content 'C:\STiG_Findings\ops\ExceptADM.txt')
 $results = @()
 
 foreach($server in $winservers){

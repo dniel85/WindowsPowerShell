@@ -1,3 +1,87 @@
+<#
+.SYNOPSIS
+Generates a categorized server inventory from Active Directory and exports it to an INI file.
+
+.DESCRIPTION
+This script queries Active Directory for all enabled Windows Server computer objects
+and automatically categorizes them based on naming conventions found in the server name.
+
+The script parses the hostname to determine the server role (such as Domain Controller,
+File Server, SQL, etc.) using a predefined role mapping table.
+
+Servers are grouped by role and exported into an INI formatted file located at:
+
+    $env:USERPROFILE\Documents\WindowsPowerShell\Files\Servers.ini
+
+Each section of the INI file represents a detected role and contains the servers
+belonging to that category.
+
+If the INI file already exists it will be deleted and regenerated.
+
+.PARAMETER None
+This script does not accept parameters.
+
+.EXAMPLE
+.\Generate-ServerInventory.ps1
+
+Queries Active Directory for Windows Servers and generates a categorized
+Servers.ini file in the user’s PowerShell files directory.
+
+.EXAMPLE
+powershell.exe -ExecutionPolicy Bypass -File .\Generate-ServerInventory.ps1
+
+Runs the script from another process and creates the categorized server list.
+
+.OUTPUTS
+INI File
+
+Creates:
+$env:USERPROFILE\Documents\WindowsPowerShell\Files\Servers.ini
+
+Example output structure:
+
+[DomainController]
+server=corp-dc01
+server=corp-dc02
+
+[FileShare]
+server=corp-fs01
+
+[Databases]
+server=corp-sql01
+
+.NOTES
+Author: Darrell Nielsen
+
+Purpose:
+Automatically build categorized server lists for administrative tools,
+PowerShell modules, or management scripts.
+
+Requirements:
+- ActiveDirectory PowerShell module
+- Domain connectivity
+- Permission to query computer objects in Active Directory
+
+File Location:
+$env:USERPROFILE\Documents\WindowsPowerShell\Files\Servers.ini
+
+Tags:
+ActiveDirectory
+ServerInventory
+Automation
+PowerShell
+Infrastructure
+ServerRoles
+INI
+EnterpriseAdministration
+
+.LINK
+Get-ADComputer
+https://learn.microsoft.com/powershell/module/activedirectory/get-adcomputer
+
+#>
+[cmdletbinding()]
+    param()
 if($WinServers -eq $null){New-Variable -name WinServers -value  @(get-adcomputer -Filter {operatingsystem -like "*windows server*" -and Enabled -eq "True"}).name -Scope global
     }
 

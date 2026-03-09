@@ -1,4 +1,99 @@
-﻿
+﻿<#
+.SYNOPSIS
+Scans Word (.docx) documents for potential SSN personally identifiable information (PII).
+
+.DESCRIPTION
+Scan-SSNPII recursively scans a directory (including UNC paths) for Microsoft Word
+documents (*.docx) and searches the document contents for patterns that resemble
+Social Security Numbers (SSN).
+
+The function extracts the internal XML structure of each .docx file and scans
+the document.xml content using regular expressions.
+
+When matches are found, the function returns information about the file including:
+
+- File path
+- File owner
+- Last access time
+
+This function is useful for identifying potential PII exposure within document
+repositories, network shares, or compliance audit environments.
+
+.PARAMETER uncPath
+Specifies the directory or UNC path to scan for .docx files.
+
+The function will recursively search the specified location for Word documents
+and analyze their contents for SSN patterns.
+
+.EXAMPLE
+Scan-SSNPII -uncPath "N:\Automation\TestDocx"
+
+Scans the specified directory for Word documents containing SSN patterns.
+
+.EXAMPLE
+Scan-SSNPII -uncPath "\\fileserver\shared\documents"
+
+Scans a network share for Word documents containing possible SSN PII.
+
+.EXAMPLE
+Scan-SSNPII -uncPath "C:\Users\Public\Documents"
+
+Scans a local directory for Word documents containing SSN data.
+
+.INPUTS
+System.String
+
+Accepts a directory path or UNC path.
+
+.OUTPUTS
+PSCustomObject
+
+Returns objects containing:
+
+FilePath
+Owner
+LastAccessTime
+
+.NOTES
+Author: Darrell Nielsen
+
+Purpose:
+Identify potential Social Security Number (SSN) exposure in Word documents
+during security audits, compliance checks, or data classification efforts.
+
+Method:
+The function extracts .docx files (which are ZIP archives) and scans the
+document.xml file using regular expressions to identify SSN patterns.
+
+Patterns Detected:
+- ###-##-####
+- SSN ###-##-####
+- SSN #########
+
+Requirements:
+- Read access to the target directory
+- .NET System.IO.Compression support (built into PowerShell)
+
+Tags:
+PII
+SSN
+SecurityAudit
+DataLossPrevention
+Compliance
+PowerShell
+InformationSecurity
+FileScanning
+Audit
+
+.LINK
+about_Regular_Expressions
+https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_regular_expressions
+
+.LINK
+System.IO.Compression.ZipFile
+https://learn.microsoft.com/dotnet/api/system.io.compression.zipfile
+
+#>
 function Scan-SSNPII{
     [CmdletBinding()]
     param (
