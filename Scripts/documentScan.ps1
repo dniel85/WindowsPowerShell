@@ -94,7 +94,7 @@ System.IO.Compression.ZipFile
 https://learn.microsoft.com/dotnet/api/system.io.compression.zipfile
 
 #>
-function Scan-SSNPII{
+function Search-SSNPII{
     [CmdletBinding()]
     param (
         [Parameter()]
@@ -102,8 +102,6 @@ function Scan-SSNPII{
         $uncPath
     )
     #$uncPath = "N:\Automation\TestDocx" 
-
-
     function Search-PIIInDocx {
         param (
             [string]$docxFilePath,
@@ -131,7 +129,7 @@ function Scan-SSNPII{
         }
         return $foundPII
     }
-    function Scan-Directory {
+    function Search-Directory {
         param (
             [string]$directory,
             [array]$patterns
@@ -150,7 +148,7 @@ function Scan-SSNPII{
     $patterns = @(
         "\b\d{3}-\d{2}-\d{4}\b","SSN \d{3}-\d{2}-\d{4}\b","SSN \d{9}"     #<---- SSN REGEX pattern
         )
-    $results = Scan-Directory -directory $uncPath -patterns $patterns
+    $results = Search-Directory -directory $uncPath -patterns $patterns
     Write-Host "`n Files below contain SSN PII" -ForegroundColor Yellow -BackgroundColor Black
     foreach ($result in $results) {
         $docOwner = Get-Acl -Path $results.FilePath | Select-Object -ExpandProperty Owner

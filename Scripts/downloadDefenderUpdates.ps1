@@ -1,4 +1,40 @@
-﻿Import-Module Write-Log
+﻿<#
+.SYNOPSIS 
+    Downloads the latest Microsoft Defender Antivirus updates and packages them into an ISO file.
+
+.DESCRIPTION
+    This script retrieves the latest Microsoft Defender Antivirus signature updates for both x64 and x86 architectures.
+    It downloads the updates from the official Microsoft links, saves them to a specified directory, and then creates an ISO file containing the updates.
+
+    The script checks for the existence of the target directories and creates them if they do not exist. 
+    After downloading the updates, it generates an ISO file named with the current date and moves it to a transfer location.
+
+    Finally, it cleans up the temporary files used for creating the ISO.
+
+.PARAMETER None
+    This script does not accept any parameters.
+    
+
+.EXAMPLE
+    .\downloadDefenderUpdates.ps1
+
+    Downloads the latest Defender updates, creates an ISO file, and saves it to the transfer directory.
+
+.NOTES
+    Author: Darrell Nielsen
+    Created: 2026-03-09
+    Version: 1.0
+
+TAGS:
+    Defender
+    MicrosoftDefender
+    Antivirus
+    Updates
+    ISO
+    Automation
+#>
+
+Import-Module Write-Log
 try{
 $mpam64 = "https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64"
 $mpam86 = "https://go.microsoft.com/fwlink/?LinkID=121721&arch=x86"

@@ -61,7 +61,7 @@ repo
 param(
     [string]$Message = "Auto commit from PowerShell"
 )
-$currentLocation = (pwd).Path
+$currentLocation = (Get-Location).Path
 Set-Location "$env:userprofile\documents\WindowsPowerShell"
 # Ensure we are inside a Git repo
 if (-not (Test-Path ".git")) {

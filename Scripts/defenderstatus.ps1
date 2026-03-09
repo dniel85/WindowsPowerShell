@@ -123,6 +123,6 @@ foreach ($server in $servers){
 
         Write-Progress -Activity "Defender Scan" -Completed
         $FormattedTime = (get-date).ToString("dd-MMM_HHmm")
-        $results |ft -AutoSize
+        $results |format-table -AutoSize
         $results | export-csv -Path $env:userprofile\documents\defenderStatus_$formattedtime.csv -NoTypeInformation -Force
         Write-Host "` CSV resuls path:: $env:userprofile\documents\defenderStatus_$formattedtime.csv" -ForegroundColor Yellow
