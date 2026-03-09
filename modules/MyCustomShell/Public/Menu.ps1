@@ -50,7 +50,7 @@ Displays commands, variables, and environment info for MyCustomShell.
         ) } |
         Sort-Object Name
 
-    function Wrap-Text($text,$width) {
+    function Start-TextWrap($text,$width) {
         $words = $text -split "\s+"
         $line  = ""
         $out   = @()
@@ -81,7 +81,7 @@ Displays commands, variables, and environment info for MyCustomShell.
         }
         else { "" }
 
-        $wrapped = Wrap-Text $description $descWidth
+        $wrapped = Start-TextWrap $description $descWidth
         $first = $true
 
         foreach ($line in $wrapped) {

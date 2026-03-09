@@ -44,7 +44,7 @@ Write-Host "Type 'Menu' to list all pre-defined Commands and Variables" -Foregro
 Write-Host "`n"
 
 
-$ps5Root = Join-Path $env:USERPROFILE "Documents\WindowsPowerShell"
+$script:ps5Root = Join-Path $env:USERPROFILE "Documents\WindowsPowerShell"
 $ps7Root = Join-Path $env:USERPROFILE "Documents\PowerShell"
 
 if (-not (Test-Path $ps7Root)) {
