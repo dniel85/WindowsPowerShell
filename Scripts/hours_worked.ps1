@@ -34,6 +34,12 @@ hours_worked -Computer PC01 -Days 3
 Author  : Darrell Nielsen
 Module  : PSScripts
 Version : 1.2
+
+Tags:
+    hours
+    worked
+    hours worked
+    time
 #>
 
 [CmdletBinding()]

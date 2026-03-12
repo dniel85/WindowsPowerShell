@@ -14,6 +14,11 @@ if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administra
 $loggedInUser = (Get-Process explorer -IncludeUserName |
                Select-Object -First 1 -ExpandProperty UserName).Split('\')[1]
 
+if(([Security.Principal.WindowsIdentity]::GetCurrent().Name -split '\\')[-1] -eq $loggedInUser){
+    Write-Host "This script must be ran under your user account using evelated priviliges. Exiting now." -ForegroundColor Red
+    return
+}
+
 $items = Get-ChildItem C:\Users\$loggedInUser\documents\WindowsPowerShell
 
 $PS7_UserDir = "C:\Users\$($loggedInUser)\Documents\PowerShell"

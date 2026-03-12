@@ -1,67 +1,77 @@
 function banner {
-    $cacheDir  = Join-Path $env:USERPROFILE 'Documents\WindowsPowerShell\Files'
+    [cmdletbinding()]
+        param()
+    $cacheDir  = Join-Path ([Environment]::GetFolderPath("MyDocuments")) 'PowerShell\Files'
     $cacheFile = Join-Path $cacheDir 'BannerInfo.txt'
     $tmpXml    = Join-Path $env:TEMP 'banner.xml'
 
-    # If cache doesn't exist, try to find and parse the Banner GPO
+    # Only do the expensive stuff if cache doesn't exist
     if (-not (Test-Path $cacheFile)) {
 
-        # Make sure the cache folder exists
+        Import-Module GroupPolicy -ErrorAction SilentlyContinue
+
         if (-not (Test-Path $cacheDir)) {
             New-Item -Path $cacheDir -ItemType Directory -Force | Out-Null
         }
 
         try {
-            $gpo = Get-GPO -All -ErrorAction Stop |
-                   Where-Object { $_.DisplayName -like '*Banner*' } |
+            $gpo = Get-GPO -All |
+                   Where-Object DisplayName -match "Banner" |
                    Select-Object -First 1
-        } catch {
-            return  # Do absolutely nothing if GPO query fails
+        }
+        catch {
+            return
         }
 
-        if (-not $gpo) { return }  # No matching GPO => do nothing
+        if (-not $gpo) { return }
 
         try {
-            Get-GPOReport -Guid $gpo.Id -ReportType Xml -Path $tmpXml -ErrorAction Stop | Out-Null
-            [xml]$BannerXML = Get-Content -Path $tmpXml -ErrorAction Stop
-        } catch {
-            if (Test-Path $tmpXml) { Remove-Item $tmpXml -Force -ErrorAction SilentlyContinue }
+            Get-GPOReport -Guid $gpo.Id -ReportType Xml -Path $tmpXml | Out-Null
+            [xml]$BannerXML = Get-Content $tmpXml
+        }
+        catch {
             return
-        } finally {
-            if (Test-Path $tmpXml) { Remove-Item $tmpXml -Force -ErrorAction SilentlyContinue }
+        }
+        finally {
+            Remove-Item $tmpXml -Force -ErrorAction SilentlyContinue
         }
 
-        # Try to extract values (guard against missing nodes)
-        $displayText      = $BannerXML.gpo.computer.extensiondata.extension.policy.edittext.value
-        $foregroundColor  = ($BannerXML.gpo.computer.extension.policy.dropdownlist.value)[1].name
-        $backgroundColor  = ($BannerXML.gpo.computer.extension.policy.dropdownlist.value)[0].name
+        $node = $BannerXML.SelectSingleNode("//EditText/Value")
+        if ($node) { $displayText = $node.InnerText }
 
-        if (-not $displayText -or -not $foregroundColor -or -not $backgroundColor) {
-            return  # Missing expected values => do nothing
+        $dropdowns = $BannerXML.SelectNodes("//DropDownList/Value")
+
+        if ($dropdowns -and $dropdowns.Count -ge 2) {
+            $foregroundColor = $dropdowns[1].name
+            $backgroundColor = $dropdowns[0].name
         }
 
-        # Write cache
-        @($displayText, $foregroundColor, $backgroundColor) | Set-Content -Path $cacheFile -Encoding UTF8
+        if (-not $displayText) { return }
+
+        @($displayText,$foregroundColor,$backgroundColor) |
+            Set-Content $cacheFile -Encoding UTF8
     }
 
-    # Read cached banner info
-    $bannerContent = Get-Content -Path $cacheFile -ErrorAction SilentlyContinue
+    # FAST PATH (runs every shell launch)
+    $bannerContent = Get-Content $cacheFile -ErrorAction SilentlyContinue
     if (-not $bannerContent -or $bannerContent.Count -lt 3) { return }
 
-    $width  = [console]::WindowWidth
+    $width  = $Host.UI.RawUI.WindowSize.Width
     $status = $bannerContent[0]
 
     $leftPadding = [math]::Max(0, ($width - $status.Length) / 2)
     $line = (" " * [math]::Floor($leftPadding)) + $status
     $line = $line.PadRight($width)
 
-    # Background color normalization: "Dark" + ColorName (only if not already "DarkX")
-    $bgName = $bannerContent[2].ToString()
-    if ($bgName -notmatch '^Dark') { $bgName = "Dark$bgName" }
+    $fg = $bannerContent[1]
+    $bg = $bannerContent[2]
+
+    if ($bg -notmatch '^Dark') { $bg = "Dark$bg" }
 
     try {
-        Write-Host $line -BackgroundColor $bgName -ForegroundColor $bannerContent[1]
-    } catch {
-        return  # If colors are invalid => do nothing
+        Write-Host $line -ForegroundColor $fg -BackgroundColor $bg
+    }
+    catch {
+        Write-Host $line
     }
 }

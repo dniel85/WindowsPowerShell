@@ -1,0 +1,146 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Ask-GPT</S>
+      <Version N="Version">1.0.4</Version>
+      <S N="Type">Module</S>
+      <S N="Description">A PowerShell module for interacting with OpenAI GPT models via command line interface.</S>
+      <S N="Author">stimpy77</S>
+      <S N="CompanyName">JonDavis</S>
+      <S N="Copyright">(c) 2025 stimpy77. All rights reserved.</S>
+      <DT N="PublishedDate">2025-09-02T07:35:42-05:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2026-03-12T12:36:56.5988942-05:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/stimpy77/Ask-GPT/blob/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/stimpy77/ask-gpt</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>OpenAI</S>
+          <S>GPT</S>
+          <S>AI</S>
+          <S>Chat</S>
+          <S>API</S>
+          <S>PowerShell</S>
+          <S>Ask-GPT</S>
+          <S>AskGPT</S>
+          <S>ChatGPT</S>
+          <S>CLI</S>
+          <S>CommandLine</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Ask-GPT</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Ask-GPT</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="6" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">Version 1.0.4: Major fixes and GPT-5 support_x000D__x000A_- Fixed GPT-5 compatibility: Handle temperature restrictions (GPT-5 only supports default temperature)_x000D__x000A_- Fixed GPT-5 streaming: Auto-fallback to non-streaming for unverified organizations_x000D__x000A_- Improved error handling with detailed API error messages_x000D__x000A_- Better model filtering to exclude problematic models (realtime, instruct, etc.)_x000D__x000A_- Enhanced model auto-detection with robust fallback to gpt-4o_x000D__x000A_- Fixed temperature parameter handling for different model types_x000D__x000A_- Improved ANSI escape sequence support for better terminal rendering</S>
+      <Obj N="Dependencies" RefId="8">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2025 stimpy77. All rights reserved.</S>
+          <S N="description">A PowerShell module for interacting with OpenAI GPT models via command line interface.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">Version 1.0.4: Major fixes and GPT-5 support_x000D__x000A_- Fixed GPT-5 compatibility: Handle temperature restrictions (GPT-5 only supports default temperature)_x000D__x000A_- Fixed GPT-5 streaming: Auto-fallback to non-streaming for unverified organizations_x000D__x000A_- Improved error handling with detailed API error messages_x000D__x000A_- Better model filtering to exclude problematic models (realtime, instruct, etc.)_x000D__x000A_- Enhanced model auto-detection with robust fallback to gpt-4o_x000D__x000A_- Fixed temperature parameter handling for different model types_x000D__x000A_- Improved ANSI escape sequence support for better terminal rendering</S>
+          <S N="isLatestVersion">False</S>
+          <S N="isAbsoluteLatestVersion">False</S>
+          <S N="versionDownloadCount">8</S>
+          <S N="downloadCount">130</S>
+          <S N="packageSize">13376</S>
+          <S N="published">9/2/2025 7:35:42 AM -05:00</S>
+          <S N="created">9/2/2025 7:35:42 AM -05:00</S>
+          <S N="lastUpdated">10/19/2025 5:30:00 AM -05:00</S>
+          <S N="tags">OpenAI GPT AI Chat API PowerShell Ask-GPT AskGPT ChatGPT CLI CommandLine PSModule</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2025-10-19T05:30:00Z</S>
+          <S N="NormalizedVersion">1.0.4</S>
+          <S N="Authors">stimpy77</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Ask-GPT.nuspec|Ask-GPT.psd1|Ask-GPT.psm1|CHANGELOG.md|GALLERY_PREP.md|LICENSE|README.md|Update-Version.ps1</S>
+          <S N="Functions">Ask-GPT</S>
+          <S N="GUID">b8c5e8a0-4d1a-4a7e-9b2c-3f4d5e6a7b8c</S>
+          <S N="PowerShellVersion">7.0</S>
+          <S N="CompanyName">Unknown</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\darrell.nielsen\Documents\PowerShell\Modules\Ask-GPT\1.0.4</S>
+    </MS>
+  </Obj>
+</Objs>

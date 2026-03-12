@@ -428,3 +428,7 @@ End     100
 2026-02-20 09:03:23 [INFO] While loop iteration | VAR: 4
 2026-02-20 09:03:23 [DEBUG] Generated random value | VAR: 5
 2026-02-20 09:03:23 [INFO] Exiting Test-WhileLoop
+2026-03-12 14:20:50 [INFO] test
+2026-03-12 14:22:54 [INFO] requires PS7 set to :: False
+2026-03-12 14:27:08 [ERROR] Please run as Administrator.
+2026-03-12 14:38:16 [ERROR] [Initialisations]  must be ran as Administrator.

@@ -1,6 +1,8 @@
 ﻿function prompt {
     #detect repo/branch
-   # banner
+    if($PSVersionTable.PSVersion.Major -eq 5){
+    #banner -WarningAction SilentlyContinue
+    }
     $git = $null
     $path = $PWD.Path
     while ($path) {
