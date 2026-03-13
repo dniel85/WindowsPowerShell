@@ -57,11 +57,11 @@ $itemsToLink = @(
     "Microsoft.PowerShell_profile.ps1"
 )
 
-$script:UserPSRoot = if (Test-Path "$HOME\Documents\PowerShell") {
-    "$HOME\Documents\PowerShell"
+$script:UserPSRoot = if($PSVersionTable.PSVersion.Major -eq 5){
+    "$HOME\Documents\WindowsPowerShell"
 }
 else {
-    "$HOME\Documents\WindowsPowerShell"
+    "$HOME\Documents\PowerShell"
 }
 
 # --------------------------------------

@@ -1,23 +1,23 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "ctrl+shift+\\",
-        "command": "editor.action.jumpToBracket",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+\\",
-        "command": "-editor.action.jumpToBracket",
-        "when": "editorTextFocus"
-    },
-    {
+{
         "key": "shift+space",
         "command": "cursorRight",
-        "when": "textInputFocus"
+        "when": "editorTextFocus"
     },
     {
-        "key": "right",
-        "command": "-cursorRight",
-        "when": "textInputFocus"
+        "key": "ctrl+space",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+space",
+        "command": "cursorWordEndRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+space",
+        "command": "cursorWordStartLeft",
+        "when": "editorTextFocus"
     }
 ]

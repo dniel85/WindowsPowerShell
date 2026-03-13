@@ -1,4 +1,32 @@
-﻿if($winservers -eq $null) {
+﻿<#
+.SYNOPSIS
+    Query domain Workstations and Servers for Time Sync settings
+
+.DESCRIPTION
+    Script will iterate through all Windows servers on a domain to collect the win32tm settings.  Data is parsed 
+    into a table output. Script is usefull for troubleshooting network time issues within a domain. 
+
+.PARAMETER None
+    Parameter description
+
+.EXAMPLE
+    .\Get-DomainNetTimeInfo.ps1
+
+.ROLE
+    Administrator
+
+.NOTES
+    Author: Darrell Nielsen
+    Created: 2026-03-13
+    Version: 1.0
+
+TAGS:
+    Time
+    netTime
+    w32tm
+    net time
+#>
+if($winservers -eq $null) {
     $winservers = @(Get-Content 'C:\STiG_Findings\ops\ExceptADM.txt')
     }
 $results = @()

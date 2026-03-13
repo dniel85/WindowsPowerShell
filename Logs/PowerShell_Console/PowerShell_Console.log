@@ -432,3 +432,7 @@ End     100
 2026-03-12 14:22:54 [INFO] requires PS7 set to :: False
 2026-03-12 14:27:08 [ERROR] Please run as Administrator.
 2026-03-12 14:38:16 [ERROR] [Initialisations]  must be ran as Administrator.
+2026-03-13 09:18:39 [ERROR] [Initialisations]  must be run as Administrator.
+2026-03-13 09:20:25 [INFO] PowerShell 7 Requirement: False 
+2026-03-13 09:21:17 [INFO] PowerShell 7 Requirement: False
+2026-03-13 09:21:17 [INFO] Script Must be ran as Admin: False
