@@ -436,3 +436,279 @@ End     100
 2026-03-13 09:20:25 [INFO] PowerShell 7 Requirement: False 
 2026-03-13 09:21:17 [INFO] PowerShell 7 Requirement: False
 2026-03-13 09:21:17 [INFO] Script Must be ran as Admin: False
+2026-03-13 10:02:24 [INFO] test
+2026-03-13 10:18:20 [INFO] Starting TempScript.ps1 v1.0
+2026-03-13 10:20:00 [INFO] Starting TempScript.ps1 v1.0
+2026-03-13 10:20:17 [INFO] Starting TempScript.ps1 v1.0
+2026-03-13 10:20:23 [INFO] Starting TempScript.ps1 v1.0
+2026-03-13 10:20:23 [ERROR] The variable '$ComputerName' cannot be retrieved because it has not been set.
+2026-03-13 10:20:23 [INFO] Ending TempScript.ps1 with exit code 1
+2026-03-13 10:38:11 [INFO] Starting TempScript.ps1 v1.0
+2026-03-13 10:39:25 [INFO] Starting TempScript.ps1 v1.0
+2026-03-13 10:39:46 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 10:41:06 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 10:41:06 [INFO] Ending TempScript.ps1 with exit code 0
+2026-03-13 10:45:53 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 10:45:53 [INFO] Ending TempScript.ps1 with exit code 0
+2026-03-13 10:52:05 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 10:52:05 [ERROR] The variable '$ComputerName' cannot be retrieved because it has not been set.
+2026-03-13 10:52:05 [INFO] Ending TempScript.ps1 with exit code 1
+2026-03-13 10:57:58 [WARN] this is a warning
+2026-03-13 10:59:03 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 10:59:03 [ERROR] The variable '$ComputerName' cannot be retrieved because it has not been set.
+2026-03-13 10:59:03 [INFO] Ending TempScript.ps1 with exit code 1
+2026-03-13 11:02:19 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:02:25 [ERROR] The variable '$results' cannot be retrieved because it has not been set.
+2026-03-13 11:02:25 [INFO] Ending TempScript.ps1 with exit code 1
+2026-03-13 11:03:15 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:04:51 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:04:51 [INFO] Adding to $results variable: .length
+2026-03-13 11:06:52 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:06:52 [INFO] Processing 1 of SIL-DC-2 SIL-DC-1 SIL-RADIUS MEL-SP SIL-BKUP01 NI-VAL SIL-WDS01 SIL-KMS01 SIL-DMS SIL-WDM-01 SIL-BKUP1 SIL-MON1 SIL-WDS02 SIL-FP1 SIL-SEP-1 SIL-SW1 ATOM-WSUS SIL-WSUS2019-01 SIL-WDS-MEL SIL-SQL1 SIL-VMM1 SIL-SCVMM SIL-HOST-1 SIL-FS1 SIL-FS2 SIL-SQL2 SIL-VMM2 SIL-DHCP SIL-HOST-5 SIL-HOST-2 SIL-HOST-3 SIL-HOST-4 SIL-WSUS-2022 SIL-AIQUM1 SIL-ADM1 SIL-SQL-CL1 SIL-FS-CL1 SIL-SQL-SCVMM SIL-VMM-CL1 SIL-FS SIL-HOST-CL1 SIL-CDP1 SIL-CDP2 SIL-SCA1 SIL-TZM SIL-SQL-VEEAM SIL-BKUPPRX1 SIL-IAT1 SIL-BKUPPRX2 BACKUPTEST SIL-BKUPPRX3 SIL-TEST-RESMC- VMW-WORKSTATION JP-DEV CV-TEST.length
+2026-03-13 11:06:53 [INFO] Processing 1 of SIL-DC-2 SIL-DC-1 SIL-RADIUS MEL-SP SIL-BKUP01 NI-VAL SIL-WDS01 SIL-KMS01 SIL-DMS SIL-WDM-01 SIL-BKUP1 SIL-MON1 SIL-WDS02 SIL-FP1 SIL-SEP-1 SIL-SW1 ATOM-WSUS SIL-WSUS2019-01 SIL-WDS-MEL SIL-SQL1 SIL-VMM1 SIL-SCVMM SIL-HOST-1 SIL-FS1 SIL-FS2 SIL-SQL2 SIL-VMM2 SIL-DHCP SIL-HOST-5 SIL-HOST-2 SIL-HOST-3 SIL-HOST-4 SIL-WSUS-2022 SIL-AIQUM1 SIL-ADM1 SIL-SQL-CL1 SIL-FS-CL1 SIL-SQL-SCVMM SIL-VMM-CL1 SIL-FS SIL-HOST-CL1 SIL-CDP1 SIL-CDP2 SIL-SCA1 SIL-TZM SIL-SQL-VEEAM SIL-BKUPPRX1 SIL-IAT1 SIL-BKUPPRX2 BACKUPTEST SIL-BKUPPRX3 SIL-TEST-RESMC- VMW-WORKSTATION JP-DEV CV-TEST.length
+2026-03-13 11:06:54 [INFO] Processing 1 of SIL-DC-2 SIL-DC-1 SIL-RADIUS MEL-SP SIL-BKUP01 NI-VAL SIL-WDS01 SIL-KMS01 SIL-DMS SIL-WDM-01 SIL-BKUP1 SIL-MON1 SIL-WDS02 SIL-FP1 SIL-SEP-1 SIL-SW1 ATOM-WSUS SIL-WSUS2019-01 SIL-WDS-MEL SIL-SQL1 SIL-VMM1 SIL-SCVMM SIL-HOST-1 SIL-FS1 SIL-FS2 SIL-SQL2 SIL-VMM2 SIL-DHCP SIL-HOST-5 SIL-HOST-2 SIL-HOST-3 SIL-HOST-4 SIL-WSUS-2022 SIL-AIQUM1 SIL-ADM1 SIL-SQL-CL1 SIL-FS-CL1 SIL-SQL-SCVMM SIL-VMM-CL1 SIL-FS SIL-HOST-CL1 SIL-CDP1 SIL-CDP2 SIL-SCA1 SIL-TZM SIL-SQL-VEEAM SIL-BKUPPRX1 SIL-IAT1 SIL-BKUPPRX2 BACKUPTEST SIL-BKUPPRX3 SIL-TEST-RESMC- VMW-WORKSTATION JP-DEV CV-TEST.length
+2026-03-13 11:07:38 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:07:38 [INFO] Processing 1 of SIL-DC-2.length
+2026-03-13 11:07:39 [INFO] Processing 1 of SIL-DC-1.length
+2026-03-13 11:07:40 [INFO] Processing 1 of SIL-RADIUS.length
+2026-03-13 11:08:27 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:08:27 [INFO] Processing 1 of SIL-DC-2.length
+2026-03-13 11:08:28 [INFO] Processing 2 of SIL-DC-1.length
+2026-03-13 11:08:29 [INFO] Processing 3 of SIL-RADIUS.length
+2026-03-13 11:09:00 [INFO] 55
+2026-03-13 11:09:56 [INFO] processing 1 of SIL-DC-2.Length
+2026-03-13 11:09:56 [INFO] processing 2 of SIL-DC-1.Length
+2026-03-13 11:09:56 [INFO] processing 3 of SIL-RADIUS.Length
+2026-03-13 11:09:56 [INFO] processing 4 of MEL-SP.Length
+2026-03-13 11:09:56 [INFO] processing 5 of SIL-BKUP01.Length
+2026-03-13 11:09:56 [INFO] processing 6 of NI-VAL.Length
+2026-03-13 11:09:56 [INFO] processing 7 of SIL-WDS01.Length
+2026-03-13 11:09:56 [INFO] processing 8 of SIL-KMS01.Length
+2026-03-13 11:09:56 [INFO] processing 9 of SIL-DMS.Length
+2026-03-13 11:09:56 [INFO] processing 10 of SIL-WDM-01.Length
+2026-03-13 11:09:56 [INFO] processing 11 of SIL-BKUP1.Length
+2026-03-13 11:09:56 [INFO] processing 12 of SIL-MON1.Length
+2026-03-13 11:09:56 [INFO] processing 13 of SIL-WDS02.Length
+2026-03-13 11:09:56 [INFO] processing 14 of SIL-FP1.Length
+2026-03-13 11:09:56 [INFO] processing 15 of SIL-SEP-1.Length
+2026-03-13 11:09:56 [INFO] processing 16 of SIL-SW1.Length
+2026-03-13 11:09:56 [INFO] processing 17 of ATOM-WSUS.Length
+2026-03-13 11:09:56 [INFO] processing 18 of SIL-WSUS2019-01.Length
+2026-03-13 11:09:56 [INFO] processing 19 of SIL-WDS-MEL.Length
+2026-03-13 11:09:56 [INFO] processing 20 of SIL-SQL1.Length
+2026-03-13 11:09:56 [INFO] processing 21 of SIL-VMM1.Length
+2026-03-13 11:09:56 [INFO] processing 22 of SIL-SCVMM.Length
+2026-03-13 11:09:56 [INFO] processing 23 of SIL-HOST-1.Length
+2026-03-13 11:09:56 [INFO] processing 24 of SIL-FS1.Length
+2026-03-13 11:09:56 [INFO] processing 25 of SIL-FS2.Length
+2026-03-13 11:09:56 [INFO] processing 26 of SIL-SQL2.Length
+2026-03-13 11:09:56 [INFO] processing 27 of SIL-VMM2.Length
+2026-03-13 11:09:56 [INFO] processing 28 of SIL-DHCP.Length
+2026-03-13 11:09:56 [INFO] processing 29 of SIL-HOST-5.Length
+2026-03-13 11:09:56 [INFO] processing 30 of SIL-HOST-2.Length
+2026-03-13 11:09:56 [INFO] processing 31 of SIL-HOST-3.Length
+2026-03-13 11:09:56 [INFO] processing 32 of SIL-HOST-4.Length
+2026-03-13 11:09:56 [INFO] processing 33 of SIL-WSUS-2022.Length
+2026-03-13 11:09:56 [INFO] processing 34 of SIL-AIQUM1.Length
+2026-03-13 11:09:56 [INFO] processing 35 of SIL-ADM1.Length
+2026-03-13 11:09:56 [INFO] processing 36 of SIL-SQL-CL1.Length
+2026-03-13 11:09:56 [INFO] processing 37 of SIL-FS-CL1.Length
+2026-03-13 11:09:56 [INFO] processing 38 of SIL-SQL-SCVMM.Length
+2026-03-13 11:09:56 [INFO] processing 39 of SIL-VMM-CL1.Length
+2026-03-13 11:09:56 [INFO] processing 40 of SIL-FS.Length
+2026-03-13 11:09:56 [INFO] processing 41 of SIL-HOST-CL1.Length
+2026-03-13 11:09:56 [INFO] processing 42 of SIL-CDP1.Length
+2026-03-13 11:09:56 [INFO] processing 43 of SIL-CDP2.Length
+2026-03-13 11:09:56 [INFO] processing 44 of SIL-SCA1.Length
+2026-03-13 11:09:56 [INFO] processing 45 of SIL-TZM.Length
+2026-03-13 11:09:56 [INFO] processing 46 of SIL-SQL-VEEAM.Length
+2026-03-13 11:09:56 [INFO] processing 47 of SIL-BKUPPRX1.Length
+2026-03-13 11:09:56 [INFO] processing 48 of SIL-IAT1.Length
+2026-03-13 11:09:56 [INFO] processing 49 of SIL-BKUPPRX2.Length
+2026-03-13 11:09:56 [INFO] processing 50 of BACKUPTEST.Length
+2026-03-13 11:09:56 [INFO] processing 51 of SIL-BKUPPRX3.Length
+2026-03-13 11:09:56 [INFO] processing 52 of SIL-TEST-RESMC-.Length
+2026-03-13 11:09:56 [INFO] processing 53 of VMW-WORKSTATION.Length
+2026-03-13 11:09:56 [INFO] processing 54 of JP-DEV.Length
+2026-03-13 11:09:56 [INFO] processing 55 of CV-TEST.Length
+2026-03-13 11:10:42 [INFO] processing 1 of 8
+2026-03-13 11:10:42 [INFO] processing 2 of 8
+2026-03-13 11:10:42 [INFO] processing 3 of 10
+2026-03-13 11:10:42 [INFO] processing 4 of 6
+2026-03-13 11:10:42 [INFO] processing 5 of 10
+2026-03-13 11:10:42 [INFO] processing 6 of 6
+2026-03-13 11:10:42 [INFO] processing 7 of 9
+2026-03-13 11:10:42 [INFO] processing 8 of 9
+2026-03-13 11:10:42 [INFO] processing 9 of 7
+2026-03-13 11:10:42 [INFO] processing 10 of 10
+2026-03-13 11:10:42 [INFO] processing 11 of 9
+2026-03-13 11:10:42 [INFO] processing 12 of 8
+2026-03-13 11:10:42 [INFO] processing 13 of 9
+2026-03-13 11:10:42 [INFO] processing 14 of 7
+2026-03-13 11:10:42 [INFO] processing 15 of 9
+2026-03-13 11:10:42 [INFO] processing 16 of 7
+2026-03-13 11:10:42 [INFO] processing 17 of 9
+2026-03-13 11:10:42 [INFO] processing 18 of 15
+2026-03-13 11:10:42 [INFO] processing 19 of 11
+2026-03-13 11:10:42 [INFO] processing 20 of 8
+2026-03-13 11:10:42 [INFO] processing 21 of 8
+2026-03-13 11:10:42 [INFO] processing 22 of 9
+2026-03-13 11:10:42 [INFO] processing 23 of 10
+2026-03-13 11:10:42 [INFO] processing 24 of 7
+2026-03-13 11:10:42 [INFO] processing 25 of 7
+2026-03-13 11:10:42 [INFO] processing 26 of 8
+2026-03-13 11:10:42 [INFO] processing 27 of 8
+2026-03-13 11:10:42 [INFO] processing 28 of 8
+2026-03-13 11:10:42 [INFO] processing 29 of 10
+2026-03-13 11:10:42 [INFO] processing 30 of 10
+2026-03-13 11:10:42 [INFO] processing 31 of 10
+2026-03-13 11:10:42 [INFO] processing 32 of 10
+2026-03-13 11:10:42 [INFO] processing 33 of 13
+2026-03-13 11:10:42 [INFO] processing 34 of 10
+2026-03-13 11:10:42 [INFO] processing 35 of 8
+2026-03-13 11:10:42 [INFO] processing 36 of 11
+2026-03-13 11:10:42 [INFO] processing 37 of 10
+2026-03-13 11:10:42 [INFO] processing 38 of 13
+2026-03-13 11:10:42 [INFO] processing 39 of 11
+2026-03-13 11:10:42 [INFO] processing 40 of 6
+2026-03-13 11:10:42 [INFO] processing 41 of 12
+2026-03-13 11:10:42 [INFO] processing 42 of 8
+2026-03-13 11:10:42 [INFO] processing 43 of 8
+2026-03-13 11:10:42 [INFO] processing 44 of 8
+2026-03-13 11:10:42 [INFO] processing 45 of 7
+2026-03-13 11:10:42 [INFO] processing 46 of 13
+2026-03-13 11:10:42 [INFO] processing 47 of 12
+2026-03-13 11:10:42 [INFO] processing 48 of 8
+2026-03-13 11:10:42 [INFO] processing 49 of 12
+2026-03-13 11:10:42 [INFO] processing 50 of 10
+2026-03-13 11:10:42 [INFO] processing 51 of 12
+2026-03-13 11:10:42 [INFO] processing 52 of 15
+2026-03-13 11:10:42 [INFO] processing 53 of 15
+2026-03-13 11:10:42 [INFO] processing 54 of 6
+2026-03-13 11:10:42 [INFO] processing 55 of 7
+2026-03-13 11:10:57 [INFO] processing 1 of 8
+2026-03-13 11:10:57 [INFO] processing 2 of 8
+2026-03-13 11:10:57 [INFO] processing 3 of 10
+2026-03-13 11:10:57 [INFO] processing 4 of 6
+2026-03-13 11:10:57 [INFO] processing 5 of 10
+2026-03-13 11:10:57 [INFO] processing 6 of 6
+2026-03-13 11:10:57 [INFO] processing 7 of 9
+2026-03-13 11:10:57 [INFO] processing 8 of 9
+2026-03-13 11:10:57 [INFO] processing 9 of 7
+2026-03-13 11:10:57 [INFO] processing 10 of 10
+2026-03-13 11:10:57 [INFO] processing 11 of 9
+2026-03-13 11:10:57 [INFO] processing 12 of 8
+2026-03-13 11:10:57 [INFO] processing 13 of 9
+2026-03-13 11:10:57 [INFO] processing 14 of 7
+2026-03-13 11:10:57 [INFO] processing 15 of 9
+2026-03-13 11:10:57 [INFO] processing 16 of 7
+2026-03-13 11:10:57 [INFO] processing 17 of 9
+2026-03-13 11:10:57 [INFO] processing 18 of 15
+2026-03-13 11:10:57 [INFO] processing 19 of 11
+2026-03-13 11:10:57 [INFO] processing 20 of 8
+2026-03-13 11:10:57 [INFO] processing 21 of 8
+2026-03-13 11:10:57 [INFO] processing 22 of 9
+2026-03-13 11:10:57 [INFO] processing 23 of 10
+2026-03-13 11:10:57 [INFO] processing 24 of 7
+2026-03-13 11:10:57 [INFO] processing 25 of 7
+2026-03-13 11:10:57 [INFO] processing 26 of 8
+2026-03-13 11:10:57 [INFO] processing 27 of 8
+2026-03-13 11:10:57 [INFO] processing 28 of 8
+2026-03-13 11:10:57 [INFO] processing 29 of 10
+2026-03-13 11:10:57 [INFO] processing 30 of 10
+2026-03-13 11:10:57 [INFO] processing 31 of 10
+2026-03-13 11:10:57 [INFO] processing 32 of 10
+2026-03-13 11:10:57 [INFO] processing 33 of 13
+2026-03-13 11:10:57 [INFO] processing 34 of 10
+2026-03-13 11:10:57 [INFO] processing 35 of 8
+2026-03-13 11:10:57 [INFO] processing 36 of 11
+2026-03-13 11:10:57 [INFO] processing 37 of 10
+2026-03-13 11:10:57 [INFO] processing 38 of 13
+2026-03-13 11:10:57 [INFO] processing 39 of 11
+2026-03-13 11:10:57 [INFO] processing 40 of 6
+2026-03-13 11:10:57 [INFO] processing 41 of 12
+2026-03-13 11:10:57 [INFO] processing 42 of 8
+2026-03-13 11:10:57 [INFO] processing 43 of 8
+2026-03-13 11:10:57 [INFO] processing 44 of 8
+2026-03-13 11:10:57 [INFO] processing 45 of 7
+2026-03-13 11:10:57 [INFO] processing 46 of 13
+2026-03-13 11:10:57 [INFO] processing 47 of 12
+2026-03-13 11:10:57 [INFO] processing 48 of 8
+2026-03-13 11:10:57 [INFO] processing 49 of 12
+2026-03-13 11:10:57 [INFO] processing 50 of 10
+2026-03-13 11:10:57 [INFO] processing 51 of 12
+2026-03-13 11:10:57 [INFO] processing 52 of 15
+2026-03-13 11:10:57 [INFO] processing 53 of 15
+2026-03-13 11:10:57 [INFO] processing 54 of 6
+2026-03-13 11:10:57 [INFO] processing 55 of 7
+2026-03-13 11:11:16 [INFO] processing 1 of 55
+2026-03-13 11:11:16 [INFO] processing 2 of 55
+2026-03-13 11:11:16 [INFO] processing 3 of 55
+2026-03-13 11:11:16 [INFO] processing 4 of 55
+2026-03-13 11:11:16 [INFO] processing 5 of 55
+2026-03-13 11:11:16 [INFO] processing 6 of 55
+2026-03-13 11:11:16 [INFO] processing 7 of 55
+2026-03-13 11:11:16 [INFO] processing 8 of 55
+2026-03-13 11:11:16 [INFO] processing 9 of 55
+2026-03-13 11:11:16 [INFO] processing 10 of 55
+2026-03-13 11:11:16 [INFO] processing 11 of 55
+2026-03-13 11:11:16 [INFO] processing 12 of 55
+2026-03-13 11:11:16 [INFO] processing 13 of 55
+2026-03-13 11:11:16 [INFO] processing 14 of 55
+2026-03-13 11:11:16 [INFO] processing 15 of 55
+2026-03-13 11:11:16 [INFO] processing 16 of 55
+2026-03-13 11:11:16 [INFO] processing 17 of 55
+2026-03-13 11:11:16 [INFO] processing 18 of 55
+2026-03-13 11:11:16 [INFO] processing 19 of 55
+2026-03-13 11:11:16 [INFO] processing 20 of 55
+2026-03-13 11:11:16 [INFO] processing 21 of 55
+2026-03-13 11:11:16 [INFO] processing 22 of 55
+2026-03-13 11:11:16 [INFO] processing 23 of 55
+2026-03-13 11:11:16 [INFO] processing 24 of 55
+2026-03-13 11:11:16 [INFO] processing 25 of 55
+2026-03-13 11:11:16 [INFO] processing 26 of 55
+2026-03-13 11:11:16 [INFO] processing 27 of 55
+2026-03-13 11:11:16 [INFO] processing 28 of 55
+2026-03-13 11:11:16 [INFO] processing 29 of 55
+2026-03-13 11:11:16 [INFO] processing 30 of 55
+2026-03-13 11:11:16 [INFO] processing 31 of 55
+2026-03-13 11:11:16 [INFO] processing 32 of 55
+2026-03-13 11:11:16 [INFO] processing 33 of 55
+2026-03-13 11:11:16 [INFO] processing 34 of 55
+2026-03-13 11:11:16 [INFO] processing 35 of 55
+2026-03-13 11:11:16 [INFO] processing 36 of 55
+2026-03-13 11:11:16 [INFO] processing 37 of 55
+2026-03-13 11:11:16 [INFO] processing 38 of 55
+2026-03-13 11:11:16 [INFO] processing 39 of 55
+2026-03-13 11:11:16 [INFO] processing 40 of 55
+2026-03-13 11:11:16 [INFO] processing 41 of 55
+2026-03-13 11:11:16 [INFO] processing 42 of 55
+2026-03-13 11:11:16 [INFO] processing 43 of 55
+2026-03-13 11:11:16 [INFO] processing 44 of 55
+2026-03-13 11:11:16 [INFO] processing 45 of 55
+2026-03-13 11:11:16 [INFO] processing 46 of 55
+2026-03-13 11:11:16 [INFO] processing 47 of 55
+2026-03-13 11:11:16 [INFO] processing 48 of 55
+2026-03-13 11:11:16 [INFO] processing 49 of 55
+2026-03-13 11:11:16 [INFO] processing 50 of 55
+2026-03-13 11:11:16 [INFO] processing 51 of 55
+2026-03-13 11:11:16 [INFO] processing 52 of 55
+2026-03-13 11:11:16 [INFO] processing 53 of 55
+2026-03-13 11:11:16 [INFO] processing 54 of 55
+2026-03-13 11:11:16 [INFO] processing 55 of 55
+2026-03-13 11:11:32 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:11:32 [INFO] processing 1 of 55
+2026-03-13 11:11:33 [INFO] processing 2 of 55
+2026-03-13 11:11:34 [INFO] processing 3 of 55
+2026-03-13 11:13:12 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:13:12 [INFO] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:13:13 [INFO] processing 2 of 55:: SIL-DC-1
+2026-03-13 11:13:14 [INFO] processing 3 of 55:: SIL-RADIUS
+2026-03-13 11:13:59 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:13:59 [INFO] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:14:00 [INFO] processing 2 of 55:: SIL-DC-1
+2026-03-13 11:14:00 [INFO] processing 3 of 55:: SIL-RADIUS
+2026-03-13 11:14:18 [INFO] Starting TempScript.ps1 1.0
+2026-03-13 11:14:18 [INFO] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:14:19 [INFO] processing 2 of 55:: SIL-DC-1
+2026-03-13 11:14:20 [INFO] Ending TempScript.ps1 with exit code 0

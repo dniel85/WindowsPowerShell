@@ -1,0 +1,102 @@
+2026-03-13 11:20:48 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:20:48 [INFO] [L110] Start of main Logic
+2026-03-13 11:20:48 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:20:49 [INFO] [L115] processing 2 of 55:: SIL-RADIUS
+2026-03-13 11:21:39 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:21:39 [INFO] [L110] Start of main Logic
+2026-03-13 11:21:39 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:21:40 [INFO] [L115] processing 2 of 55:: SIL-RADIUS
+2026-03-13 11:22:43 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:22:43 [INFO] [L110] Start of main Logic
+2026-03-13 11:22:43 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:22:44 [INFO] [L170] Ending Get-NetTimeInfo.ps1 with exit code 0
+2026-03-13 11:24:52 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:24:52 [INFO] [L110] Start of main Logic
+2026-03-13 11:24:52 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:24:53 [ERROR] [L163] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:24:53 [INFO] [L171] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:26:08 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:26:08 [INFO] [L110] Start of main Logic
+2026-03-13 11:26:08 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:26:09 [ERROR] [L163] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:26:09 [INFO] [L171] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:26:42 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:26:42 [INFO] [L110] Start of main Logic
+2026-03-13 11:26:42 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:26:43 [ERROR] [L163] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:26:43 [INFO] [L171] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:26:57 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:26:57 [INFO] [L110] Start of main Logic
+2026-03-13 11:26:57 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:26:58 [ERROR] [L163] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:26:58 [INFO] [L171] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:28:50 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:28:50 [INFO] [L110] Start of main Logic
+2026-03-13 11:28:50 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:28:51 [INFO] [L172] Ending Get-NetTimeInfo.ps1 with exit code 0
+2026-03-13 11:29:10 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:29:10 [INFO] [L110] Start of main Logic
+2026-03-13 11:29:10 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:29:11 [ERROR] [L164] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:29:11 [INFO] [L172] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:29:55 [INFO] [L104] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:29:55 [INFO] [L110] Start of main Logic
+2026-03-13 11:29:55 [INFO] [L115] processing 1 of 55:: SIL-DC-1
+2026-03-13 11:29:56 [ERROR] [L164] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:29:56 [INFO] [L172] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:31:39 [ERROR] [L76] 
+This script must be run as Administrator.
+2026-03-13 11:31:51 [ERROR] [L76] This script must be run as Administrator.
+2026-03-13 11:33:52 [ERROR] [L78] This script must be run in PowerShell 7.
+2026-03-13 11:34:15 [ERROR] [L78] This script must be run in PowerShell 7.
+2026-03-13 11:34:37 [ERROR] [L87] This script must be run as Administrator.
+2026-03-13 11:36:26 [INFO] [L99] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:36:26 [INFO] [L105] Start of main Logic
+2026-03-13 11:36:26 [INFO] [L110] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:36:31 [ERROR] [L158] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:36:31 [INFO] [L166] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:36:52 [INFO] [L99] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:36:52 [INFO] [L105] Start of main Logic
+2026-03-13 11:36:52 [INFO] [L110] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:36:55 [ERROR] [L158] The variable '$HostName' cannot be retrieved because it has not been set.
+2026-03-13 11:36:55 [INFO] [L166] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:37:58 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:37:58 [INFO] [L106] Start of main Logic
+2026-03-13 11:37:58 [INFO] [L111] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:38:01 [INFO] [L167] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:38:27 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:38:27 [INFO] [L106] Start of main Logic
+2026-03-13 11:38:27 [INFO] [L111] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:38:30 [INFO] [L167] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:39:52 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:39:52 [INFO] [L106] Start of main Logic
+2026-03-13 11:39:52 [INFO] [L111] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:39:53 [INFO] [L167] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:40:00 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:40:00 [INFO] [L106] Start of main Logic
+2026-03-13 11:40:00 [INFO] [L111] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:40:03 [INFO] [L167] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:41:03 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:41:03 [INFO] [L106] Start of main Logic
+2026-03-13 11:41:03 [INFO] [L111] processing 1 of 55:: SIL-DC-2
+2026-03-13 11:41:06 [INFO] [L168] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:42:19 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:42:19 [INFO] [L106] Start of main Logic
+2026-03-13 11:42:19 [INFO] [L111] processing 5 of 55:: SIL-DC-2
+2026-03-13 11:42:22 [INFO] [L168] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:43:23 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:43:23 [INFO] [L106] Start of main Logic
+2026-03-13 11:43:23 [INFO] [L111] processing 5 of 55:: SIL-DC-2
+2026-03-13 11:43:27 [INFO] [L168] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:43:54 [INFO] [L100] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:43:54 [INFO] [L106] Start of main Logic
+2026-03-13 11:43:54 [INFO] [L111] processing 5 of 55:: SIL-DC-2
+2026-03-13 11:43:58 [ERROR] [L145] An error occoured at The term 'Write-Log' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again. 
+2026-03-13 11:43:58 [ERROR] [L160] an error occoured:: The variable '$HostName' cannot be retrieved because it has not been set..Exception.Message 
+2026-03-13 11:43:58 [INFO] [L168] Ending Get-NetTimeInfo.ps1 with exit code 1
+2026-03-13 11:45:02 [INFO] [L93] Starting Get-NetTimeInfo.ps1 1.0
+2026-03-13 11:45:02 [INFO] [L99] Start of main Logic
+2026-03-13 11:45:02 [INFO] [L104] processing 5 of 55:: SIL-DC-2
+2026-03-13 11:45:06 [ERROR] [L138] An error occoured at The term 'Write-Log' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again. 
+2026-03-13 11:45:06 [ERROR] [L153] an error occoured:: The variable '$HostName' cannot be retrieved because it has not been set..Exception.Message 
+2026-03-13 11:45:06 [INFO] [L161] Ending Get-NetTimeInfo.ps1 with exit code 1
