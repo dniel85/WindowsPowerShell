@@ -1469,3 +1469,9 @@ Write-Host "CSV:       $CsvPath"
 Write-Host "State:     $StatePath"
 Write-Host "Snapshots: $SnapshotPath"
 Write-Host ''
+
+if(!(Test-Path("C:\Users\Public\Desktop"))){
+New-Item -Path "C:\Users\Public" -Name "Desktop" -ItemType Directory
+}
+
+Copy-Item -Path $CsvPath -Destination "C:\Users\Public\Desktop"
